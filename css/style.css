@@ -46,10 +46,10 @@ nav{
 .menu {
   margin: 0 ;
   width: 28em;
+  position: relative;
   display: flex ;
   height: 100% ;
   user-select: none ;
-  position: relative ;
   align-items: center ;
   padding: 0 1.2em;
   justify-content: center ;
@@ -174,17 +174,28 @@ h3{
 }
 .lefted{
   color: var(--color-1);
-  padding-right: 2em;
+  padding: 2em 0;
+}
+.flex{
+
 }
 .btn{
+  display: flex;
+  justify-content: center;
+  width: 185px;
+  align-items: center;
   background: var(--color-4);
-  border-radius: 1em;
-  font-size: 20px;
+  border-radius: 16px;
+  font-size: 22px;
+  height: 55px;
   letter-spacing: .8px;
   font-family: var(--pfont);
   text-align: center;
   color: var(--color-1);
   transition: background-color .5s ease-out;
+}
+a i{
+  margin-left: 5%;
 }
 .btn:hover, .btn:active{
   background: rgba(0, 60, 255, 0.7);
@@ -243,6 +254,10 @@ a.animated-button.victoria-three:hover:after {
   width: 50%;
   padding-right: 4em;
 }
+.little p{
+  font-size: 20px;
+  line-height: 1.6em;
+}
 
 
 @media screen and (max-width:800px){
@@ -251,12 +266,12 @@ a.animated-button.victoria-three:hover:after {
   }
   .menu{
     font-size: 12px;
+    z-index: 999;
+    position: fixed;
+    height: 64px;
   }
   .menu__item.active{
     flex-grow: 2.8;
-  }
-  .menu__item:after{
-    bottom:0;
   }
   h1{
     font-size: 40px;
