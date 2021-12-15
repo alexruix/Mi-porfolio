@@ -12,6 +12,7 @@
   --bgcolor3: #232323;
   --bgcolor4: #1B2223;
   --bgcolor5: #1D2B2C;
+  --bgcolor6: #322E3A;
   --duration: .45s ;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -195,9 +196,13 @@ h2{
   color: var(--color-4);
 }
 h3{
-
   text-align: center;
   font-family: var(--pfont);
+}
+h4{
+  font-size: 25px;
+  font-family: var(--pfont);
+  line-height: 1.3em;
 }
 .lefted{
   color: var(--color-1);
@@ -211,9 +216,11 @@ h3{
   margin-right: 8em;
   width: 60%;
 }
+.victoria-three{
+  margin: 40px 0;
+}
 .btn{
   display: flex;
-  margin: 40px 0;
   justify-content: center;
   width: 185px;
   align-items: center;
@@ -323,11 +330,50 @@ a.animated-button.victoria-three:hover:after {
   background: var(--color-4);
 }
 .sec3{
-  height: 80px;
+  height: 100%;
   width: 100%;
+  color: var(--color-1);
   border-radius: 16px;
-  background: #322E3A;
+  background: var(--bgcolor6);
 }
+.sec3__header h3{
+  padding-left: 0.8em;
+  text-align: left;
+}
+.sec3__subheader{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sec3-card__inner{
+	 background: var(--color-1);
+   color: var(--color-2);
+	 box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+	 border-radius: 10px;
+   width: 30%;
+}
+.sec3-card__description{
+  padding: 13px 35px;
+}
+.sec3-card__inner h4{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-bottom: .15em solid #ccc;
+}
+ @media screen and (max-width: 480px) {
+	 .sec3-card__inner {
+		 padding: 25px;
+		 padding-top: 165px;
+	}
+}
+ @media screen and (max-width: 360px) {
+	 .sec3-card__inner {
+		 padding: 15px;
+		 padding-top: 165px;
+	}
+}
+
 
 @media screen and (max-width:800px){
   .container{
@@ -341,6 +387,9 @@ a.animated-button.victoria-three:hover:after {
   }
   h3{
     font-size: 30px;
+  }
+  h4{
+    font-size: 25px;
   }
   .little, .notlittle{
     padding: 2em;
