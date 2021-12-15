@@ -264,4 +264,8 @@ a.animated-button.victoria-three:hover:after {
   h2{
     font-size: 30px;
   }
+  .little{
+    padding: 2em;
+    width: 100%;
+  }
 }
