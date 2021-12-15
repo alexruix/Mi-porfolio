@@ -208,6 +208,7 @@ h3{
 }
 .btn{
   display: flex;
+  margin: 40px 0;
   justify-content: center;
   width: 185px;
   align-items: center;
