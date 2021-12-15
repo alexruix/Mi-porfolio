@@ -322,7 +322,12 @@ a.animated-button.victoria-three:hover:after {
 .little a.active::before, .little a:hover::before{
   background: var(--color-4);
 }
-
+.sec3{
+  height: 80px;
+  width: 100%;
+  border-radius: 16px;
+  background: #322E3A;
+}
 
 @media screen and (max-width:800px){
   .container{
@@ -364,6 +369,10 @@ a.animated-button.victoria-three:hover:after {
 @media screen and (max-width:1050px){
   .navflex{
     justify-content: center ;
+    background: var(--bgcolor1);
+  }
+  header{
+    position: relative;
   }
   .menu{
     font-size: 12px;
