@@ -47,18 +47,21 @@ function handleTransition(item, text) {
     });
 
 }
-var app = document.getElementById('type');
-
-var typewriter = new Typewriter(app, {
-    loop: true
+$(document).ready(function(){
+    $('#type').typewrite({
+        actions: [
+            {type: 'Hello. '},
+            {type: '<br>'},
+            {type: 'Weclome '},
+            {delay: 1500},
+            {remove: {num: 1, type: 'stepped'}},
+            {select: {from: 11, to: 16}},
+            {delay: 2000},
+            {remove: {num: 5, type: 'whole'}},
+            {delay: 300},
+            {type: 'lcome to typewrite. '},
+            {type: '<br>'},
+            {type: 'It\'s just so easy to setup and use.'}
+        ]
+    });
 });
-typewriter.typeString('learn a lot.')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('draw everyday.')
-    .pauseFor(2500)
-    .deleteChars(9)
-    .typeString('all my life.')
-    .deleteAll()
-    .typeString('become a great designer.')
-    .start();
