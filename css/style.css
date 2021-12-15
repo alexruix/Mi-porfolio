@@ -6,7 +6,7 @@
   --color-1: #d5d5d5 ; /*Color blanco */
   --color-2: #090909 ;/*Color negro */
   --color-3: #3C58B7; /*Color principal fondo blanco */
-  --color-4: rgba(0, 114, 255, 0.7) ; /*Color principal fondo negro */
+  --color-4: rgb(0, 114, 255) ; /*Color principal fondo negro */
   --bgcolor1: #090909;
   --bgcolor2: #191C1C;
   --bgcolor3: #232323;
@@ -27,12 +27,15 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+a{
+  color: #fff;
+}
 body, h1{
   margin: 0;
 }
 body{
   font-family: var(--sfont);
-  background: var(--color-1);
+  background: var(--color-2);
 }
 nav{
   background-color: rgba(0,0,0,0);
@@ -139,9 +142,11 @@ nav{
 }
 /* Presentacion */
 .bg1{
-  background: var(--bgcolor1);
-  margin-bottom: -.5em;
-  margin-top: -.7px;
+  background-image: url(../img/bannerbg.png);
+  background-position: top left;
+  background-size: cover;
+  margin-top: -64px;
+  height: 45em;
 }
 .bg2{
   background: var(--bgcolor2);
@@ -186,6 +191,7 @@ h2{
   color: var(--color-4);
 }
 h3{
+
   text-align: center;
   font-family: var(--pfont);
 }
@@ -193,9 +199,13 @@ h3{
   color: var(--color-1);
   padding: 2em 0;
 }
+.lefted p{
+  font-size: 20px;
+  line-height: 1.6em;
+}
 .width70{
   margin-right: 8em;
-  width: 70%;
+  width: 60%;
 }
 .btn{
   display: flex;
@@ -219,25 +229,29 @@ a i{
   background: rgba(0, 60, 255, 0.7);
 }
 a.animated-button.victoria-three:after {
-	background: #D24D57;
-	opacity: .5;
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+  background: #D24D57;
+  opacity: .5;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 a.animated-button.victoria-three:hover:after {
-	height: 140%;
-	opacity: 1;
+  height: 140%;
+  opacity: 1;
 }
-.card-item {
+.card-item{
   max-width: 430px;
   height: 200px;
+  max-height: 200px;
+  position: relative;
+}
+.card-item__about {
+  height: 24.5em;
+  z-index: 1;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  z-index: 2;
-  width: 80%;
 }
 @media screen and (max-width: 480px) {
   .card-item {
@@ -250,9 +264,6 @@ a.animated-button.victoria-three:hover:after {
   .card-item {
     height: 180px;
   }
-}
-.card-item.-active .card-item__side.-front {
-  transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
 }
 .card-item__bg {
   max-width: 100%;
@@ -267,13 +278,28 @@ a.animated-button.victoria-three:hover:after {
   width: 100%;
 }
 
-.little{
+.notlittle{
   width: 50%;
   padding-right: 4em;
 }
-.little p{
-  font-size: 20px;
+.little{
+  width: 20%;
+  padding-right: 4em;
+}
+.little ul li{
+  font-size: 25px;
+  font-family: var(--pfont);
   line-height: 1.6em;
+}
+.little ul li::before{
+  content: '';
+  display: inline-block;
+  margin-right: 16px;
+  margin-left: -25px;
+  margin-bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 
 
@@ -301,7 +327,10 @@ a.animated-button.victoria-three:hover:after {
   h2{
     font-size: 30px;
   }
-  .little{
+  h3{
+    font-size: 30px;
+  }
+  .little, .notlittle{
     padding: 2em;
     width: 100%;
   }
@@ -317,6 +346,9 @@ a.animated-button.victoria-three:hover:after {
     height: 64px;
     bottom: 0;
     border-radius: 1em 1em 0 0;
+  }
+  .bg1{
+    margin: 0;
   }
   .width70{
     width: 100%;

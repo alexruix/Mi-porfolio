@@ -24,7 +24,7 @@
       <div class="menu">
         <a href="#home" class="menu__item active">
           <div class="menu__icon" >
-             <i data-feather="home"></i>
+            <i data-feather="home"></i>
           </div>
           <strong class="menu__text active">inicio</strong>
         </a>
@@ -52,66 +52,64 @@
     </header>
 
     <div class="bg1" id="home">
-      <div class="container">
+      <div class="container" style="height:45em;">
         <div class="lefted width70">
           <h1>Hola, soy <span>Alex Ruiz</span></h1>
           <h2>Soy <span id="type"></span> web en Buenos Aires, Argentina.
-Me considero un apasionado por los diseños <span id="type2"></span></h2>
-          <a href="#" class="btn animated-button victoria-three">Ver mi trabajo
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-        <div class="righted">
-          <div class="card-item__cover">
-            <img src="https://images.pexels.com/photos/10290644/pexels-photo-10290644.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-item__bg" alt="Alex Ruiz Website perfil">
+            Me considero un apasionado por los diseños <span id="type2"></span></h2>
+            <a href="#" class="btn animated-button victoria-three">Ver mi trabajo
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="righted">
+            <figure class="card-item__cover">
+            <!--  <img src="img/fotoperfil.png" class="card-item__bg" alt="Alex Ruiz Website perfil"> -->
+            </figure>
           </div>
         </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block">
-        <path fill="#191c1c" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-
 
       </div>
 
 
       <div class="bg2" id="perfil">
         <div class="container">
-          <div class="lefted little">
+          <div class="lefted notlittle">
             <h3>Diseñador creativo</h3>
-            <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front-end porque considero fundamental crear una  experiencia integral, hago contenido donde se destaca el diseño moderno.</p>
+            <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front-end porque considero fundamental crear una  experiencia integral, hago contenido donde se destaca el estilo de diseño actual</p>
             <p>Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo</p>
             <a href="#" class="btn animated-button victoria-three">Acerca de mi <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="righted">
             <div class="card-item">
-              <div class="card-item__side -front">
-                <div class="card-item__cover">
-                  <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Christmas Pomegranate Salad" class="card-item__bg">
-                </div>
-              </div>
+                <figure class="card-item__about">
+                  <img src="img/aboutme.png" alt="Christmas Pomegranate Salad" class="card-item__bg">
+                </figure>
             </div>
           </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block; z-index:999;">
+          <path fill="#232323" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
       </div>
 
       <div class="bg3" id="sec3">
         <div class="container">
-          <div class="lefted little">
-            <ul>
-              <li><a class="active" href="#habilities">Habilidades</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-            </ul>
+            <nav class="navsec3">
+              <ul>
+                <li><a class="active" href="#habilities">Habilidades</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+              </ul>
+            </nav>
           </div>
-          <div class="righted">
+          <div class="container">
             <div class="card-item">
               <div class="card-item__side -front">
-                <div class="card-item__cover">
+                <figure class="card-item__cover">
                   <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Christmas Pomegranate Salad" class="card-item__bg">
-                </div>
+                </figure>
               </div>
             </div>
           </div>
-        </div>
       </div>
       <div class="bg4" id="contac">
         <h3></h3>
@@ -127,10 +125,10 @@ Me considero un apasionado por los diseños <span id="type2"></span></h2>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
       <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-       <script src="https://unpkg.com/feather-icons"></script>
+      <script src="https://unpkg.com/feather-icons"></script>
       <script src="js/index.js"></script>
       <!-- <script src="http://localhost:35729/livereload.js"></script> -->
       <script src="js/materialize.min.js"></script>
-        <script src="http://localhost:58890/livereload.js"></script>
+      <script src="http://localhost:58890/livereload.js"></script>
     </body>
     </html>
