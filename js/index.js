@@ -1,4 +1,3 @@
-/* Intagram: @ui.tormenta*/
 
 const buttons = document.querySelectorAll(".menu__item");
 let activeButton = document.querySelector(".menu__item.active");
@@ -48,3 +47,18 @@ function handleTransition(item, text) {
     });
 
 }
+var app = document.getElementById('type');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+typewriter.typeString('learn a lot.')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('draw everyday.')
+    .pauseFor(2500)
+    .deleteChars(9)
+    .typeString('all my life.')
+    .deleteAll()
+    .typeString('become a great designer.')
+    .start();
