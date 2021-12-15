@@ -141,6 +141,7 @@ nav{
 .bg1{
   background: var(--bgcolor1);
   margin-bottom: -.5em;
+  margin-top: -.7px;
 }
 .bg2{
   background: var(--bgcolor2);
@@ -181,18 +182,20 @@ h2{
   font-size: 35px;
   line-height: 1.3em;
 }
-h2 span{
+#type2{
   color: var(--color-4);
 }
 h3{
   text-align: center;
+  font-family: var(--pfont);
 }
 .lefted{
   color: var(--color-1);
   padding: 2em 0;
 }
-.flex{
-
+.width70{
+  margin-right: 8em;
+  width: 70%;
 }
 .btn{
   display: flex;
@@ -259,7 +262,6 @@ a.animated-button.victoria-three:hover:after {
   width: 100%;
   object-fit: cover;
 }
-
 .wave{
   height: 100px;
   width: 100%;
@@ -303,6 +305,9 @@ a.animated-button.victoria-three:hover:after {
     padding: 2em;
     width: 100%;
   }
+  .bg1 > .container > .righted{
+    display: none;
+  }
 }
 @media screen and (max-width:1050px){
   .menu{
@@ -312,5 +317,9 @@ a.animated-button.victoria-three:hover:after {
     height: 64px;
     bottom: 0;
     border-radius: 1em 1em 0 0;
+  }
+  .width70{
+    width: 100%;
+    margin: 2em 0;
   }
 }

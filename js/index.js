@@ -1,7 +1,23 @@
 var app = document.getElementById('type');
 
 var typewriter = new Typewriter(app, {
-    loop: true
+  loop: true,
+  delay: 175,
+});
+
+typewriter.typeString('<strong>desarrolador</strong>')
+    .changeCursor(' ')
+    .pauseFor(15000)
+    .deleteChars(11)
+    .typeString('<strong>iseñador</strong>')
+    .pauseFor(15000)
+    .start();
+
+var app = document.getElementById('type2');
+
+var typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 85,
 });
 
 typewriter.typeString('modernos')
