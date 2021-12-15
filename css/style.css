@@ -288,7 +288,7 @@ a.animated-button.victoria-three:hover:after {
     border-radius: 1em 1em 0 0;
   }
   .menu__icon{
-    font-size: 4em;
+    font-size: 3.5em;
   }
   .menu__item.active{
     flex-grow: 2.8;

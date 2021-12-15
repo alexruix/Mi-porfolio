@@ -1,3 +1,21 @@
+var app = document.getElementById('type');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
+typewriter.typeString('modernos')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('creativos')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('<strong>únicos!</strong>')
+    .pauseFor(2500)
+    .start();
+
+feather.replace()
+
 const buttons = document.querySelectorAll(".menu__item");
 let activeButton = document.querySelector(".menu__item.active");
 
@@ -46,18 +64,3 @@ function handleTransition(item, text) {
     });
 
 }
-var app = document.getElementById('type');
-
-var typewriter = new Typewriter(app, {
-    loop: true
-});
-
-typewriter.typeString('Hello World!')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('Strings can be removed')
-    .pauseFor(2500)
-    .deleteChars(7)
-    .typeString('<strong>altered!</strong>')
-    .pauseFor(2500)
-    .start();
