@@ -146,11 +146,10 @@ nav{
   background-position: top left;
   background-size: cover;
   margin-top: -64px;
-  height: 45em;
 }
 .bg2{
   background: var(--bgcolor2);
-  margin-bottom: -.5em;
+  margin-bottom: -160px;
 }
 .bg3{
   background: var(--bgcolor3);
@@ -245,13 +244,19 @@ a.animated-button.victoria-three:hover:after {
   height: 200px;
   max-height: 200px;
   position: relative;
+  width: 80%;
+  z-index: 2;
 }
-.card-item__about {
-  height: 24.5em;
-  z-index: 1;
+.card-item__side{
+  margin-top: 5%;
+}
+.card-item__about{
+  max-width: 430px;
+  max-height: 1000px;
+  height: 500px;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  z-index: 2;
 }
 @media screen and (max-width: 480px) {
   .card-item {
@@ -334,8 +339,18 @@ a.animated-button.victoria-three:hover:after {
     padding: 2em;
     width: 100%;
   }
+  .lefted p{
+    font-size: 20px;
+    line-height: 1.6em;
+  }
+  .bg2{
+    height: 80%;
+  }
   .bg1 > .container > .righted{
     display: none;
+  }
+  .card-item__side{
+    margin: auto;
   }
 }
 @media screen and (max-width:1050px){

@@ -5,10 +5,10 @@ var typewriter = new Typewriter(app, {
   delay: 175,
 });
 
-typewriter.typeString('<strong>desarrolador</strong>')
+typewriter.typeString('<strong>desarrollador</strong>')
     .changeCursor(' ')
     .pauseFor(15000)
-    .deleteChars(11)
+    .deleteChars(12)
     .typeString('<strong>iseñador</strong>')
     .pauseFor(15000)
     .start();
