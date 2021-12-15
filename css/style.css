@@ -269,6 +269,8 @@ a.animated-button.victoria-three:hover:after {
     z-index: 999;
     position: fixed;
     height: 64px;
+    bottom: 0;
+    border-radius: 1em 1em 0 0;
   }
   .menu__item.active{
     flex-grow: 2.8;
