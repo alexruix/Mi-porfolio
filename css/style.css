@@ -9,6 +9,9 @@
   --color-4: rgba(0, 114, 255, 0.7) ; /*Color principal fondo negro */
   --bgcolor1: #090909;
   --bgcolor2: #191C1C;
+  --bgcolor3: #232323;
+  --bgcolor4: #1B2223;
+  --bgcolor5: #1D2B2C;
   --duration: .45s ;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -78,14 +81,14 @@ nav{
   transition: flex-grow var(--duration) var(--cubic) ;
 }
 .menu__icon {
-  font-size: 1.5em;
+  font-size: 2em;
   stroke: var() ;
   transition: transform var(--duration) var(--cubic) ;
 }
 
 .menu__item::after {
   left: -1.15em;
-  bottom: 1.8em ;
+  bottom: 1em ;
   content: " " ;
   height: 0.25em ;
   position: absolute ;
@@ -141,6 +144,18 @@ nav{
 }
 .bg2{
   background: var(--bgcolor2);
+  margin-bottom: -.5em;
+}
+.bg3{
+  background: var(--bgcolor3);
+  margin-bottom: -.5em;
+}
+.bg4{
+  background: var(--bgcolo4);
+  margin-bottom: -.5em;
+}
+.bg5{
+  background: var(--bgcolor5);
   margin-bottom: -.5em;
 }
 .container{
@@ -272,6 +287,9 @@ a.animated-button.victoria-three:hover:after {
     bottom: 0;
     border-radius: 1em 1em 0 0;
   }
+  .menu__icon{
+    font-size: 4em;
+  }
   .menu__item.active{
     flex-grow: 2.8;
   }
@@ -284,5 +302,15 @@ a.animated-button.victoria-three:hover:after {
   .little{
     padding: 2em;
     width: 100%;
+  }
+}
+@media screen and (max-width:1050px){
+  .menu{
+    font-size: 12px;
+    z-index: 999;
+    position: fixed;
+    height: 64px;
+    bottom: 0;
+    border-radius: 1em 1em 0 0;
   }
 }
