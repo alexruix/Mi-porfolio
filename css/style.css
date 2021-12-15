@@ -169,6 +169,9 @@ h2{
 h2 span{
   color: var(--color-4);
 }
+h3{
+  text-align: center;
+}
 .lefted{
   color: var(--color-1);
   padding-right: 2em;
@@ -198,7 +201,30 @@ a.animated-button.victoria-three:hover:after {
 	height: 140%;
 	opacity: 1;
 }
-
+.card-item {
+  max-width: 430px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+  width: 80%;
+}
+@media screen and (max-width: 480px) {
+  .card-item {
+    max-width: 310px;
+    height: 220px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card-item {
+    height: 180px;
+  }
+}
+.card-item.-active .card-item__side.-front {
+  transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
+}
 .card-item__bg {
   max-width: 100%;
   display: block;
@@ -211,7 +237,11 @@ a.animated-button.victoria-three:hover:after {
 .wave{
   height: 100px;
   width: 100%;
-  background: var(--bgcolor1)
+}
+
+.little{
+  width: 50%;
+  padding-right: 4em;
 }
 
 
