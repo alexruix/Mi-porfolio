@@ -3,6 +3,7 @@
   --pfont: 'Bebas Neue', cursive;
   --sfont: 'Didact Gothic', sans-serif;
   --shadow: ;
+  --color-0: #fafafa; /*Color blanco puro*/
   --color-1: #d5d5d5 ; /*Color blanco */
   --color-2: #090909 ;/*Color negro */
   --color-3: #3C58B7; /*Color principal fondo blanco */
@@ -231,7 +232,7 @@ h4{
   letter-spacing: .8px;
   font-family: var(--pfont);
   text-align: center;
-  color: var(--color-1);
+  color: var(--color-0);
   transition: background-color .5s ease-out;
 }
 a i{
@@ -354,7 +355,7 @@ a.animated-button.victoria-three:hover:after {
    color: var(--color-2);
 	 box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
 	 border-radius: 10px;
-   width: 30%;
+   width: 240px;
 }
 .sec3-card__description{
   padding: 8px 35px 35px;
@@ -377,14 +378,12 @@ a.animated-button.victoria-three:hover:after {
 }
  @media screen and (max-width: 480px) {
 	 .sec3-card__inner {
-		 padding: 25px;
-		 padding-top: 165px;
+		 padding: 3px;
 	}
 }
  @media screen and (max-width: 360px) {
 	 .sec3-card__inner {
-		 padding: 15px;
-		 padding-top: 165px;
+		 padding: 5px;
 	}
 }
 
@@ -431,6 +430,9 @@ a.animated-button.victoria-three:hover:after {
   .notlittle a.btn{
     margin-bottom: 3em;
   }
+  .sec3-card__inner{
+    flex-grow: 2;
+  }
 }
 @media screen and (max-width:1050px){
   .navflex{
@@ -468,5 +470,15 @@ a.animated-button.victoria-three:hover:after {
   .width70{
     width: 100%;
     margin: 2em 0;
+  }
+  .sec3__subheader{
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+  .sec3-card__inner{
+    margin: 3%;
+  }
+  .sec3-card__inner:nth-child(3){
+    flex-grow: 2;
   }
 }
