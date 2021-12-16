@@ -32,6 +32,8 @@ typewriter.typeString('modernos')
 
 feather.replace()
 
+document.querySelectorAll('.btn').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
+
 const buttons = document.querySelectorAll(".menu__item");
 let activeButton = document.querySelector(".menu__item.active");
 
