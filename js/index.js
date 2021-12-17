@@ -20,14 +20,14 @@ var typewriter = new Typewriter(app, {
   delay: 85,
 });
 
-typewriter.typeString('modernos')
-    .pauseFor(2500)
+typewriter.typeString('modernas')
+    .pauseFor(8500)
     .deleteAll()
-    .typeString('creativos')
-    .pauseFor(2500)
+    .typeString('simples')
+    .pauseFor(8500)
     .deleteAll()
-    .typeString('<strong>únicos!</strong>')
-    .pauseFor(2500)
+    .typeString('<strong>faciles de usar</strong>')
+    .pauseFor(8500)
     .start();
 
 feather.replace()
