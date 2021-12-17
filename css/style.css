@@ -384,15 +384,12 @@ box-shadow: var(--shadow-hover);
 .little a.active::before, .little a:hover::before{
   background: var(--color-4);
 }
-.sec3__subheader{
-  overflow: hidden;
+.sec3__header{
   position: relative;
-	 white-space: nowrap;
-  padding: 0 2% 5%;
-  justify-content: space-evenly;
-  align-items: baseline;
+  width: 90%;
+  margin: auto;
 }
-.sec3__subheader:before, .sec3__subheader:after {
+.sec3__header:before, .sec3__header:after {
 	 position: absolute;
 	 top: 0;
 	 z-index: 1;
@@ -401,14 +398,31 @@ box-shadow: var(--shadow-hover);
 	 width: 20px;
 	 height: 100%;
 }
- .sec3__subheader:before {
+ .sec3__header:before {
 	 left: 0;
 	 background: linear-gradient(90deg, #222, transparent);
+}
+.sec3__header:after {
+	 right: 0;
+	 background: linear-gradient(-90deg, #222, transparent);
+}
+.sec3__subheader{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+	 white-space: nowrap;
+  padding: 0 2% 5%;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.sec3__subheader.active {
+  cursor: grab;
 }
 .sec3-card__inner{
   color: var(--color-2);
   border-radius: 16px;
   display: inline-block; /*Ult mod*/
+  user-select: none;
   cursor: pointer; /*Ult mod*/
   margin-left: 20px; /*Ult mod*/
   position: relative;
@@ -419,8 +433,8 @@ box-shadow: var(--shadow-hover);
   border: 1px solid rgba(0,0,0,.8);
   box-shadow: 0 4px 10px 2px rgb(0 0 0 / 20%);
 }
-.sec3__subheader.active {
-  cursor: grab;
+.sec3-card__inner:last-child{
+	 margin-right: 20px;
 }
 .item{
   overflow: hidden;
@@ -772,8 +786,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
     padding: 2%;
   }
   .sec3-card__inner{
-    margin: 3%;
-    height: 500px;
+
   }
   .sec3-card__inner:nth-child(3){
     flex-grow: 2;

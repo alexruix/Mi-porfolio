@@ -71,6 +71,25 @@ const move = (e) => {
 })();
 
 
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if ($(window).width() < 1052){
+      if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".menu").style.bottom = "0";
+      } else {
+        document.querySelector(".menu").style.bottom = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    else {
+      document.querySelector(".menu").style.top = "0";
+    }
+  }
+
+
+
+
 const buttons = document.querySelectorAll(".menu__item");
 let activeButton = document.querySelector(".menu__item.active");
 
