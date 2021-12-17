@@ -71,8 +71,8 @@
 
     <div class="bg2" id="perfil">
       <div class="container">
-        <div class="lefted notlittle">
-          <h3>Diseñador creativo</h3>
+        <div class="lefted width50">
+          <h3 class="center">Diseñador creativo</h3>
           <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front end porque considero fundamental crear una  experiencia integral, hago contenido inspirado en el estilo de diseño actual</p>
           <p>Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo</p>
           <a href="#!" class="btn animated-button btn__secondary"><i data-feather="message-square"></i>Escribeme</a>
@@ -94,9 +94,9 @@
   </div>
 -->
 </div>
-<div class="" style="position: relative; top: -135px; z-index: 3; ">
+<div class="wave" style="position: relative; top: -135px; z-index: 3; ">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
-    <path fill="#232323" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+    <path fill="var(--bgcolor3)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
   </svg>
 </div>
 
@@ -190,7 +190,6 @@
   <div class="container">
     <div class="center">
       <h3>Mi trabajo</h3>
-      <span class="titlebg">Portfolio</span>
     </div>
   </div>
   <div class="sec3__subheader">
@@ -222,12 +221,44 @@
       </div>
     </div>
   </div>
+  <div class="wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
+      <path fill="var(--bgcolor4)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+    </svg>
+  </div>
 </div>
-<div class="bg4" id="contac">
-  <div class="container">
-    <div class="center">
-      <h3>Mi trabajo</h3>
-      <span class="titlebg">Portfolio</span>
+
+<div class="bg4" id="contact">
+  <div class="container" style="align-items:baseline;">
+    <div class="lefted width70">
+      <h3>Contactame</h3>
+      <h4>¡NO SEAS TÍMIDO!</h4>
+      <p>No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones</p>
+      <a href="#!">alexruiz1666@gmail.com</a>
+
+    </div>
+    <div class="righted">
+      <form class="form" action="index.html" method="post">
+        <div class="form__title">
+          <p>Fill in the fields below and we'll get back to you</p>
+        </div>
+        <div class="form__flex">
+          <div class="form__section">
+            <input type="text" id="first_name" placeholder="Enter your name" name="first_name" minlength="4" maxlength="80" autocomplete="given-name" required="">
+          </div>
+          <div class="form__section">
+            <input class="email" type="email" id="email" name="email" maxlength="80" required="" autocomplete="email" placeholder="Enter your email">
+          </div>
+        </div>
+        <div class="form__flex">
+          <div class="form__section">
+            <textarea class="form__imput" id="message" name="name" rows="8" cols="80" placeholder="Write your message from Nature Food..."></textarea>
+          </div>
+        </div>
+        <div class="form__flex" style="justify-content:center;">
+          <button class="btn btn__btnppal" type="submit" name="action">Send</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
