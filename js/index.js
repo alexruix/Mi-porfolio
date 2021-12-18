@@ -32,53 +32,89 @@ typewriter.typeString('modernas')
 
 feather.replace()
 
-let isDown = false;
-let startX;
-let scrollLeft;
-const slider = document.querySelector('.sec3__subheader');
+/*global $, console*/
+var slider = document.querySelector('.sec3__subheader'),
+    arrows = document.querySelectorAll('.sec3__header .arrow-left, .sec3__header .arrow-right'),
+    isDown = false,
+    startX,
+    scrollLeft;
 
-const end = () => {
-	isDown = false;
-  slider.classList.remove('active');
+slider.scrollLeft = 10;
+
+slider.onmousedown = function (e) {
+    'use strict';
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+};
+
+slider.onmouseup = function () {
+    'use strict';
+    isDown = false;
+    slider.classList.remove('active');
+};
+
+slider.onmouseleave = function () {
+    'use strict';
+    isDown = false;
+    slider.classList.remove('active');
+};
+
+slider.onmousemove = function (e) {
+    'use strict';
+    if (!isDown) { return; }
+    e.preventDefault();
+    var x = e.pageX - slider.offsetLeft,
+        walk = x - startX;
+    slider.scrollLeft = scrollLeft - walk;
+};
+
+function controlsSlider(num) {
+    'use strict';
+    var smooth = setInterval(function () {
+        slider.scrollLeft += num;
+    }, 10);
+    setTimeout(function () {
+        clearInterval(smooth);
+    }, 210);
 }
+arrows[0].onclick = function () {
+    'use strict';
+    controlsSlider(-20);
+};
 
-const start = (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-}
+arrows[1].onclick = function () {
+    'use strict';
+    controlsSlider(20);
+};
 
-const move = (e) => {
-	if(!isDown) return;
-
-  e.preventDefault();
-  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-  const dist = (x - startX);
-  slider.scrollLeft = scrollLeft - dist;
-}
-
-(() => {
-	slider.addEventListener('mousedown', start);
-	slider.addEventListener('touchstart', start);
-
-	slider.addEventListener('mousemove', move);
-	slider.addEventListener('touchmove', move);
-
-	slider.addEventListener('mouseleave', end);
-	slider.addEventListener('mouseup', end);
-	slider.addEventListener('touchend', end);
-})();
+window.onkeydown = function (e) {
+    'use strict';
+    var key = e.keyCode;
+    if (key === 39) {
+        controlsSlider(400);
+    }
+    if (key === 37) {
+        controlsSlider(-400);
+    }
+};
 
 
+
+
+
+/*
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
     if ($(window).width() < 1052){
       if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".menu").style.bottom = "0";
+        document.querySelector(".menu").style.bottom = "0px";
+
       } else {
         document.querySelector(".menu").style.bottom = "-50px";
+
       }
       prevScrollpos = currentScrollPos;
     }
@@ -86,7 +122,7 @@ const move = (e) => {
       document.querySelector(".menu").style.top = "0";
     }
   }
-
+*/
 
 
 

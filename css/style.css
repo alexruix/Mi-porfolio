@@ -17,10 +17,10 @@
   --duration: .45s ;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --background-hover: #051D6B;
-  --bgcolor:  #E9A620;
   --shadow: 0px 4px 30px rgba(45, 79, 223, 0.35);
   --shadow-hover: 0 4px 20px -2px rgba(45, 79, 223, 0.5);
   --shadow2: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  --shadow3:  0 4px 20px -2px #1c1e22;
   --blue: #e92030;
   --span: rgb(102,148,240);
   --d: 700ms;
@@ -37,6 +37,7 @@ body, h1{
 body{
   font-family: var(--sfont);
   background: var(--color-2);
+
 }
 nav{
   background-color: rgba(0,0,0,0);
@@ -53,6 +54,7 @@ header{
 }
 .navflex{
   justify-content: flex-end ;
+
 }
 .menu {
   margin-right: 5%;
@@ -412,20 +414,22 @@ box-shadow: var(--shadow-hover);
   width: 100%;
 	 white-space: nowrap;
   padding: 0 2% 5%;
-  justify-content: space-evenly;
-  align-items: baseline;
+  cursor: pointer;
+  scroll-behavior: auto;
 }
 .sec3__subheader.active {
-  cursor: grab;
+  cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
 }
 .sec3-card__inner{
   color: var(--color-2);
   border-radius: 16px;
-  display: inline-block; /*Ult mod*/
-  user-select: none;
+  display: inline-flex; /*Ult mod*/
+  justify-content: center;
+   align-items: center;
   cursor: pointer; /*Ult mod*/
   margin-left: 20px; /*Ult mod*/
-  position: relative;
   width: 400px;
   height: 400px;
   max-width: 550px;
@@ -445,7 +449,37 @@ box-shadow: var(--shadow-hover);
     position: relative;
     border-radius: 16px;
 }
-
+.sec3__header .arrow-left,
+.sec3__header .arrow-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow3);
+    cursor: pointer;
+    left: -25px;
+    border: none;
+    transition: all .3s ease-in;
+    background-color: var(--bgcolor5);
+    color: var(--color-1);
+    font-size: 20px;
+    font-weight: 900;
+}
+.sec3__header .arrow-right {
+    right: -25px;
+    left: auto;
+}
+.sec3__header .arrow-left:hover,
+.sec3__header .arrow-right:hover {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    background-color: var(--bgcolor2);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
 .card__description::after{
   content: "";
   width: 80px;
@@ -690,8 +724,6 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   }
 }
 
-
-
 /*
 @media screen and (max-width: 480px) {
   .sec3-card__inner {
@@ -747,6 +779,12 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   .width50 a.btn{
     margin-bottom: 3em;
   }
+  .card__description{
+
+  }
+  .card__hide{
+    max-height: 500px;
+  }
 }
 @media screen and (max-width:1050px){
   .navflex{
@@ -786,7 +824,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
     padding: 2%;
   }
   .sec3-card__inner{
-
+    height: 500px;
   }
   .sec3-card__inner:nth-child(3){
     flex-grow: 2;
