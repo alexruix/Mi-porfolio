@@ -101,7 +101,23 @@ window.onkeydown = function (e) {
 };
 
 
+// on page load...
+    moveProgressBar();
+    // on browser resize...
+    $(window).resize(function() {
+        moveProgressBar();
+    });
 
+    // SIGNATURE PROGRESS
+    function moveProgressBar() {
+      $(".skills__item").addClass("active")
+$(".skills__item .skill-bar span").each(function() {
+   $(this).animate({
+      "width": $(this).parent().attr("data-bar") + "%"
+   }, 1000);
+   $(this).append('<b>' + $(this).parent().attr("data-bar") + '%</b>');
+});
+    }
 
 
 /*
