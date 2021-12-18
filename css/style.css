@@ -213,6 +213,9 @@ h4{
   font-size: 20px;
   line-height: 1.6em;
 }
+.width60{
+  width: 60%;
+}
 .width80{
   width: 80%;
 }
@@ -391,6 +394,26 @@ box-shadow: var(--shadow-hover);
 .little a.active::before, .little a:hover::before{
   background: var(--color-4);
 }
+.switch{
+  width: 500px;
+  display: flex;
+  text-align: center;
+  box-shadow: var(--shadow3);
+}
+.on, .off{
+  width: 50%;
+  padding: 0 .5em;
+  cursor: pointer;
+  border-radius: 8px 0 0 8px;
+  background: var(--bgcolor2);
+  color: var(--color-0);
+  transition: all .5 ease;
+}
+.on{
+  border-radius: 0 8px 8px 0;
+  color: var(--color-2);
+  background: var(--color-1);
+}
 .sec3__header{
   position: relative;
   width: 90%;
@@ -523,11 +546,11 @@ box-shadow: var(--shadow-hover);
   width: 100%;
   overflow: hidden;
     white-space: normal;
-  transition: max-height 1.25s ease-out;
+  transition: max-height .5s ease-out;
 }
 .card__description:hover .card__hide{
   max-height: 500px;
-    transition: max-height 1.5s ease-in;
+    transition: max-height .7s ease-in;
 
 }
 .card__description h5{
@@ -705,24 +728,24 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   display:block;
 }
 .footer-links a{
-  color: #000;
+  color: var(--color-1);
 }
 .footer-links i{
   margin-right: 5%;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color: var(--blue);
+  color: var(--color-4);
 }
 .site-footer .social-icons a{
   width:40px;
   height:40px;
   line-height:40px;
   margin-left:6px;
-  color: var(--black);
+  color: var(--color-1);
   margin-right:0;
   border-radius:100%;
-  background-color: var(--white);
+  background-color: var(--bgcolor2);
 }
 .copyright-text
 {
@@ -748,8 +771,9 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
 }
 .social-icons
 {
-  padding-left:0;
-  margin-bottom:0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   list-style:none
 }
 .social-icons li
@@ -766,8 +790,8 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   font-size:13px
 }
 .social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
+  background-color: var(--color-1);
+  color: var(--bgcolor2);
   font-size:16px;
   display:inline-block;
   line-height:44px;
@@ -876,8 +900,12 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   .card__hide{
     max-height: 500px;
   }
-  .footer__right, .footer__right40{
-    width: 100%;
+  .footer__right, .footer__right40,.width60, .card__mail{
+    width: 95%;
+    margin: auto;
+  }
+  input:not([type]), input[type=text]:not(.browser-default), input[type=email]:not(.browser-default){
+    width: 85%;
   }
 }
 @media screen and (max-width:1050px){
