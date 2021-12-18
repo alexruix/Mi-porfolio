@@ -124,8 +124,6 @@ window.onkeydown = function (e) {
   }
 */
 
-
-
 const buttons = document.querySelectorAll(".menu__item");
 let activeButton = document.querySelector(".menu__item.active");
 

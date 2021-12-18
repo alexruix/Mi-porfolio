@@ -32,26 +32,26 @@
           <div class="menu__icon" >
             <i data-feather="user"></i>
           </div>
-          <strong class="menu__text">perfil</strong>
+          <strong class="menu__text active">perfil</strong>
         </a>
         <a href="#portfolio" class="menu__item">
           <div class="menu__icon" >
             <i data-feather="briefcase"></i>
           </div>
-          <strong class="menu__text">
+          <strong class="menu__text active">
             Portfolio</strong>
           </a>
           <a href="#contact" class="menu__item">
             <div class="menu__icon" >
               <i data-feather="message-square"></i>
             </div>
-            <strong class="menu__text">Contacto</strong>
+            <strong class="menu__text active">Contacto</strong>
           </a>
         </div>
       </nav>
     </header>
 
-    <div class="bg1" id="home">
+    <div class="bg1 background" id="home">
       <div class="container" style="height:45em;">
         <div class="lefted width70">
           <h1>Hola, soy <span>Alex Ruiz</span></h1>
@@ -69,8 +69,8 @@
     </div>
 
 
-    <div class="bg2" id="perfil">
-      <div class="container">
+    <div class="bg2">
+      <div class="container background" id="perfil">
         <div class="lefted width50">
           <h3 class="center">Diseñador creativo</h3>
           <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front end porque considero fundamental crear una  experiencia integral, hago contenido inspirado en el estilo de diseño actual</p>
@@ -82,8 +82,6 @@
             <img src="img/aboutme.png" class="card-item__bg" alt="">
           </div>
         </div>
-
-
         <!--
         <div class="righted">
         <div class="card-item">
@@ -186,69 +184,78 @@
 </div>
 
 </div>-->
-<div class="bg3" id="portfolio">
+<div class="background bg3" id="portfolio">
   <div class="container">
     <div class="form">
       <h3>Mi trabajo</h3>
     </div>
   </div>
   <div class="sec3__header">
-      <button class="arrow-left" style="">
-        <i data-feather="arrow-left"></i>
-      </button>
-      <button class="arrow-right" style="">
-        <i data-feather="arrow-right"></i>
-      </button>
+    <button class="arrow-left" style="">
+      <i data-feather="arrow-left"></i>
+    </button>
+    <button class="arrow-right" style="">
+      <i data-feather="arrow-right"></i>
+    </button>
     <div class="sec3__subheader">
       <div class="sec3-card__inner">
         <div class="item">
-            <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-            <div class="card__description">
-              <h5>Nature Food</h5>
-              <h6>Website Design & Development</h6>
-              <div class="card__hide">
-                <p>ishdishdishdskdgdfgdfg</p>
+          <a href="#!"><img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website"></a>
+          <div class="card__description">
+            <a href="#!"><h5>Nature Food</h5></a>
+            <h6>Website Design & Development</h6>
+            <div class="card__hide">
+              <div class="container" style="padding:0">
+                <div class="width80">
+                  <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
+                </div>
+                <div class="righted">
+                  <div class="card__button">
+                    <a href="#"><i data-feather="chevron-right"></i></a>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="sec3-card__inner">
         <div class="item">
-            <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-            <div class="card__description">
-              <h5>Nature Food</h5>
-              <h6>Website Design & Development</h6>
-            </div>
+          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+          <div class="card__description">
+            <h5>Nature Food</h5>
+            <h6>Website Design & Development</h6>
+          </div>
         </div>
       </div>
       <div class="sec3-card__inner">
         <div class="item">
-            <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-            <div class="card__description">
-              <h5>Nature Food</h5>
-              <h6>Website Design & Development</h6>
-            </div>
+          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+          <div class="card__description">
+            <h5>Nature Food</h5>
+            <h6>Website Design & Development</h6>
+          </div>
         </div>
       </div>
       <div class="sec3-card__inner">
         <div class="item">
-            <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-            <div class="card__description">
-              <h5>Nature Food</h5>
-              <h6>Website Design & Development</h6>
-            </div>
+          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+          <div class="card__description">
+            <h5>Nature Food</h5>
+            <h6>Website Design & Development</h6>
+          </div>
         </div>
       </div>
       <div class="sec3-card__inner">
         <div class="item">
-            <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-            <div class="card__description">
-              <h5>Nature Food</h5>
-              <h6>Website Design & Development</h6>
-            </div>
+          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+          <div class="card__description">
+            <h5>Nature Food</h5>
+            <h6>Website Design & Development</h6>
+          </div>
         </div>
       </div>
-  </div>
+    </div>
   </div>
   <div class="wave">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
@@ -257,14 +264,21 @@
   </div>
 </div>
 
-<div class="bg4" id="contact">
+<div class="background bg4" id="contact">
   <div class="container" style="align-items:baseline;">
     <div class="lefted width70">
       <h3>Contactame</h3>
-      <p>¡NO SEAS TÍMIDO!</p>
+      <h4>¡NO SEAS TÍMIDO!</h4>
       <p>No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones</p>
-      <a href="#!">alexruiz1666@gmail.com</a>
-
+      <div class="card__mail">
+        <div class="card__mail_left">
+          <i data-feather="mail"></i>
+        </div>
+        <div class="card__mail_left">
+          <p>Enviar mensaje</p>
+          <a href="mailto: alexruiz1666@gmail.com">alexruiz1666@gmail.com</a>
+        </div>
+      </div>
     </div>
     <div class="righted">
       <form class="form" action="index.html" method="post">
@@ -293,47 +307,55 @@
 </div>
 
 <footer class="site-footer">
-      <div class="footer">
-        <div class="container" style="justify-content: space-between;">
-          <div class="about">
-            <h6>About Me</h6>
-            <p>Website created by <b><span class="span">Alex Ruiz.</span></b> <br> I'm designer and front end web developer from Buenos Aires, Argentina. I build websites in different programming languages ​​that include HTML, CSS, Javascript, Jquery, Bootstrap and Materialize.</p>
-          </div>
-
-          <div>
-            <h6>Social Media</h6>
-            <ul class="footer-links">
-              <li><a href="https://github.com/alexruix">
-                <i data-feather="github"></i>Github</a>
-              </li>
-              <li><a href="https://dribbble.com/alexruix"><i class="fa-brands fa-dribbble"></i>Dribble</a></li>
-              <li><a href="https://codepen.io/Tormenta"><i class="fa-brands fa-codepen"></i>Codepen</a></li>
-              <li><a href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-              <li><a href="mailto: alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
+  <div class="footer">
+    <div class="container" style="padding:0; align-items:baseline;">
+      <div class="footer__right40">
+        <h6>Alex Ruiz</h6>
+        <p>Soy diseñador y desarrollador front end, construyo sitios web modernos y pongo toda mi experiencia al servicio de las personas para que alcancen sus objetivos comerciales y mejorar la vida de los usuarios</p>
       </div>
-      <div class="footer">
-        <div class="container" style="justify-content: space-between;">
-          <div>
-            <p class="copyright-text">Copyright © 2021 All Rights Reserved by
-         <b>Alex Ruiz.</b>
-            </p>
-          </div>
-
-          <div>
-            <ul class="social-icons">
-              <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-              <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-              <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-              <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a class="email" href="mailto: alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="footer__right">
+        <h6>Accesos rapidos</h6>
+        <ul class="footer-links">
+          <li><a href="https://dribbble.com/alexruix">Inicio</a></li>
+          <li><a href="https://dribbble.com/alexruix">Acerca de mi</a></li>
+          <li><a href="https://dribbble.com/alexruix">Mi portfolio</a></li>
+          <li><a href="mailto: alexruiz1666@gmail.com">Contacto</a></li>
+        </ul>
       </div>
+      <div class="footer__right">
+        <h6>Redes sociales</h6>
+        <ul class="footer-links">
+          <li><a href="https://github.com/alexruix">
+            <i class="fa-brands fa-github"></i>Github</a>
+          </li>
+          <li><a href="https://dribbble.com/alexruix"><i class="fa-brands fa-dribbble"></i>Dribble</a></li>
+          <li><a href="https://codepen.io/Tormenta"><i class="fa-brands fa-codepen"></i>Codepen</a></li>
+          <li><a href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+          <li><a href="mailto: alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="footer">
+    <div class="container" style="padding:0;">
+      <div>
+        <p class="copyright-text">Copyright © 2021 All Rights Reserved by
+          <b>Alex Ruiz.</b>
+        </p>
+      </div>
+
+      <div>
+        <ul class="social-icons">
+          <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+          <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+          <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
+          <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a class="email" href="mailto: alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="https://kit.fontawesome.com/a6083f8adb.js" crossorigin="anonymous"></script>
