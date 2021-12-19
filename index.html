@@ -62,18 +62,19 @@
       </div>
     </div>
 
-
-    <div class="bg2">
-      <div class="container background" id="perfil">
-        <div class="lefted width50">
-          <h3 class="center">Diseñador creativo</h3>
-          <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front end porque considero fundamental crear una  experiencia integral, hago contenido inspirado en las lineas de diseño actual</p>
-          <p>Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo</p>
-          <a href="#!" class="btn animated-button btn__secondary"><i data-feather="message-square"></i>Escribeme</a>
-        </div>
-        <div class="card-item__side">
-          <div class="card-item__about">
-            <img src="img/aboutme.png" class="card-item__bg" alt="">
+<section class="background" id="perfil">
+      <div class="bg2">
+        <div class="container " >
+          <div class="lefted width50">
+            <h3 class="center">Diseñador creativo</h3>
+            <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front end porque considero fundamental crear una  experiencia integral, hago contenido inspirado en las lineas de diseño actual</p>
+            <p>Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo</p>
+            <a href="#!" class="btn animated-button btn__secondary"><i data-feather="message-square"></i>Escribeme</a>
+          </div>
+          <div class="card-item__side">
+            <div class="card-item__about">
+              <img src="img/aboutme.png" class="card-item__bg" alt="">
+            </div>
           </div>
         </div>
         <!--
@@ -85,7 +86,6 @@
     </div>
   </div>
 -->
-</div>
 <div class="wave" style="position: relative; top: -135px; z-index: 3; ">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
     <path fill="var(--bgcolor3)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
@@ -176,7 +176,7 @@
 </div>
 
 </div>-->
-<div class="background bg3" id="resumen">
+<div class="bg3 " >
   <div class="container">
     <div class="form">
       <h3>Mi resumen</h3>
@@ -187,13 +187,13 @@
       <input type='checkbox'/>
       <span class='base-color'>
         <span class='toggle-slider'></span>
-        <span class='work' id="work">Mi forma de trabajo</span>
-        <span class='habilities' id="hab">Mis habilidades</span>
+        <span class='work' id="work">Mis habilidades</span>
+        <span class='habilities' id="hab">Mi forma de trabajo</span>
       </span>
     </label>
   </div>
-  <div class="container">
-    <div class="card__resume" id="habilities" style="display:none;">
+  <div class="container resume">
+    <div class="card__resume hab" id="habilities">
       <div class="width40">
         <div class="form">
           <div class="card__title">
@@ -267,61 +267,113 @@
         </div>
       </div>
     </div>
-    <div class="card__resume" id="works">
-      <div class="width40">
-        <div class="form">
-          <div class="work__flex work__title">
-            <h3>Investigación</h3>
-            <span class="work__titlebg">01</span>
-            <div class="work__img">
-              <img src="img/invest.png" class="card-item__bg" alt="">
+    <div class="card__resume work" id="works">
+      <div class="form">
+      <div class="card__flex">
+        <div class="width40">
+          <div class="form">
+            <div class="work__flex work__title">
+              <h3>Investigación</h3>
+              <span class="work__titlebg">01</span>
+              <div class="work__img">
+                <img src="img/invest.png" class="card-item__bg" alt="">
+              </div>
+            </div>
+            <div class="work__flex">
+              <!-- <p>What does the website actually need to do? We need to get on the same wavelength, so an initial chat either over zoom or in person, gives me an idea of what we are looking to achieve</p> -->
+              <p>¿Que necesita tu web actualmente? Necesitamos estar en sintonia, por lo que una charla inicial ya sea por zoom o en persona, me da una idea de lo que estás buscando lograr</p>
             </div>
           </div>
-          <div class="work__flex">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="width40">
+          <div class="form">
+            <div class="work__flex work__title">
+              <h3>Prototipado</h3>
+              <span class="work__titlebg">02</span>
+              <div class="work__img">
+                <img src="img/proto.png" class="card-item__bg" alt="">
+              </div>
+            </div>
+            <div class="work__flex">
+              <!-- <p>Next up we need to draw out a rough idea of where we want things to go, so we can visualise how things are going to look and take detailed notes. Usually this just consists of sitting down together and doing some sketches in a notepad.</p> -->
+              <p>Luego, necesitamos graficar o bocetar la idea para tener en claro hacia donde apuntamos y asi poder visualizar cómo se verán las cosas y tomar notas detalladas</p>
+            </div>
+          </div>
+        </div>
+        <div class="width40">
+          <div class="form">
+            <div class="work__flex work__title">
+              <h3>Diseño</h3>
+              <span class="work__titlebg">03</span>
+              <div class="work__img">
+                <img src="img/end.png" class="card-item__bg" alt="">
+              </div>
+            </div>
+            <div class="work__flex">
+              <!-- <p>If I'm designing the site, I will typically directly build the designs in HTML. Otherwise deisngs will usually come from a designer built in XD for me to replicate into HTML.This is the point where we can really see what the final outcome will actually look like and can work out any design kinks early on.</p> -->
+              <p>La siguiente etapa es el diseño. Este es el punto en el que realmente podemos ver cómo se verá el resultado final y podemos resolver cualquier incoveniente con el diseño antes de la implementación final</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="width40">
-        <div class="form">
-          <div class="work__flex work__title">
-            <h3>Prototipado</h3>
-            <span class="work__titlebg">02</span>
-            <div class="work__img">
-              <img src="img/proto.png" class="card-item__bg" alt="">
+      <div class="card__flex">
+        <div class="width40">
+          <div class="form">
+            <div class="work__flex work__title">
+              <h3>implementación</h3>
+              <span class="work__titlebg">04</span>
+              <div class="work__img">
+                <img src="img/invest.png" class="card-item__bg" alt="">
+              </div>
+            </div>
+            <div class="work__flex">
+              <p>En esta etapa usaré los bocetos y el prototipo como base para construir la versión web del proyecto en la plataforma elegida por el cliente</p>
+              </div>
+          </div>
+        </div>
+        <div class="width40">
+          <div class="form">
+            <div class="work__flex work__title">
+              <h3>Seguimiento</h3>
+              <span class="work__titlebg">05</span>
+              <div class="work__img">
+                <img src="img/proto.png" class="card-item__bg" alt="">
+              </div>
+            </div>
+            <div class="work__flex">
+              <p>Cuando este la implementación casi completa se le enviará un enlace a una copia del sitio web para que el cliente pueda ver el producto final. También podemoos trabajar en cualquier ajuste para que el producto sea el mejor posible</p>
             </div>
           </div>
-          <div class="work__flex">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="width40">
+          <div class="form">
+            <div class="work__flex work__title">
+              <h3>Hosting</h3>
+              <span class="work__titlebg">06</span>
+              <div class="work__img">
+                <img src="img/end.png" class="card-item__bg" alt="">
+              </div>
+            </div>
+            <div class="work__flex">
+              <p>Al terminar alojo todos mis sitios web en servidores de alta calidad porque ofrecen seguridad y velociadad superior al promedio, esto puede marcar una gran diferencia a la hora de cargar su sitio web</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="width40">
-        <div class="form">
-          <div class="work__flex work__title">
-            <h3>Implementacion</h3>
-            <span class="work__titlebg">03</span>
-            <div class="work__img">
-              <img src="img/end.png" class="card-item__bg" alt="">
-            </div>
-          </div>
-          <div class="work__flex">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
+</section >
 
-</div>
-<div class="background bg3" id="portfolio">
-  <div class="container">
+<section class=" bg3" >
+  <div id="portfolio">
+  <div class="container" >
     <div class="form">
       <h3>Mi trabajo</h3>
     </div>
   </div>
-  <div class="sec3__header">
+  <div class="sec3__header" >
     <button class="arrow-left" style="">
       <i data-feather="arrow-left"></i>
     </button>
@@ -436,15 +488,17 @@
       </div>
     </div>
   </div>
-  <div class="wave">
+  <div class="wave background" >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
       <path fill="var(--bgcolor4)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
     </svg>
   </div>
 </div>
+</section>
 
-<div class="background bg4" id="contact">
-  <div class="container">
+<section class="bg4" >
+<div>
+  <div class="container background" id="contact">
     <div class="lefted width70">
       <h3>Contactame</h3>
       <h4>¡NO SEAS TÍMIDO!</h4>
@@ -459,6 +513,7 @@
         </div>
       </div>
       <div class="width60">
+        <p style="font-size:1em;">Tambien puedes encontrarme en:</p>
         <ul class="social-icons">
           <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
           <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
@@ -493,6 +548,7 @@
     </div>
   </div>
 </div>
+</section>
 
 <footer class="site-footer">
   <div class="footer">

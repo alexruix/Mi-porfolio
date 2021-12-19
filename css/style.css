@@ -158,15 +158,12 @@ header{
 }
 .bg3{
   background: var(--bgcolor3);
-  margin-bottom: -.5em;
 }
 .bg4{
   background: var(--bgcolor4);
-  margin-bottom: -.5em;
 }
 .bg5{
   background: var(--bgcolor5);
-  margin-bottom: -.5em;
 }
 .container{
   width: 100%;
@@ -485,6 +482,18 @@ label {
   background: var(--bgcolor2);
   box-shadow: var(--shadow3);
   border-radius: 16px;
+}
+.hab {
+	 display: none;
+}
+ .show .hab {
+	 display: flex;
+}
+ .show .work {
+	 display: none;
+}
+.card__flex{
+  display: flex;
 }
 .work__flex{
   display: flex;
@@ -1010,7 +1019,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
 */
 
 @media screen and (max-width:800px){
-  .container{
+  .container, .card__resume, .card__flex{
     flex-wrap: wrap;
   }
   h1{
@@ -1064,9 +1073,6 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   label{
     width: 100%;
   }
-  .card__resume{
-    flex-wrap: wrap;
-  }
   .width40{
     padding: 5%;
     width: 100%;
@@ -1112,7 +1118,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   .sec3-card__inner:nth-child(3){
     flex-grow: 2;
   }
-  label, .card__mail, .width60{
+  label{
     width: 50%;
     margin: auto;
   }
