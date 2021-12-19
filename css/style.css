@@ -1118,8 +1118,4 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   .sec3-card__inner:nth-child(3){
     flex-grow: 2;
   }
-  label{
-    width: 50%;
-    margin: auto;
-  }
 }
