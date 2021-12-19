@@ -119,6 +119,16 @@ $(".skills__item .skill-bar span").each(function() {
 });
     }
 
+    $("#hab").click(function(){
+        $("#habilities").show();
+        console.log(this);
+        $("#works").hide();
+      });
+      $("#work").click(function(){
+          $("#habilities").hide();
+          console.log(this);
+          $("#works").show();
+        });
 
 /*
   var prevScrollpos = window.pageYOffset;

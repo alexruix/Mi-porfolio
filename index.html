@@ -59,13 +59,7 @@
           <a href="#!" class="btn animated-button btn__btnppal">Ver mi trabajo
           </a>
         </div>
-        <div class="righted">
-          <figure class="card-item__cover">
-            <!--  <img src="img/fotoperfil.png" class="card-item__bg" alt="Alex Ruiz Website perfil"> -->
-          </figure>
-        </div>
       </div>
-
     </div>
 
 
@@ -73,7 +67,7 @@
       <div class="container background" id="perfil">
         <div class="lefted width50">
           <h3 class="center">Diseñador creativo</h3>
-          <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front end porque considero fundamental crear una  experiencia integral, hago contenido inspirado en el estilo de diseño actual</p>
+          <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo front end porque considero fundamental crear una  experiencia integral, hago contenido inspirado en las lineas de diseño actual</p>
           <p>Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo</p>
           <a href="#!" class="btn animated-button btn__secondary"><i data-feather="message-square"></i>Escribeme</a>
         </div>
@@ -97,9 +91,7 @@
     <path fill="var(--bgcolor3)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
   </svg>
 </div>
-
 </div>
-
 <!--<div class="bg3" id="sec3">
 <div class="container">
 <div class="little">
@@ -191,57 +183,136 @@
     </div>
   </div>
   <div class="container" style="justify-content:center;">
-    <div class="switch">
-      <div class="off">
-        <h4>Habilidades</h4>
-      </div>
-      <div class="on">
-        <h4>Mi forma de trabajo</h4>
-      </div>
-    </div>
-
+    <label>
+      <input type='checkbox'/>
+      <span class='base-color'>
+        <span class='toggle-slider'></span>
+        <span class='work' id="work">Mi forma de trabajo</span>
+        <span class='habilities' id="hab">Mis habilidades</span>
+      </span>
+    </label>
   </div>
-
-    <div class="container">
-      <div class="card__resume">
-        <div class="width40">
-          <div class="form">
+  <div class="container">
+    <div class="card__resume" id="habilities" style="display:none;">
+      <div class="width40">
+        <div class="form">
           <div class="card__title">
-            <h3>Diseño</h3>
-            <h4>Me focalizo en crear productos que brinden experiencias significativas y relevantes para los usuarios por eso me especializo en el uso de estas herramnientas</h4>
+            <h3><i data-feather="pen-tool"></i>Diseñador</h3>
+            <h4>Me focalizo en crear productos que brinden experiencias significativas y relevantes para los usuarios utilizando principalmente estas herramnientas</h4>
           </div>
           <div class="form">
             <div class="skills__item">
               <div class="skills__title">
                 <p>Figma</p>
               </div>
-            <div class="skill-bar" data-bar="90"><span></span></div>
+              <div class="skill-bar" data-bar="90"><span></span></div>
             </div>
-              <div class="skills__item"> 
-                <div class="skills__title">
-                  <p>Figma</p>
-                </div>
-            <div class="progress-wrap progres" data-progress-percent="25">
-              <div class="progress-bar progres"></div>
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>Adobe XD</p>
+              </div>
+              <div class="skill-bar" data-bar="80"><span></span></div>
             </div>
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>Adobe Illustrator</p>
+              </div>
+              <div class="skill-bar" data-bar="60"><span></span></div>
+            </div>
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>After Effects</p>
+              </div>
+              <div class="skill-bar" data-bar="60"><span></span></div>
             </div>
           </div>
 
 
+        </div>
+      </div>
+      <div class="width40">
+        <div class="form">
+          <div class="card__title">
+            <h3><i data-feather="code"></i>Desarrollador</h3>
+            <h4>Realizo codificacion, diseño y maquetación de un sitio web de acuerdo con las especificaciones del proyecto utilizando especialmente estas herramnientas</h4>
           </div>
+          <div class="form">
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>HTML</p>
+              </div>
+              <div class="skill-bar" data-bar="90"><span></span></div>
+            </div>
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>CSS</p>
+              </div>
+              <div class="skill-bar" data-bar="80"><span></span></div>
+            </div>
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>Javascript</p>
+              </div>
+              <div class="skill-bar" data-bar="60"><span></span></div>
+            </div>
+            <div class="skills__item">
+              <div class="skills__title">
+                <p>Bootstrap</p>
+              </div>
+              <div class="skill-bar" data-bar="60"><span></span></div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="card__resume" id="works">
+      <div class="width40">
+        <div class="form">
+          <div class="work__flex work__title">
+            <h3>Investigación</h3>
+            <span class="work__titlebg">01</span>
+            <div class="work__img">
+              <img src="img/invest.png" class="card-item__bg" alt="">
+            </div>
+          </div>
+          <div class="work__flex">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
-
-        <div class="width40">
-          <div class="form">
-          <div class="card__title">
-            <h3>Diseño</h3>
-            <h4>Me focalizo en crear productos que brinden experiencias significativas y relevantes para los usuarios por eso me especializo en el uso de estas herramnientas</h4>
+      </div>
+      <div class="width40">
+        <div class="form">
+          <div class="work__flex work__title">
+            <h3>Prototipado</h3>
+            <span class="work__titlebg">02</span>
+            <div class="work__img">
+              <img src="img/proto.png" class="card-item__bg" alt="">
+            </div>
           </div>
+          <div class="work__flex">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="width40">
+        <div class="form">
+          <div class="work__flex work__title">
+            <h3>Implementacion</h3>
+            <span class="work__titlebg">03</span>
+            <div class="work__img">
+              <img src="img/end.png" class="card-item__bg" alt="">
+            </div>
+          </div>
+          <div class="work__flex">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 </div>
 <div class="background bg3" id="portfolio">
@@ -373,7 +444,7 @@
 </div>
 
 <div class="background bg4" id="contact">
-  <div class="container" style="align-items:baseline;">
+  <div class="container">
     <div class="lefted width70">
       <h3>Contactame</h3>
       <h4>¡NO SEAS TÍMIDO!</h4>
@@ -384,7 +455,7 @@
         </div>
         <div class="card__mail_left">
           <p>Enviar mensaje</p>
-          <a href="mailto: alexruiz1666@gmail.com">alexruiz1666@gmail.com</a>
+          <a style="color:var(--background-hover);" href="mailto: alexruiz1666@gmail.com">alexruiz1666@gmail.com</a>
         </div>
       </div>
       <div class="width60">

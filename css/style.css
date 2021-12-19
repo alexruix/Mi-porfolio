@@ -277,7 +277,7 @@ a i{
   opacity: 1;
   text-indent: 0;
 }
-.btn svg{
+.btn svg, h3 svg{
   margin-top: -2%;
   margin-right: 5%;
   transition: transform .2s ease-in-out 0s;
@@ -397,28 +397,134 @@ transform: translateY(-50%);
 .little a.active::before, .little a:hover::before{
   background: var(--color-4);
 }
-.switch{
-  width: 50%;
-  display: flex;
-  text-align: center;
-  box-shadow: var(--shadow3);
+label {
+	 position: relative;
+	 display: flex;
+	 width: 35%;
+   --label__height: 60px;
+	 height: var(--label__height);
+	 justify-content: center;
+   align-items: center;
+	 cursor: default;
+   overflow: hidden;
+   white-space: nowrap;
+	 text-transform: uppercase;
 }
-.on, .off{
-  width: 50%;
-  padding: 0 .5em;
-  cursor: pointer;
-  border-radius: 8px 0 0 8px;
-  background: var(--bgcolor2);
-  color: var(--color-0);
-  transition: all .5 ease;
+ label * {
+	 transition: all 200ms linear;
 }
-.on{
-  border-radius: 0 8px 8px 0;
-  color: var(--color-2);
-  background: var(--color-1);
+ label input[type="checkbox"] {
+	 opacity: 0;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+}
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+  content: none;
+}
+ label input[type="checkbox"]:checked + .base-color .toggle-slider {
+	 margin-left: 50%;
+}
+ label input[type="checkbox"]:checked + .base-color .habilities {
+	 color: var(--bgcolor2);
+}
+ label input[type="checkbox"]:checked + .base-color .work {
+	 color: var(--color-1);
+}
+ label input[type="checkbox"] + .base-color {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 transition: all 150ms linear;
+	 background: var(--color-3);
+   box-shadow: var(--shadow3);
+	 border-radius: 16px;
+}
+ label input[type="checkbox"] + .base-color .toggle-slider {
+	 display: flex;
+	 position: absolute;
+	 content: " ";
+   align-items: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: margin 300ms linear;
+	 border-radius: 16px;
+	 top: 0;
+	 left: 0;
+	 background: var(--bgcolor2);
+   box-shadow: var(--shadow3);
+}
+ label input[type="checkbox"] + .base-color .habilities {
+	 color: #f7fafb;
+    font-family: var(--pfont);
+     font-size: 20px;
+     letter-spacing: 1px;
+}
+ label .habilities, label .work {
+	 display: block;
+	 position: absolute;
+	 width: 50%;
+	 color: #1c1e1f;
+    font-family: var(--pfont);
+    font-size: 20px;
+    letter-spacing: 1px;
+	 line-height: var(--label__height);
+	 text-align: center;
+}
+ label .habilities {
+	 left: 0px;
+}
+ label .work {
+	 right: 0px;
 }
 .card__resume{
   display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 3% 0;
+  background: var(--bgcolor2);
+  box-shadow: var(--shadow3);
+  border-radius: 16px;
+}
+.work__flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  position: relative;
+}
+.work__flex p{
+  color: var(--color-1);
+}
+.work__title h3{
+    font-size: 30px;
+}
+.work__title{
+  margin-top: 20%;
+}
+.work__titlebg{
+  font-size: 110px;
+      left: 0;
+      letter-spacing: 10px;
+      line-height: .7;
+      position: absolute;
+      right: 0;
+      top: 25%;
+      text-transform: uppercase;
+      font-weight: 800;
+      transform: translateY(-50%);
+      color: hsla(0,0%,100%,.07);
+}
+.work__img{
+  width: 55px;
+  height: 55px;
+  margin-right: 2%;
+}
+.card__title{
+  margin-bottom: 30px;
+}
+.card__title h3{
+  font-size: 30px;
 }
 .card__title h4{
   color: var(--color-1);
@@ -429,6 +535,7 @@ transform: translateY(-50%);
 .skills__item {
 	 display: flex;
 	 width: 100%;
+   height: 50px;
 	 align-items: center;
 	 justify-content: space-between;
 }
@@ -442,7 +549,7 @@ transform: translateY(-50%);
 .skill-bar {
    width: 175px;
    height: 8px;
-   background: #888;
+   background: var(--color-1);
    border-radius: 8px;
    transition: all .3s ease;
 }
@@ -669,7 +776,7 @@ transform: translateY(-50%);
   font-size: 14px;
   margin: 3% 0;
 }
-.card__mail_left svg{
+.card__mail_left svg {
   stroke-width: 1;
   width: 100%;
   height: 50px;
@@ -947,12 +1054,22 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   .card__hide{
     max-height: 500px;
   }
-  .footer__right, .footer__right40,.width60, .card__mail{
+  .footer__right, .footer__right40, .card__mail{
     width: 95%;
     margin: auto;
   }
   input:not([type]), input[type=text]:not(.browser-default), input[type=email]:not(.browser-default){
     width: 85%;
+  }
+  label{
+    width: 100%;
+  }
+  .card__resume{
+    flex-wrap: wrap;
+  }
+  .width40{
+    padding: 5%;
+    width: 100%;
   }
 }
 @media screen and (max-width:1050px){
@@ -994,5 +1111,9 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   }
   .sec3-card__inner:nth-child(3){
     flex-grow: 2;
+  }
+  label, .card__mail, .width60{
+    width: 50%;
+    margin: auto;
   }
 }
