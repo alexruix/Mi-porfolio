@@ -47,6 +47,14 @@ nav{
   height: 64px ;
   overflow: hidden ;
 }
+nav ul li a{
+  display: inline-flex;
+  font-family: var(--sfont);
+}
+nav ul li a.active, nav ul li a:hover{
+    color: var(--color-4);
+    border-radius: 16px;
+}
 header{
   position: sticky;
   top: 0;
@@ -242,6 +250,9 @@ a i{
   transition: box-shadow .2s ease-in-out 0s;
   transition: transform 1s ease-in-out;
 }
+.btn:focus{
+  background: var(--background-hover);
+}
 .btn:hover {
   text-indent: -20%;
   box-shadow: var(--shadow-hover);
@@ -251,6 +262,7 @@ a i{
   width: 205px;
   transition: background-color .2s ease-in-out 0s;
   transition: text-indent .2s ease-in-out 0s;
+  margin-right: 2%;
 }
 .btn:before {
   position: absolute;
@@ -970,7 +982,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
 .social-icons a:active,.social-icons a:focus,.social-icons a:hover
 {
   color:#fff;
-  background-color:#29aafe
+  background-color:#29aafe;
 }
 .social-icons.size-sm a
 {
