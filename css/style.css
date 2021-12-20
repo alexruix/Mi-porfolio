@@ -33,7 +33,6 @@
 }
 body, h1{
   margin: 0;
-  overflow-x: hidden;
 }
 body{
   font-family: var(--sfont);
