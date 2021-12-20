@@ -33,11 +33,14 @@
 }
 body, h1{
   margin: 0;
+  overflow-x: hidden;
 }
 body{
   font-family: var(--sfont);
   background: var(--color-2);
-
+}
+a{
+  color: var(--color-2);
 }
 nav{
   background-color: rgba(0,0,0,0);
@@ -50,6 +53,7 @@ nav{
 nav ul li a{
   display: inline-flex;
   font-family: var(--sfont);
+  font-size: 1.1em;
 }
 nav ul li a.active, nav ul li a:hover{
     color: var(--color-4);
@@ -507,6 +511,10 @@ label {
 .card__flex{
   display: flex;
 }
+.card__between{
+  justify-content: space-between;
+  align-items: center;
+}
 .work__flex{
   display: flex;
   align-items: center;
@@ -631,7 +639,6 @@ label {
   display: inline-flex; /*Ult mod*/
   justify-content: center;
   align-items: center;
-  cursor: pointer; /*Ult mod*/
   margin-left: 20px; /*Ult mod*/
   width: 400px;
   height: 400px;
@@ -639,6 +646,35 @@ label {
   background: var(--bgcolor6);
   border: 1px solid rgba(0,0,0,.8);
   box-shadow: 0 4px 10px 2px rgb(0 0 0 / 20%);
+}
+.sec3-card__inner:hover img{
+  animation: scale .5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.sec3-card__inner:hover .card__description::after{
+  animation: updown .5s ease-in-out;
+  animation-iteration-count: 6;
+  animation-direction: alternate;
+}
+@keyframes scale {
+  0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.05);
+    }
+}
+@keyframes updown{
+  0%{
+      transform: translateY(0);
+      transform: translateX(-50%);
+      top: 10px;
+    }
+    100%{
+      transform: translateY(20%);
+      transform: translateX(-50%);
+      top: 7px;
+    }
 }
 .sec3-card__inner:last-child{
   margin-right: 20px;
@@ -686,13 +722,14 @@ label {
 .card__description::after{
   content: "";
   width: 80px;
-  background: #d9e0ea;
+  background: var(--bgcolor5);
   position: absolute;
   top: 10px;
   left: 50%;
-  height: 3px;
+  border-radius: 8px;
+  height: 4px;
   transform: translateX(-50%);
-  opacity: 0.7;
+  opacity: 0.3;
 }
 .card__description{
   width: 100%;
@@ -712,6 +749,15 @@ label {
   font-weight: 400;
   font-size: 12px;
   cursor: auto;
+}
+.btn-text{
+  font-size: 1.3em;
+  font-family: var(--pfont);
+  letter-spacing: .3px;
+  font-weight: 500;
+  color: var(--background-hover);
+  border-radius: 8px;
+  padding: 0.2em .5em;
 }
 .card__description:hover {
   max-height: 500px;
@@ -736,9 +782,9 @@ label {
   font-size: 12px;
   margin: 0;
 }
-.card__description a,.card__mail_left a{
+.card__mail_left a{
   color: var(--color-2);
-  transition: color .3s ease-in;
+  transition: color .2s ease-in;
 }
 .card__description a:hover,.card__mail_left a:hover{
   color: var(--color-4);
@@ -1126,8 +1172,6 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   }
   .sec3-card__inner{
     height: 500px;
-  }
-  .sec3-card__inner:nth-child(3){
-    flex-grow: 2;
+    width: 80%;
   }
 }
