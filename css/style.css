@@ -169,6 +169,7 @@ header{
 }
 .bg3{
   background: var(--bgcolor3);
+  padding-top: 3em;
 }
 .bg4{
   background: var(--bgcolor4);
@@ -1097,9 +1098,6 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   h4{
     font-size: 25px;
   }
-  .bg1{
-    margin-top: 0;
-  }
   .little, .width50{
     padding: 2em;
     width: 100%;
@@ -1128,6 +1126,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
   }
   .card__mail, .width60{
     margin: auto;
+    width: 80%;
   }
   input:not([type]), input[type=text]:not(.browser-default), input[type=email]:not(.browser-default){
     width: 85%;
