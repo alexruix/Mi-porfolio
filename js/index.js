@@ -99,7 +99,22 @@ window.onkeydown = function (e) {
         controlsSlider(-400);
     }
 };
-/*
+
+// var sections = $('.background');
+// var navlinks = $('menu__item')
+// $(window).scroll(function() {
+//     var currentPosition = $(this).scrollTop();
+//     sections.removeClass('active').each(function() {
+//         var top = $(this).offset().top,
+//             bottom = top + $(this).height();
+//         if (currentPosition >= top && currentPosition <= bottom) {
+//             $(navlinks).addClass('active');
+//         }
+//     });
+//
+// });
+
+
 let mainNavLinks = document.querySelectorAll(".menu__item");
 let mainSections = document.querySelectorAll(".background");
 
@@ -131,7 +146,8 @@ window.addEventListener("scroll", event => {
     }
   });
 });
-*/
+
+
 /*
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {

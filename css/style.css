@@ -762,13 +762,6 @@ label {
   border-radius: 8px;
   transition: color .3s ease;
 }
-.card__flex svg{
-  width: 20px;
-  height: 20px;
-  color: var(--color-2);
-  opacity: 0;
-  transition: color .3s ease, opacity .3s ease;
-}
 .card__between .card__flex:hover svg{
   color: var(--color-4);
   opacity: 1;
