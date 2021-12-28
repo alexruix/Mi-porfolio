@@ -908,10 +908,11 @@ textarea{
   padding:10px;
   font-size: 16px;
   margin: 0;
+  color: white;
 }
 input[type=text]:focus, input[type=email]:focus, textarea:focus{
   outline: 2px solid var(--background-hover);
-
+  color: white;
 }
 
 .form textarea{
