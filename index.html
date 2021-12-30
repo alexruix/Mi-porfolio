@@ -2,7 +2,7 @@
 <html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Soy diseñador web y desarrollador front end centrado en crear experiencias modernas, simples y faciles de usar que mejoren la vida de los usuarios">
   <meta name="twitter:description" content="Soy diseñador web y desarrollador front end centrado en crear experiencias modernas, simples y faciles de usar que mejoren la vida de los usuarios">
@@ -18,8 +18,11 @@
   <meta property="og:locale" content="es_ES" />
   <link rel="canonical" href="https://alexruix.github.io/">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="scss/universal.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="scss/main.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -29,106 +32,109 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
-<title>Alex Ruiz - Web Developer</title>
+  <title>Alex Ruiz - Web Developer</title>
 </head>
+
 <body>
   <header class="background">
     <nav class="navflex">
-      <div class="menu">
+      <div class="menu flex__box-center">
         <a href="#home" class="menu__item active">
-          <div class="menu__icon" >
+          <div class="menu__icon">
             <i data-feather="home"></i>
           </div>
           <strong class="menu__text active">inicio</strong>
         </a>
-        <a href="#perfil" class="menu__item">
-          <div class="menu__icon" >
+        <a href="#perfil" class="menu__item active">
+          <div class="menu__icon">
             <i data-feather="user"></i>
           </div>
           <strong class="menu__text active">perfil</strong>
         </a>
-        <a href="#portfolio" class="menu__item">
-          <div class="menu__icon" >
+        <a href="#portfolio" class="menu__item active">
+          <div class="menu__icon">
             <i data-feather="briefcase"></i>
           </div>
           <strong class="menu__text active">
             Portfolio</strong>
-          </a>
-          <a href="#contact" class="menu__item">
-            <div class="menu__icon" >
-              <i data-feather="message-square"></i>
-            </div>
-            <strong class="menu__text active">Contacto</strong>
-          </a>
-        </div>
-      </nav>
-    </header>
+        </a>
+        <a href="#contact" class="menu__item">
+          <div class="menu__icon">
+            <i data-feather="message-square"></i>
+          </div>
+          <strong class="menu__text menu-active">Contacto</strong>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-    <div class="bg1" id="home">
-      <div class="container" style="height:45em;">
-        <div class="lefted width70">
-          <h1>Hola, soy <span>Alex Ruiz</span></h1>
-          <h2>Soy diseñador web y desarrollador front end centrado en crear experiencias <span id="type2"></span> que mejoren la vida de los usuarios</h2>
-          <a href="#!" class="btn animated-button btn__btnppal">Ver mi trabajo
-          </a>
+  <div class="bg bg--bg1" id="home">
+    <div class="container flex__box container--padding" >
+      <div class="container--middlewidth">
+        <h1 class="text text__title">Hola, soy <span class="text text--gradient">Alex Ruiz</span></h1>
+        <h2 class="text text__subtitle text--font">Soy diseñador UI/UX y desarrollador frontend centrado en crear experiencias <span class="text text--blue" id="type2"></span> que mejoren la vida de los usuarios</h2>
+        <a href="#portfolio" class="button button__ppal">Ver mi trabajo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="background" id="perfil">
+    <div class="bg bg--bg2">
+      <div class="container flex__box ">
+        <div class="container--middlewidth">
+          <h3 class="text text__spacing center">Diseñador creativo</h3>
+          <p class="text text__description">Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo frontend porque considero fundamental crear una experiencia integral para que los clientes alcancen sus objetivos comerciales. Los sitios web que
+            construyo son modernos y acorde a las lineas de diseño actual</p>
+          <p class="text text__description">Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo 😉</p>
+          <div class="flex__box">
+            <!-- <a href="#!" class="btn animated-button btn__btnppal">Mas sobre mi</a> -->
+            <a href="mailto:alexruiz1666@gmail.com" class="button button__secondary marginbottom"><i data-feather="message-square"></i>Escribeme</a>
+          </div>
         </div>
+        <div class="container--img">
+            <img src="img/aboutme.png" class="card-item__bg" alt="">
+        </div>
+      </div>
+      <div class="wave">
+        <svg class="path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path class=" path--one" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
       </div>
     </div>
 
-<section class="background" id="perfil">
-      <div class="bg2">
-        <div class="container" >
-          <div class="lefted width50">
-            <h3 class="center">Diseñador creativo</h3>
-            <p>Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo frontend porque considero fundamental crear una  experiencia integral para que los clientes alcancen sus objetivos comerciales. Los sitios web que construyo son modernos y acorde a las lineas de diseño actual</p>
-            <p>Si quieres potenciar o iniciar un proyecto web y crees que necesitas mi ayuda, entonces ponte en contacto conmigo 😉</p>
-            <div class="card__flex">
-              <!-- <a href="#!" class="btn animated-button btn__btnppal">Mas sobre mi</a> -->
-              <a href="mailto:alexruiz1666@gmail.com" class="btn animated-button btn__secondary"><i data-feather="message-square"></i>Escribeme</a>
-            </div>
-          </div>
-          <div class="card-item__side">
-            <div class="card-item__about">
-              <img src="img/aboutme.png" class="card-item__bg" alt="">
-            </div>
-          </div>
+
+    <div class="bg bg--bg3 ">
+      <div class="container">
+        <div class="flex__column">
+          <h3 class="text text__spacing center">Lo que hago</h3>
         </div>
-        <!--
-        <div class="righted">
-        <div class="card-item">
-        <figure class="card-item__about">
-        <img src="img/aboutme.png" alt="Christmas Pomegranate Salad" class="card-item__bg">
-      </figure>
-    </div>
-  </div>
--->
-<div class="wave" style="position: relative; top: -135px; z-index: 3; ">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
-    <path fill="var(--bgcolor3)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-  </svg>
-</div>
-</div>
-
-
-<div class="bg3 " >
-  <div class="container">
-    <div class="form">
-      <h3>Lo que hago</h3>
-    </div>
-  </div>
-  <div class="container" style="justify-content:center;">
-    <label>
-      <input type='checkbox'/>
-      <span class='base-color'>
-        <span class='toggle-slider'></span>
-        <span class='work' id="work">Mis herramientas</span>
-        <span class='habilities' id="hab">Plan de trabajo</span>
-      </span>
-    </label>
-  </div>
-  <div class="container resume">
-    <div class="card__resume hab" id="habilities">
-      <div class="width40">
+      </div>
+      <div class="container flex__column">
+        <label>
+          <input type='checkbox' />
+          <span class='base-color'>
+            <span class='toggle-slider'></span>
+            <span class='work' id="work">Mis herramientas</span>
+            <span class='habilities' id="hab">Plan de trabajo</span>
+          </span>
+        </label>
+      </div>
+      <div class="container resume">
+        <div class="card__resume hab" id="habilities">
+          <div class="form">
+            <div class="card__title footer">
+              <h3><i data-feather="pen-tool"></i>Hola soy Alex</h3>
+              <p class="skill__subtitle">Soy un diseñador y desarrolador que ayuda a las personas a crear aplicaciones web increíbles. Estoy especializado en el desarrollo de frontend para aplicaciones web complejas y escalables, siendo responsable
+                de crear productos que brinden experiencias significativa para el usuario final, creando interfaces y componentes increíbles e interactivos con la mejor implementación de diseño de UX / UI. Siempre trato de mejorarme aprendiendo
+                constantemente y también compartiendo conocimientos sobre tecnologías web. ¿Quieres saber más sobre mi experiencia? Consulte mi perfil de Linkedin y mi portfolio de Github</p>
+            </div>
+            <div class="card__title footer">
+              <h3><i data-feather="code"></i>Tecnologias que uso</h3>
+              <p class="skill__subtitle">Estas son algunas de las tecnologías que utilizo para codificacion, diseñar y maquetar los sitios web de acuerdo con las especificaciones del proyecto como frameworks y librerias tanto para Javascript como para CSS</p>
+            </div>
+          </div>
+          <!-- <div class="width40">
         <div class="form">
           <div class="card__title">
             <h3><i data-feather="pen-tool"></i>Diseñador</h3>
@@ -162,8 +168,9 @@
 
           </div>
         </div>
-      </div>
-      <div class="width40">
+      </div> -->
+
+  <!-- <div class="width40">
         <div class="form">
           <div class="card__title">
             <h3><i data-feather="code"></i>Desarrollador</h3>
@@ -199,115 +206,116 @@
 
 
         </div>
+      </div> -->
+        </div>
+        <div class="card__resume work" id="works">
+          <div class="form">
+            <div class="card__flex">
+              <div class="width40">
+                <div class="form">
+                  <div class="work__flex work__title">
+                    <h3>Investigación</h3>
+                    <span class="work__titlebg">01</span>
+                    <div class="work__img">
+                      <img src="img/invest.png" class="card-item__bg" alt="">
+                    </div>
+                  </div>
+                  <div class="work__flex">
+                    <!-- <p>What does the website actually need to do? We need to get on the same wavelength, so an initial chat either over zoom or in person, gives me an idea of what we are looking to achieve</p> -->
+                    <p>¿Qué necesita tu web actualmente? Necesitamos estar en sintonía, por lo que una charla inicial ya sea por zoom o en persona, me da una idea de lo que estás buscando conseguir</p>
+                  </div>
+                </div>
+              </div>
+              <div class="width40">
+                <div class="form">
+                  <div class="work__flex work__title">
+                    <h3>Prototipo</h3>
+                    <span class="work__titlebg">02</span>
+                    <div class="work__img">
+                      <img src="img/proto.png" class="card-item__bg" alt="">
+                    </div>
+                  </div>
+                  <div class="work__flex">
+                    <!-- <p>Next up we need to draw out a rough idea of where we want things to go, so we can visualise how things are going to look and take detailed notes. Usually this just consists of sitting down together and doing some sketches in a notepad.</p> -->
+                    <p>Luego, necesitamos graficar o bocetar la idea para tener en claro hacia donde apuntamos y así poder visualizar cómo se verán las cosas y tomar notas detalladas</p>
+                  </div>
+                </div>
+              </div>
+              <div class="width40">
+                <div class="form">
+                  <div class="work__flex work__title">
+                    <h3>Diseño</h3>
+                    <span class="work__titlebg">03</span>
+                    <div class="work__img">
+                      <img src="img/design.png" class="card-item__bg" alt="">
+                    </div>
+                  </div>
+                  <div class="work__flex">
+                    <!-- <p>If I'm designing the site, I will typically directly build the designs in HTML. Otherwise deisngs will usually come from a designer built in XD for me to replicate into HTML.This is the point where we can really see what the final outcome will actually look like and can work out any design kinks early on.</p> -->
+                    <p>Este es el punto en el que realmente podemos saber cómo se verá el resultado final y podemos resolver cualquier inconveniente con el diseño antes de la implementación final</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__flex">
+              <div class="width40">
+                <div class="form">
+                  <div class="work__flex work__title">
+                    <h3>implementación</h3>
+                    <span class="work__titlebg">04</span>
+                    <div class="work__img">
+                      <img src="img/end.png" class="card-item__bg" alt="">
+                    </div>
+                  </div>
+                  <div class="work__flex">
+                    <p>En esta etapa usaré los bocetos y el prototipo como base para construir la versión web del proyecto, de ser necesario puedes elegir la plataforma, ya sea WordPress o algún framework en especial</p>
+                  </div>
+                </div>
+              </div>
+              <div class="width40">
+                <div class="form">
+                  <div class="work__flex work__title">
+                    <h3>Seguimiento</h3>
+                    <span class="work__titlebg">05</span>
+                    <div class="work__img">
+                      <img src="img/follow.png" class="card-item__bg" alt="">
+                    </div>
+                  </div>
+                  <div class="work__flex">
+                    <p>Cuando la implementación esté casi completa se le enviará un enlace a una copia del sitio web para que el puedas ver el producto final. También podemos trabajar en cualquier ajuste visual para que el producto sea el mejor
+                      posible</p>
+                  </div>
+                </div>
+              </div>
+              <div class="width40">
+                <div class="form">
+                  <div class="work__flex work__title">
+                    <h3>Hosting</h3>
+                    <span class="work__titlebg">06</span>
+                    <div class="work__img">
+                      <img src="img/cloud.png" class="card-item__bg" alt="">
+                    </div>
+                  </div>
+                  <div class="work__flex">
+                    <p>Al terminar, el sitio web será alojado en servidores de alta calidad que ofrecen una seguridad y velocidad superior al promedio, esto puede marcar una gran diferencia a la hora de cargar su sitio web</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card__resume work" id="works">
-      <div class="form">
-      <div class="card__flex">
-        <div class="width40">
-          <div class="form">
-            <div class="work__flex work__title">
-              <h3>Investigación</h3>
-              <span class="work__titlebg">01</span>
-              <div class="work__img">
-                <img src="img/invest.png" class="card-item__bg" alt="">
-              </div>
-            </div>
-            <div class="work__flex">
-              <!-- <p>What does the website actually need to do? We need to get on the same wavelength, so an initial chat either over zoom or in person, gives me an idea of what we are looking to achieve</p> -->
-              <p>¿Qué necesita tu web actualmente? Necesitamos estar en sintonía, por lo que una charla inicial ya sea por zoom o en persona, me da una idea de lo que estás buscando conseguir</p>
-            </div>
-          </div>
-        </div>
-        <div class="width40">
-          <div class="form">
-            <div class="work__flex work__title">
-              <h3>Prototipo</h3>
-              <span class="work__titlebg">02</span>
-              <div class="work__img">
-                <img src="img/proto.png" class="card-item__bg" alt="">
-              </div>
-            </div>
-            <div class="work__flex">
-              <!-- <p>Next up we need to draw out a rough idea of where we want things to go, so we can visualise how things are going to look and take detailed notes. Usually this just consists of sitting down together and doing some sketches in a notepad.</p> -->
-              <p>Luego, necesitamos graficar o bocetar la idea para tener en claro hacia donde apuntamos y así poder visualizar cómo se verán las cosas y tomar notas detalladas</p>
-            </div>
-          </div>
-        </div>
-        <div class="width40">
-          <div class="form">
-            <div class="work__flex work__title">
-              <h3>Diseño</h3>
-              <span class="work__titlebg">03</span>
-              <div class="work__img">
-                <img src="img/design.png" class="card-item__bg" alt="">
-              </div>
-            </div>
-            <div class="work__flex">
-              <!-- <p>If I'm designing the site, I will typically directly build the designs in HTML. Otherwise deisngs will usually come from a designer built in XD for me to replicate into HTML.This is the point where we can really see what the final outcome will actually look like and can work out any design kinks early on.</p> -->
-              <p>Este es el punto en el que realmente podemos saber cómo se verá el resultado final y podemos resolver cualquier inconveniente con el diseño antes de la implementación final</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card__flex">
-        <div class="width40">
-          <div class="form">
-            <div class="work__flex work__title">
-              <h3>implementación</h3>
-              <span class="work__titlebg">04</span>
-              <div class="work__img">
-                <img src="img/end.png" class="card-item__bg" alt="">
-              </div>
-            </div>
-            <div class="work__flex">
-              <p>En esta etapa usaré los bocetos y el prototipo como base para construir la versión web del proyecto, de ser necesario puedes elegir la plataforma, ya sea WordPress o algún framework en especial</p>
-              </div>
-          </div>
-        </div>
-        <div class="width40">
-          <div class="form">
-            <div class="work__flex work__title">
-              <h3>Seguimiento</h3>
-              <span class="work__titlebg">05</span>
-              <div class="work__img">
-                <img src="img/follow.png" class="card-item__bg" alt="">
-              </div>
-            </div>
-            <div class="work__flex">
-              <p>Cuando la implementación esté casi completa se le enviará un enlace a una copia del sitio web para que el puedas ver el producto final. También podemos trabajar en cualquier ajuste visual para que el producto sea el mejor posible</p>
-            </div>
-          </div>
-        </div>
-        <div class="width40">
-          <div class="form">
-            <div class="work__flex work__title">
-              <h3>Hosting</h3>
-              <span class="work__titlebg">06</span>
-              <div class="work__img">
-                <img src="img/cloud.png" class="card-item__bg" alt="">
-              </div>
-            </div>
-            <div class="work__flex">
-              <p>Al terminar, el sitio web será alojado en servidores de alta calidad que ofrecen una seguridad y velocidad superior al promedio, esto puede marcar una gran diferencia a la hora de cargar su sitio web</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section >
+  </section>
 
-<section class=" bg3" id="portfolio">
-  <div >
-  <div class="container" >
-    <div class="form">
-      <h3>Mi trabajo</h3>
-    </div>
-  </div>
-  <!-- <div class="container" style="padding-top:0;" >
+  <section class=" bg3" id="portfolio">
+    <div>
+      <div class="container">
+        <div class="form">
+          <h3>Mi trabajo</h3>
+        </div>
+      </div>
+      <!-- <div class="container" style="padding-top:0;" >
       <nav class="center">
         <ul>
           <li><a class="active" href="#!">Recientes</a></li>
@@ -316,199 +324,206 @@
         </ul>
       </nav>
     </div> -->
-  <div class="sec3__header" >
-    <button class="arrow-left" style="">
-      <i data-feather="arrow-left"></i>
-    </button>
-    <button class="arrow-right" style="">
-      <i data-feather="arrow-right"></i>
-    </button>
-    <div class="sec3__subheader">
-      <div class="sec3-card__inner">
-        <div class="item">
-          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-          <div class="card__description">
-            <div class="card__flex card__between">
-              <a href="https://alexruix.github.io/NatureFood/"><h5>Nature Food</h5></a>
-              <div class="card__flex card__btn">
-                <a class="btn-text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
-                <i data-feather="arrow-up-right"></i>
+      <div class="sec3__header">
+        <button class="arrow-left" style="">
+          <i data-feather="arrow-left"></i>
+        </button>
+        <button class="arrow-right" style="">
+          <i data-feather="arrow-right"></i>
+        </button>
+        <div class="sec3__subheader">
+          <div class="sec3-card__inner">
+            <div class="item">
+              <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+              <div class="card__description">
+                <div class="card__flex card__between">
+                  <a href="https://alexruix.github.io/NatureFood/">
+                    <h5>Nature Food</h5>
+                  </a>
+                  <div class="card__flex card__btn">
+                    <a class="btn-text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
+                    <i data-feather="arrow-up-right"></i>
+                  </div>
+                </div>
+                <h6>Website Design & Development</h6>
+                <div class="card__hide">
+                  <div class="container" style="padding:0">
+                    <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <h6>Website Design & Development</h6>
-            <div class="card__hide">
-              <div class="container" style="padding:0">
-                  <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
+          </div>
+          <div class="sec3-card__inner">
+            <div class="item">
+              <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+              <div class="card__description">
+                <div class="card__flex card__between">
+                  <a href="https://alexruix.github.io/NatureFood/">
+                    <h5>Nature Food</h5>
+                  </a>
+                  <div class="card__flex card__btn">
+                    <a class="btn-text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
+                    <i data-feather="arrow-up-right"></i>
+                  </div>
+                </div>
+                <h6>Website Design & Development</h6>
+                <div class="card__hide">
+                  <div class="container" style="padding:0">
+                    <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec3-card__inner">
+            <div class="item">
+              <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
+              <div class="card__description">
+                <div class="card__flex card__between">
+                  <a href="https://alexruix.github.io/NatureFood/">
+                    <h5>Nature Food</h5>
+                  </a>
+                  <div class="card__flex card__btn">
+                    <a class="btn-text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
+                    <i data-feather="arrow-up-right"></i>
+                  </div>
+                </div>
+                <h6>Website Design & Development</h6>
+                <div class="card__hide">
+                  <div class="container" style="padding:0">
+                    <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="sec3-card__inner">
-        <div class="item">
-          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-          <div class="card__description">
-            <div class="card__flex card__between">
-              <a href="https://alexruix.github.io/NatureFood/"><h5>Nature Food</h5></a>
-              <div class="card__flex card__btn">
-                <a class="btn-text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
-                <i data-feather="arrow-up-right"></i>
-              </div>
-            </div>
-            <h6>Website Design & Development</h6>
-            <div class="card__hide">
-              <div class="container" style="padding:0">
-                  <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sec3-card__inner">
-        <div class="item">
-          <img src="img/NatureFood-Thumbnail.png" class="card-item__bg" alt="Nature Food Website">
-          <div class="card__description">
-            <div class="card__flex card__between">
-              <a href="https://alexruix.github.io/NatureFood/"><h5>Nature Food</h5></a>
-              <div class="card__flex card__btn">
-                <a class="btn-text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
-                <i data-feather="arrow-up-right"></i>
-              </div>
-            </div>
-            <h6>Website Design & Development</h6>
-            <div class="card__hide">
-              <div class="container" style="padding:0">
-                  <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
+          <path fill="var(--bgcolor4)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
       </div>
     </div>
-  </div>
-  <div class="wave" >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
-      <path fill="var(--bgcolor4)" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-    </svg>
-  </div>
-</div>
-</section>
+  </section>
 
-<section class="bg4" >
-<div>
-  <div class="container background" id="contact">
-    <div class="lefted width70">
-      <h3>Contactame</h3>
-      <h4>¡NO SEAS TÍMIDO!</h4>
-      <p>No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones</p>
-      <div class="card__mail">
-        <div class="card__mail_left">
-          <a href="mailto:alexruiz1666@gmail.com"> <i data-feather="mail"></i> </a>
-        </div>
-        <div class="card__mail_left">
-           <p>ENviar mensaje</p>
-        <a href="mailto:alexruiz1666@gmail.com">alexruiz1666@gmail.com</a>
-        </div>
-      </div>
-      <div class="width60">
-        <p style="font-size:1em;">Tambien puedes encontrarme en:</p>
-        <ul class="social-icons">
-          <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-          <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-          <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-          <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a class="email" href="mailto:alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="righted">
-      <form class="form" action="https://formspree.io/f/mgedvorp" method="POST">
-        <div class="form__title">
-          <p>Ponte en contacto conmigo</p>
-        </div>
-        <div class="form__flex">
-          <div class="form__section">
-            <input type="text" id="first_name" placeholder="Nombre" name="name" minlength="4" maxlength="80" autocomplete="given-name" required="">
+  <section class="bg4">
+    <div>
+      <div class="container background" id="contact">
+        <div class="lefted width70">
+          <h3>Contactame</h3>
+          <h4>¡NO SEAS TÍMIDO!</h4>
+          <p>No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones</p>
+          <div class="card__mail">
+            <div class="card__mail_left">
+              <a href="mailto:alexruiz1666@gmail.com"> <i data-feather="mail"></i> </a>
+            </div>
+            <div class="card__mail_left">
+              <p>ENviar mensaje</p>
+              <a href="mailto:alexruiz1666@gmail.com">alexruiz1666@gmail.com</a>
+            </div>
           </div>
-          <div class="form__section">
-            <input class="email" type="email" id="email" name="_replyto" maxlength="80" required="" autocomplete="email" placeholder="Email">
+          <div class="width60">
+            <p style="font-size:1em;">Tambien puedes encontrarme en:</p>
+            <ul class="social-icons">
+              <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+              <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
+              <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a class="email" href="mailto:alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            </ul>
           </div>
         </div>
-        <div class="form__flex">
-          <div class="form__section">
-            <textarea class="form__imput" id="message" name="message" rows="8" cols="80" placeholder="Escribe tu mensaje..."></textarea>
-          </div>
+        <!-- <div class="righted">
+          <form class="form" action="https://formspree.io/f/mgedvorp" method="POST">
+            <div class="form__title">
+              <p>Ponte en contacto conmigo</p>
+            </div>
+            <div class="form__flex">
+              <div class="form__section">
+                <input type="text" id="first_name" placeholder="Nombre" name="name" minlength="4" maxlength="80" autocomplete="given-name" required="">
+              </div>
+              <div class="form__section">
+                <input class="email" type="email" id="email" name="_replyto" maxlength="80" required="" autocomplete="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="form__flex">
+              <div class="form__section">
+                <textarea class="form__imput" id="message" name="message" rows="8" cols="80" placeholder="Escribe tu mensaje..."></textarea>
+              </div>
+            </div>
+            <div class="form__flex" style="justify-content:center;">
+              <button class="btn btn__btnppal" type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer">
+      <div class="container" style="padding:0; align-items:baseline;">
+        <div class="footer__right40">
+          <h6>Alex Ruiz</h6>
+          <p>Soy diseñador y desarrollador front end, construyo sitios web modernos y pongo toda mi experiencia al servicio de las personas para que alcancen sus objetivos comerciales y mejorar la vida de los usuarios</p>
         </div>
-        <div class="form__flex" style="justify-content:center;">
-          <button class="btn btn__btnppal" type="submit">Enviar mensaje</button>
+        <div class="footer__right">
+          <h6>Accesos rapidos</h6>
+          <ul class="footer-links">
+            <li><a href="https://dribbble.com/alexruix">Inicio</a></li>
+            <li><a href="https://dribbble.com/alexruix">Acerca de mi</a></li>
+            <li><a href="https://dribbble.com/alexruix">Mi portfolio</a></li>
+            <li><a href="mailto:alexruiz1666@gmail.com">Contacto</a></li>
+          </ul>
         </div>
-      </form>
+        <div class="footer__right">
+          <h6>Redes sociales</h6>
+          <ul class="footer-links">
+            <li><a href="https://github.com/alexruix">
+                <i class="fa-brands fa-github"></i>Github</a>
+            </li>
+            <li><a href="https://dribbble.com/alexruix"><i class="fa-brands fa-dribbble"></i>Dribble</a></li>
+            <li><a href="https://codepen.io/Tormenta"><i class="fa-brands fa-codepen"></i>Codepen</a></li>
+            <li><a href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a href="mailto:alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
     </div>
-  </div>
-</div>
-</section>
+    <div class="footer">
+      <div class="container" style="padding:0;">
+        <div>
+          <p class="copyright-text">Copyright © 2021 All Rights Reserved by
+            <b>Alex Ruiz.</b>
+          </p>
+        </div>
 
-<footer class="site-footer">
-  <div class="footer">
-    <div class="container" style="padding:0; align-items:baseline;">
-      <div class="footer__right40">
-        <h6>Alex Ruiz</h6>
-        <p>Soy diseñador y desarrollador front end, construyo sitios web modernos y pongo toda mi experiencia al servicio de las personas para que alcancen sus objetivos comerciales y mejorar la vida de los usuarios</p>
-      </div>
-      <div class="footer__right">
-        <h6>Accesos rapidos</h6>
-        <ul class="footer-links">
-          <li><a href="https://dribbble.com/alexruix">Inicio</a></li>
-          <li><a href="https://dribbble.com/alexruix">Acerca de mi</a></li>
-          <li><a href="https://dribbble.com/alexruix">Mi portfolio</a></li>
-          <li><a href="mailto:alexruiz1666@gmail.com">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer__right">
-        <h6>Redes sociales</h6>
-        <ul class="footer-links">
-          <li><a href="https://github.com/alexruix">
-            <i class="fa-brands fa-github"></i>Github</a>
-          </li>
-          <li><a href="https://dribbble.com/alexruix"><i class="fa-brands fa-dribbble"></i>Dribble</a></li>
-          <li><a href="https://codepen.io/Tormenta"><i class="fa-brands fa-codepen"></i>Codepen</a></li>
-          <li><a href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-          <li><a href="mailto:alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
-        </ul>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="footer">
-    <div class="container" style="padding:0;">
-      <div>
-        <p class="copyright-text">Copyright © 2021 All Rights Reserved by
-          <b>Alex Ruiz.</b>
-        </p>
-      </div>
-
-      <div>
-        <ul class="social-icons">
-          <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-          <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-          <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-          <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a class="email" href="mailto:alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-        </ul>
+        <div>
+          <ul class="social-icons">
+            <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
+            <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a class="email" href="mailto:alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://kit.fontawesome.com/a6083f8adb.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="js/index.js"></script>
-<!-- <script src="http://localhost:35729/livereload.js"></script> -->
-<script src="js/materialize.min.js"></script>
-<script src="http://localhost:58890/livereload.js"></script>
+  <script src="https://kit.fontawesome.com/a6083f8adb.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="js/index.js"></script>
+  <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+  <script src="js/materialize.min.js"></script>
+  <script src="http://localhost:58890/livereload.js"></script>
 </body>
+
 </html>
