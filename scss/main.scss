@@ -3,7 +3,7 @@
   $primary: blue;
   $pfont: 'Bebas Neue', cursive;
   $sfont: 'Didact Gothic', sans-serif;
-
+  $border: 16px;
   $duration: .45s;
   $cubic: cubic-bezier(0.4, 0, 0.2, 1);
   $d: 700ms;
@@ -23,6 +23,7 @@
 
   //Sombras
   $shadow: 0 4px 20px -2px rgba(45, 79, 223, 0.5);
+  $shadow2:  0 4px 20px -2px #1c1e22;
 
 body{
   font-family: $pfont;
@@ -291,8 +292,93 @@ header {
   }
 }
 
-.wave{
-position: relative;
- top: -140px;
- z-index: 3;
+.wave {
+  position: relative;
+  top: -140px;
+  z-index: 3;
+}
+
+.switcher {
+  position: relative;
+  width: 35%;
+  height: 60px;
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+}
+
+@mixin buttonblue($background: $color3){
+  background: $background;
+  box-shadow: $shadow2;
+  border-radius: $border;
+}
+input {
+  &[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &[type="checkbox"]+span:not(.lever):before,
+  [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+    content: none;
+  }
+
+  &[type="checkbox"]+.base-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 150ms linear;
+    @include buttonblue;
+  }
+
+  &[type="checkbox"]:checked+.base-color .toggle-slider {
+    margin-left: 50%;
+  }
+
+  &[type="checkbox"]:checked+.base-color .habilities {
+    color: $bg2color;
+  }
+  &[type="checkbox"]:checked+.base-color .work {
+    color: $color;
+  }
+
+  &[type="checkbox"]+.base-color .toggle-slider {
+    position: absolute;
+    content: " ";
+    width: 50%;
+    height: 100%;
+    transition: margin 300ms linear;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    background: $bg2color;
+    box-shadow: $shadow2;
+  }
+
+  &[type="checkbox"]+.base-color .habilities{
+    color: $color2;
+  }
+}
+.habilities{
+  left: 0;
+}
+.work{
+  right: 0;
+}
+.habilities, .work{
+  display: block;
+  position: absolute;
+  width: 50%;
+  color: $bg2color;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 60px;
+  text-align: center;
+}
+.card__black{
+  @include buttonblue($bg2color);
 }
