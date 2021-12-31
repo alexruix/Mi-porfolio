@@ -12,7 +12,7 @@
   $color: #fafafa;
   $color2: #d5d5d5;
   $color3: #3C58B7;
-  $color4: #0072ff;
+  $color4: #0082ff;
   $color5: rgba(#ffffff, 0.07);
   $hoverbg: #051D6B;
   $bg1color: #090909;
@@ -32,108 +32,9 @@ body{
   color: $color;
   background: $bg1color;
 }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
 a{
   color: $bg1color;
 }
-.navflex{
-  display: flex;
-  justify-content: flex-end;
-  height: 64px;
-  overflow: hidden;
-}
-.menu {
-  margin-right: 5%;
-  width: 28em;
-  position: relative;
-  background: $color;
-  color: $bg1color;
-  display: flex;
-  height: 100%;
-  user-select: none;
-  align-items: center;
-  padding: 0 1.2em;
-  justify-content: center;
-  border-radius: 0 0 1.5em 1.5em;
-  max-width: 1250px;
-  max-height: 860px;
-  -webkit-tap-highlight-color: transparent;
-}
-@media (max-width: 42.625em) {
-  .menu {
-    font-size: .55em;
-  }
-}
-.menu__item {
-  all: unset;
-  flex-grow: 1;
-  display: flex;
-  cursor: pointer;
-  overflow: hidden;
-  padding-top: 0.5em;
-  position: relative;
-  justify-content: center;
-  transition: flex-grow $duration $cubic;
-}
-.menu__icon {
-  font-size: 2em;
-  transition: transform $duration $cubic;
-}
-.menu__item::after {
-  left: -1.15em;
-  bottom: 1em;
-  content: " ";
-  height: 0.25em;
-  position: absolute;
-  border-radius: 2em;
-  transform-origin: left center;
-  background-color: $color4;
-  width: calc(--lineWidth + 5px);
-  transform: translate3d(3em, 0, 0) scaleX(0);
-  transition: transform calc($duration + .2s) $cubic;
-}
-.menu__text {
-  left: 3.5em;
-  height: 4em;
-  font-size: 1.5em;
-  color: $color4;
-  position: absolute;
-  text-transform: capitalize;
-  letter-spacing: .03em;
-  transform: translate3d(0, 109%, 0);
-  transition: transform calc($duration / 3.7);
-}
-.menu__item.active {
-  flex-grow: 2.6;
-  color: $color4;
-}
-.menu__item.active .menu__icon {
-  transform: translate3d(-95%, 0, 0);
-}
-.menu__item.active::before {
-  transform: scale(1);
-}
-.menu__item.active::after {
-  transform: translate3d(6.3em, 0, 0) scaleX(1);
-  transition: transform $duration $cubic;
-}
-.menu__text.active {
-  transform: translate3d(0, 0, 0);
-  transition: transform $duration $cubic;
-}
-.icon {
-  fill: none;
-  width: 2.5em;
-  height: 2.5em;
-  display: block;
-  stroke-width: 15;
-  stroke-miterlimit: 10;
-}
-
 //Backgrounds color
 .bg{
   &--bg1{
@@ -172,20 +73,43 @@ a{
   &--middlewidth{
     width: 50%;
   }
-  &__fullwidth{
-    width: 100%;
-    position: relative;
+  &--quarterwidth{
+    width: 45%;
   }
   &--img{
-    max-width: 430px;
-    height: 500px;
+    max-width: 450px;
+    height: 100%;
+    max-height: 580px;
     position: relative;
     width: 100%;
+    margin-top: 10%;
   }
 }
 .text{
   &--blue{
     color: $color4;
+  }
+  &--underline{
+    position: relative;
+    &:hover{
+      color: $color3;
+      &::after{
+        width: 100%;
+        left: 0;
+      }
+    }
+    &::after{
+      content: ' ';
+      width: 100%;
+      height: 1px;
+      left: auto;
+      width: 0;
+      right: 0;
+      background: $color3;
+      position: absolute;
+      bottom: -5px;
+    	 transition: 0.3s ease-in-out;
+    }
   }
   &--gradient{
     background: linear-gradient(to bottom, #00c6ff 30%, #0072ff 70%);
@@ -210,11 +134,22 @@ a{
   &__description{
     font-size: 20px;
     line-height: 1.6em;
-    font-family: $sfont;
+  }
+  &__card--title{
+    margin: 0;
+    font-size: 32px;
+    margin-top: 10%;
+    transition: color .3s ease-in-out;
+    &:hover{
+      color: $color4;
+    }
   }
 }
+svg{
+  display: inline-flex;
+}
 .button {
-  transition: text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
+  transition: color .3s ease-in-out, text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
   border-radius: $border;
   font-size: 22px;
   height: 55px;
@@ -222,10 +157,50 @@ a{
   color: inherit;
   width: 205px;
   position: relative;
-
+svg{
+  margin-top: -2%;
+  margin-right: 5%;
+  transition: transform .2s ease-in-out 0s;
+}
   &:hover {
     text-indent: -20%;
     box-shadow: $shadow;
+    svg{
+        transform: translateX(-20%);
+    }
+    &:before {
+      opacity: 1;
+      text-indent: 0;
+    }
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 55px;
+    content: '\f061';
+    font-family: "Font Awesome 6 Free";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
+  }
+
+  &__mail{
+    width: 100%;
+    background: $hoverbg;
+    color: $color;
+    height: 110px;
+    padding: 1em 0;
+    &:hover{
+      text-indent: 0;
+      color: $color2;
+    }
   }
 
   &__text {
@@ -233,11 +208,14 @@ a{
     letter-spacing: .3px;
     color: $bg1color;
     width: 100px;
+    height: 0;
 
     &:active,
     &:focus,
     &:hover {
       box-shadow: none;
+      color: $color4;
+
 
       &:before {
         opacity: 1;
@@ -269,29 +247,6 @@ a{
     &:focus,
     &:hover {
       background: $hoverbg;
-
-      &:before {
-        opacity: 1;
-        text-indent: 0;
-      }
-    }
-
-    &:before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 55px;
-      content: '\f061';
-      font-family: "Font Awesome 6 Free";
-      font-size: 20px;
-      font-weight: 900;
-      line-height: inherit;
-      opacity: 0;
-      transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
     }
   }
 
@@ -353,6 +308,10 @@ a{
   height: 12rem;
   display: block;
 
+  &--two {
+    fill: $bg4color;
+  }
+
   &--one {
     fill: $bg3color;
   }
@@ -360,7 +319,6 @@ a{
 
 .wave {
   position: relative;
-  top: -140px;
   z-index: 3;
 }
 
@@ -520,10 +478,12 @@ label .habilities, label .work{
     }
   }
 }
-.card{
-  &__description{
+.card {
+  &__description {
     width: 100%;
     left: 0;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: 20px 15px 10px 20px;
     position: absolute;
@@ -533,13 +493,14 @@ label .habilities, label .work{
     border-radius: 1.5em 1.5em 0 0;
     background-color: $color;
     box-shadow: 0 -6px 26px 6px rgba(0, 0, 0, 0.25);
-    font-size: 25px;
     font-weight: 400;
+    font-size: 12px;
     cursor: auto;
-    &:after{
+
+    &:after {
       content: "";
       width: 80px;
-      background: var(--bgcolor5);
+      background: $bg5color;
       position: absolute;
       top: 10px;
       left: 50%;
@@ -548,12 +509,18 @@ label .habilities, label .work{
       transform: translateX(-50%);
       opacity: 0.3;
     }
-    &:hover .card__hide {
+
+    &:hover {
       max-height: 500px;
-      transition: max-height .7s ease-in;
+      transition: max-height 0.7s ease-in;
+      .card__hide {
+        max-height: 500px;
+        transition: max-height .7s ease-in;
+      }
     }
   }
-  &__inner{
+
+  &__inner {
     color: $bg2color;
     border-radius: $border;
     display: inline-flex;
@@ -568,27 +535,42 @@ label .habilities, label .work{
     background: $bg6color;
     outline: 1px solid rgba(0, 0, 0, .8);
     box-shadow: $shadow3;
-    &:hover{
-      animation: scale .5s ease-in-out;
-      animation-fill-mode: forwards;
+
+    &:hover  {
+      & img{
+        animation: scale 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
       &.card__description::after {
-        animation: updown .5s ease-in-out;
+        animation: updown 0.5s ease-in-out;
         animation-iteration-count: 6;
         animation-direction: alternate;
       }
     }
+
     &:last-child {
       margin-right: 20px;
     }
   }
-  &__hide{
+
+  &__hide {
     max-height: 0;
     width: 100%;
     overflow: hidden;
     white-space: normal;
-    transition: max-height .5s ease-out;
+    transition: max-height 0.5s ease-out;
   }
 
+  &__text {
+    font-family: $sfont;
+
+    &--title {
+      font-size: 1.2em;
+    }
+  }
+  &__mail{
+
+  }
 }
 
 @keyframes scale {
@@ -614,7 +596,6 @@ label .habilities, label .work{
     top: 7px;
   }
 }
-
 .item {
   overflow: hidden;
   margin-left: auto;
@@ -624,4 +605,98 @@ label .habilities, label .work{
   max-height: 550px;
   position: relative;
   border-radius: $border;
+}
+.gap{
+  gap: 10px;
+}
+.social-icons{
+ a{
+   background-color: $color;
+   color: $bg2color;
+   font-size: 16px;
+   display: inline-block;
+   line-height: 44px;
+   width: 44px;
+   height: 44px;
+   text-align: center;
+   margin-right: 8px;
+   border-radius: 100%;
+   -webkit-transition: all .2s linear;
+   -o-transition: all .2s linear;
+   transition: all .2s linear;
+   &:active, &:hover, &:focus{
+     color: $color;
+     background-color: $color3;
+   }
+   &.github:hover{
+     background-color: $bg1color;
+   }
+   &.codepen:hover{
+     background-color: #464646;
+   }
+   &.dribbble:hover{
+     background-color: #ea4c89;
+   }
+ }
+}
+.site-footer{
+  background-color: $bg5color;
+  padding: 45px 0 20px;
+  line-height: 24px;
+}
+.links{
+  li{
+    margin-bottom: 2%;
+  }
+  li i{
+    margin-right: 5%;
+  }
+    a{
+      color: $color;
+      transition: color .3s ease-in-out;
+      &:hover{
+        color: $color4;
+      }
+    }
+}
+@media screen and (max-width:800px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+  .bg--bg2{
+      height: 80%;
+  }
+  .card__hide {
+    max-height: 500px;
+  }
+
+}
+@media screen and (max-width:1050px) {
+  .portfolio__subheader {
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+  .card__inner {
+    height: 500px;
+    width: 80%;
+  }
+  .container--middlewidth{
+    width: 100%;
+  }
+  .flex__column{
+    flex-wrap: wrap;
+  }
 }

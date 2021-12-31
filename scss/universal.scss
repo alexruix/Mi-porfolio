@@ -85,7 +85,6 @@ p, h1, h2, h3, h4, h5, h6 {
 @mixin flex__box-around($content: space-around){
   @include flex__box;
   justify-content: space-around;
-
 }
 @mixin flex__column($content: center){
   display: flex;
@@ -124,6 +123,10 @@ nav{
 .flex__box-end{
   @include flex__box;
   justify-content: flex-end;
+}
+.flex__box-start{
+  @include flex__box;
+  justify-content: flex-start;
 }
 .flex__box-baseline{
   @include flex__box;

@@ -1,17 +1,3 @@
-var app = document.getElementById('type');
-
-var typewriter = new Typewriter(app, {
-  loop: true,
-  delay: 175,
-});
-
-typewriter.typeString('<strong>desarrollador</strong>')
-    .changeCursor(' ')
-    .pauseFor(15000)
-    .deleteChars(12)
-    .typeString('<strong>iseñador</strong>')
-    .pauseFor(15000)
-    .start();
 
 var app = document.getElementById('type2');
 
@@ -33,8 +19,8 @@ typewriter.typeString('modernas')
 feather.replace()
 
 /*global $, console*/
-var slider = document.querySelector('.sec3__subheader'),
-    arrows = document.querySelectorAll('.sec3__header .arrow-left, .sec3__header .arrow-right'),
+var slider = document.querySelector('.portfolio__subheader'),
+    arrows = document.querySelectorAll('.portfolio .button--left, .portfolio .button--right'),
     isDown = false,
     startX,
     scrollLeft;
@@ -127,27 +113,6 @@ window.addEventListener("scroll", event => {
   });
 });
 
-
-/*
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-    if ($(window).width() < 1052){
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".menu").style.bottom = "0px";
-
-      } else {
-        document.querySelector(".menu").style.bottom = "-50px";
-
-      }
-      prevScrollpos = currentScrollPos;
-    }
-    else {
-      document.querySelector(".menu").style.top = "0";
-    }
-  }
-*/
-
 const buttons = document.querySelectorAll(".menu__item");
 let activeButton = document.querySelector(".menu__item.active");
 
@@ -217,7 +182,7 @@ $(".skills__item .skill-bar span").each(function() {
 
 document.addEventListener("DOMContentLoaded", function () {
       const checkboxSwitcher = document.querySelector("input[type=checkbox]");
-      const details = document.querySelector(".resume");
+      const details = document.querySelector(".switch");
       checkboxSwitcher.addEventListener("change", function (event) {
         if (event.target.checked) {
           details.classList.add('show');
