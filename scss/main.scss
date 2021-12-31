@@ -631,15 +631,15 @@ label .habilities, label .work{
    transition: all .2s linear;
    &:active, &:hover, &:focus{
      color: $color;
-     background-color: $color3;
+     background-color: #E34133;
    }
    &.github:hover{
      background-color: $bg1color;
    }
-   &.codepen:hover{
-     background-color: #464646;
+   &.linkedin:hover{
+     background-color: #0A63BC;
    }
-   &.dribbble:hover{
+   &.instagram:hover{
      background-color: #ea4c89;
    }
  }
