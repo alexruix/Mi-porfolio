@@ -12,7 +12,7 @@
   $color: #fafafa;
   $color2: #d5d5d5;
   $color3: #3C58B7;
-  $color4: #0072ff;
+  $color4: #0082ff;
   $color5: rgba(#ffffff, 0.07);
   $hoverbg: #051D6B;
   $bg1color: #090909;
@@ -212,9 +212,18 @@ a{
     line-height: 1.6em;
     font-family: $sfont;
   }
+  &__card--title{
+    margin: 0;
+    font-size: 32px;
+    margin-top: 10%;
+    transition: color .3s ease-in-out;
+    &:hover{
+      color: $color4;
+    }
+  }
 }
 .button {
-  transition: text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
+  transition: color .3s ease-in-out, text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
   border-radius: $border;
   font-size: 22px;
   height: 55px;
@@ -228,16 +237,31 @@ a{
     box-shadow: $shadow;
   }
 
+  &__mail{
+    width: 100%;
+    background: $hoverbg;
+    color: $color;
+    height: 110px;
+    padding: 1em 0;
+    &:hover{
+      text-indent: 0;
+      color: $color2;
+    }
+  }
+
   &__text {
     font-size: $border;
     letter-spacing: .3px;
     color: $bg1color;
     width: 100px;
+    height: 0;
 
     &:active,
     &:focus,
     &:hover {
       box-shadow: none;
+      color: $color4;
+
 
       &:before {
         opacity: 1;
@@ -353,6 +377,10 @@ a{
   height: 12rem;
   display: block;
 
+  &--two {
+    fill: $bg4color;
+  }
+
   &--one {
     fill: $bg3color;
   }
@@ -360,7 +388,6 @@ a{
 
 .wave {
   position: relative;
-  top: -140px;
   z-index: 3;
 }
 
@@ -520,10 +547,12 @@ label .habilities, label .work{
     }
   }
 }
-.card{
-  &__description{
+.card {
+  &__description {
     width: 100%;
     left: 0;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: 20px 15px 10px 20px;
     position: absolute;
@@ -533,13 +562,14 @@ label .habilities, label .work{
     border-radius: 1.5em 1.5em 0 0;
     background-color: $color;
     box-shadow: 0 -6px 26px 6px rgba(0, 0, 0, 0.25);
-    font-size: 25px;
     font-weight: 400;
+    font-size: 12px;
     cursor: auto;
-    &:after{
+
+    &:after {
       content: "";
       width: 80px;
-      background: var(--bgcolor5);
+      background: $bg5color;
       position: absolute;
       top: 10px;
       left: 50%;
@@ -548,12 +578,18 @@ label .habilities, label .work{
       transform: translateX(-50%);
       opacity: 0.3;
     }
-    &:hover .card__hide {
+
+    &:hover {
       max-height: 500px;
-      transition: max-height .7s ease-in;
+      transition: max-height 0.7s ease-in;
+      .card__hide {
+        max-height: 500px;
+        transition: max-height .7s ease-in;
+      }
     }
   }
-  &__inner{
+
+  &__inner {
     color: $bg2color;
     border-radius: $border;
     display: inline-flex;
@@ -568,27 +604,42 @@ label .habilities, label .work{
     background: $bg6color;
     outline: 1px solid rgba(0, 0, 0, .8);
     box-shadow: $shadow3;
-    &:hover{
-      animation: scale .5s ease-in-out;
-      animation-fill-mode: forwards;
+
+    &:hover  {
+      & img{
+        animation: scale 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
       &.card__description::after {
-        animation: updown .5s ease-in-out;
+        animation: updown 0.5s ease-in-out;
         animation-iteration-count: 6;
         animation-direction: alternate;
       }
     }
+
     &:last-child {
       margin-right: 20px;
     }
   }
-  &__hide{
+
+  &__hide {
     max-height: 0;
     width: 100%;
     overflow: hidden;
     white-space: normal;
-    transition: max-height .5s ease-out;
+    transition: max-height 0.5s ease-out;
   }
 
+  &__text {
+    font-family: $sfont;
+
+    &--title {
+      font-size: 1.2em;
+    }
+  }
+  &__mail{
+
+  }
 }
 
 @keyframes scale {
@@ -614,7 +665,6 @@ label .habilities, label .work{
     top: 7px;
   }
 }
-
 .item {
   overflow: hidden;
   margin-left: auto;
@@ -624,4 +674,54 @@ label .habilities, label .work{
   max-height: 550px;
   position: relative;
   border-radius: $border;
+}
+.gap{
+  gap: 10px;
+}
+.social-icons{
+ a{
+   background-color: $color;
+   color: $bg2color;
+   font-size: 16px;
+   display: inline-block;
+   line-height: 44px;
+   width: 44px;
+   height: 44px;
+   text-align: center;
+   margin-right: 8px;
+   border-radius: 100%;
+   -webkit-transition: all .2s linear;
+   -o-transition: all .2s linear;
+   transition: all .2s linear;
+   &:active, &:hover, &:focus{
+     color: $color;
+     background-color: $color3;
+   }
+   &.github:hover{
+     background-color: $bg1color;
+   }
+   &.codepen:hover{
+     background-color: #464646;
+   }
+   &.dribbble:hover{
+     background-color: #ea4c89;
+   }
+ }
+}
+.site-footer{
+  background-color: $bg5color;
+  padding: 45px 0 20px;
+  line-height: 24px;
+}
+.links{
+    a{
+      color: $color;
+      transition: color .3s ease-in-out;
+      &:hover{
+        color: $color4;
+      }
+    }
+    & i{
+      margin-right: 5%;
+    }
 }
