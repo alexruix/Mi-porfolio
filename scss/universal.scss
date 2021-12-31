@@ -87,6 +87,10 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-around;
 
 }
+@mixin flex__box-baseline(){
+  @include flex__box;
+  align-items: baseline;
+}
 @mixin flex__column($content: center){
   display: flex;
   flex-direction: column;
