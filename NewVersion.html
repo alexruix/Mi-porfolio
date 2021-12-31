@@ -21,7 +21,7 @@
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="scss/universal.min.css">
-  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="scss/main.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -41,33 +41,33 @@
     <nav class="navflex">
       <div class="menu">
         <a href="#home" class="menu__item active">
-          <div class="menu__icon">
+          <div class="menu__icon" >
             <i data-feather="home"></i>
           </div>
-          <strong class="menu__text active">inicio</strong>
+          <span class="menu__text active">inicio</span>
         </a>
-        <a href="#perfil" class="menu__item active">
-          <div class="menu__icon">
+        <a href="#perfil" class="menu__item">
+          <div class="menu__icon" >
             <i data-feather="user"></i>
           </div>
-          <strong class="menu__text active">perfil</strong>
+          <span class="menu__text active">perfil</span>
         </a>
-        <a href="#portfolio" class="menu__item active">
-          <div class="menu__icon">
+        <a href="#portfolio" class="menu__item">
+          <div class="menu__icon" >
             <i data-feather="briefcase"></i>
           </div>
-          <strong class="menu__text active">
-            Portfolio</strong>
-        </a>
-        <a href="#contact" class="menu__item">
-          <div class="menu__icon">
-            <i data-feather="message-square"></i>
-          </div>
-          <strong class="menu__text menu-active">Contacto</strong>
-        </a>
-      </div>
-    </nav>
-  </header>
+          <span class="menu__text active">
+            Portfolio</span>
+          </a>
+          <a href="#contact" class="menu__item">
+            <div class="menu__icon" >
+              <i data-feather="message-square"></i>
+            </div>
+            <span class="menu__text active">Contacto</span>
+          </a>
+        </div>
+      </nav>
+    </header>
 
   <div class="bg bg--bg1" id="home">
     <div class="container flex__box container--padding">
@@ -83,7 +83,7 @@
   <section class="background" id="perfil">
     <div class="bg bg--bg2">
       <div class="container flex__box ">
-        <div class="container--quarterwidth">
+        <div class="container--quarterwidth container__more__padding">
           <h3 class="text text__spacing center">Diseñador creativo</h3>
           <p class="text text__description text--font">Me especializo en el diseño y desarrollo de interfaces de usuario, incluido el desarrollo frontend porque considero fundamental crear una experiencia integral para que los clientes alcancen sus
             objetivos
@@ -129,7 +129,7 @@
             <div class="flex__box container">
               <div class="flex__column">
                 <div>
-                  <h4 class="flex__box-start gap text__spacing"><i data-feather="pen-tool"></i>AHORRAD</h4>
+                  <!-- <h4 class="flex__box-start gap text__spacing"><i data-feather="pen-tool"></i>AHORRAD</h4> -->
                   <p class="text__description text--font">Soy un diseñador y desarrolador que ayuda a las personas a crear aplicaciones web increíbles. Estoy especializado en el desarrollo de frontend para aplicaciones web complejas y escalables,
                     siendo responsable
                     de crear productos que brinden experiencias significativa para el usuario final, creando interfaces y componentes increíbles e interactivos con la mejor implementación de diseño de UX / UI. Siempre trato de mejorarme aprendiendo
@@ -250,7 +250,7 @@
     </div>
   </section>
 
-  <section class="bg bg--bg3" id="portfolio">
+  <section class="background bg bg--bg3" id="portfolio">
     <div>
       <div class="container">
         <div class="flex__column">
@@ -347,9 +347,9 @@
     </div>
   </section>
 
-  <section class="bg bg--bg4">
+  <section class="background bg bg--bg4">
     <div>
-      <div class="container container--middlewidth background" id="contact">
+      <div class="container container--middlewidth" id="contact">
         <div class="flex__column gap center">
           <h3 class="text__spacing">Contactame</h3>
           <h4 class="text text__subtitle">¡NO SEAS TÍMIDO!</h4>
@@ -365,13 +365,12 @@
           <div class="container--middlewidth">
             <p class="text text__description text--font">Tambien puedes encontrarme en:</p>
             <ul class="social-icons flex__box">
-              <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-              <li><a class="linkedin" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-              <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-              <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-              <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a class="email" href="mailto:alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-            </ul>
+              <li><a class="text--underline" href="https://github.com/alexruix"><i class="fa-brands fa-github"></i></a></li>
+              <li><a class="text--underline" href="https://www.linkedin.com/in/alexruix/"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a class="text--underline" href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a class="text--underline" href="https://dev.to/alexruix"><i class="fa-brands fa-dev"></i></a></li>
+              <li><a class="text--underline" href="mailto:alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+          </ul>
           </div>
         </div>
       </div>
@@ -380,8 +379,8 @@
 
   <footer class="site-footer">
     <div class="container work__container">
-      <div class="flex__box-baseline">
-        <div class="container--middlewidth text--font">
+      <!-- <div class="flex__box-baseline">
+        <div class="container container--middlewidth text--font">
           <div class="work__container">
             <h5>ALEX RUIZ</h5>
             <p>Soy diseñador UI/UX y desarrollador frontend, construyo sitios web modernos y pongo toda mi experiencia al servicio de las personas para que alcancen sus objetivos comerciales y mejorar la vida de los usuarios</p>
@@ -398,7 +397,7 @@
             </ul>
           </div>
         </div>
-        <div class="container container--middlewidth text--font">
+         <div class="container container--middlewidth text--font">
           <div class="work__container">
             <h5>REDES SOCIALES</h5>
             <ul class="links">
@@ -410,7 +409,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
       <hr>
     </div>
     <div class="work__container">
@@ -424,12 +423,12 @@
 
           <div>
             <ul class="social-icons flex__box">
-              <li><a class="github" href="https://github.com/alexruix"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-              <li><a class="dribbble" href="https://dribbble.com/alexruix"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-              <li><a class="codepen" href="https://codepen.io/Tormenta"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-              <li><a class="dribbble" href="https://www.instagram.com/ui.tormenta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a class="email" href="mailto:alexruiz1666@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-            </ul>
+              <li><a class="text--underline" href="https://github.com/alexruix"><i class="fa-brands fa-github"></i></a></li>
+              <li><a class="text--underline" href="https://www.linkedin.com/in/alexruix/"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a class="text--underline" href="https://www.instagram.com/ui.tormenta/"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a class="text--underline" href="https://dev.to/alexruix"><i class="fa-brands fa-dev"></i></a></li>
+              <li><a class="text--underline" href="mailto:alexruiz1666@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+          </ul>
           </div>
         </div>
       </div>
@@ -444,7 +443,7 @@
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="js/index.js"></script>
-  <script src="js/materialize.min.js"></script>
+  <!-- <script src="js/materialize.min.js"></script> -->
 </body>
 
 </html>

@@ -168,27 +168,32 @@ svg{
     svg{
         transform: translateX(-20%);
     }
-    &:before {
-      opacity: 1;
-      text-indent: 0;
-    }
+
   }
-  &:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 55px;
-    content: '\f061';
-    font-family: "Font Awesome 6 Free";
-    font-size: 20px;
-    font-weight: 900;
-    line-height: inherit;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
+  &__ppal, &__secondary{
+    &:before{
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 55px;
+      content: '\f061';
+      font-family: "Font Awesome 6 Free";
+      font-size: 20px;
+      font-weight: 900;
+      line-height: inherit;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
+    }
+    &:hover{
+      &:before{
+          opacity: 1;
+          text-indent: 0;
+      }
+    }
   }
 
   &__mail{
@@ -640,7 +645,7 @@ label .habilities, label .work{
  }
 }
 .site-footer{
-  background-color: $bg5color;
+  background-color: $bg4color;
   padding: 45px 0 20px;
   line-height: 24px;
 }
@@ -660,12 +665,12 @@ label .habilities, label .work{
     }
 }
 @media screen and (max-width:800px) {
-  h1 {
+  .text__title{
     font-size: 40px;
   }
 
-  h2 {
-    font-size: 30px;
+  .text__subtitle {
+    font-size: 25px;
   }
 
   h3 {
@@ -675,11 +680,42 @@ label .habilities, label .work{
   h4 {
     font-size: 25px;
   }
+  .text__description{
+    font-size: 14px;
+  }
   .bg--bg2{
       height: 80%;
   }
   .card__hide {
     max-height: 500px;
+  }
+  .flex__column-start{
+    padding-top: 20%;
+  }
+  .flex__box, .flex__box-baseline{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container{
+    width: 100%;
+    &--img{
+      height: 500px;
+      margin-top: 0;
+    }
+  }
+  .container__more__padding{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .switcher, .work__container{
+    width: 100%;
+  }
+  .button--left{
+    left: 10px;
+  }
+  .button--right{
+    right: 10px;
   }
 
 }
@@ -694,6 +730,9 @@ label .habilities, label .work{
     width: 80%;
   }
   .container--middlewidth{
+    width: 100%;
+  }
+  .container--quarterwidth{
     width: 100%;
   }
   .flex__column{

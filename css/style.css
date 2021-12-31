@@ -1343,12 +1343,12 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
     margin: 2em 0;
   }
 
-  .portfolio__subheader {
+  .sec3__subheader {
     flex-wrap: wrap;
     padding: 2%;
   }
 
-  .card__inner {
+  .sec3-card__inner {
     height: 500px;
     width: 80%;
   }

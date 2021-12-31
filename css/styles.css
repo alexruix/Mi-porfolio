@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+:root {
+  --pfont: 'Bebas Neue', cursive;
+  --sfont: 'Didact Gothic', sans-serif;
+  --color-0: #fafafa;
+  /*Color blanco puro*/
+  --color-1: #d5d5d5;
+  /*Color blanco */
+  --color-2: #090909;
+  /*Color negro puro */
+  --color-3: #3C58B7;
+  /*Color principal fondo blanco */
+  --color-4: #0072ff;
+  /*Color principal fondo negro */
+  --cards: #1a2237;
+  --bgcolor1: #090909;
+  /*Color negro puro*/
+  --bgcolor2: #191C1C;
+  --bgcolor3: #232323;
+  --bgcolor4: #1B2223;
+  /*Color negro verde*/
+  --bgcolor5: #24292E;
+  --bgcolor6: #322E3A;
+  /*Color negro violeta*/
+  --duration: .45s;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --background-hover: #051D6B;
+  --shadow: 0px 4px 30px rgba(45, 79, 223, 0.35);
+  --shadow-hover: 0 4px 20px -2px rgba(45, 79, 223, 0.5);
+  --shadow2: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  --shadow3: 0 4px 20px -2px #1c1e22;
+  --skills-bar-length: 0%;
+  --span: rgb(102, 148, 240);
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+nav {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: var(--pfont);
+  box-shadow: 0 0 0 0;
+  display: flex;
+  height: 64px;
+  overflow: hidden;
+}
+
+nav ul li a {
+  display: inline-flex;
+  font-family: var(--sfont);
+  font-size: 1.1em;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  color: var(--color-4);
+  border-radius: 16px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navflex {
+  justify-content: flex-end;
+}
+
+.menu {
+  margin-right: 5%;
+  width: 28em;
+  position: relative;
+  background: var(--color-0);
+  display: flex;
+  height: 100%;
+  user-select: none;
+  align-items: center;
+  padding: 0 1.2em;
+  justify-content: center;
+  border-radius: 0 0 1.5em 1.5em;
+  max-width: 1250px;
+  max-height: 860px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 42.625em) {
+  .menu {
+    font-size: .55em;
+  }
+}
+
+.menu__item {
+  all: unset;
+  flex-grow: 1;
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 0.5em;
+  position: relative;
+  color: var(--bgcolor6);
+  justify-content: center;
+  transition: flex-grow var(--duration) var(--cubic);
+}
+
+.menu__icon {
+  font-size: 2em;
+  transition: transform var(--duration) var(--cubic);
+}
+
+.menu__item::after {
+  left: -1.15em;
+  bottom: 1em;
+  content: " ";
+  height: 0.25em;
+  position: absolute;
+  border-radius: 2em;
+  transform-origin: left center;
+  background-color: var(--color-4);
+  width: calc(var(--lineWidth) + 5px);
+  transform: translate3d(3em, 0, 0) scaleX(0);
+  transition: transform calc(var(--duration) + .2s) var(--cubic);
+}
+
+.menu__text {
+  left: 3.5em;
+  height: 4em;
+  font-size: 1.5em;
+  color: var(--color-4);
+  position: absolute;
+  text-transform: capitalize;
+  letter-spacing: .03em;
+  transform: translate3d(0, 109%, 0);
+  transition: transform calc(var(--duration) / 3.7);
+}
+
+.menu__item.active {
+  flex-grow: 3.3;
+  color: var(--color-4);
+}
+
+.menu__item.active .menu__icon {
+  transform: translate3d(-95%, 0, 0);
+}
+
+.menu__item.active::before {
+  transform: scale(1);
+}
+
+.menu__item.active::after {
+  transform: translate3d(6.3em, 0, 0) scaleX(1);
+  transition: transform var(--duration) var(--cubic);
+}
+
+.menu__text.active {
+  transform: translate3d(0, 0, 0);
+  transition: transform calc(var(--duration) / 1.5);
+}
+
+.icon {
+  --duration-icon: 1s;
+  fill: none;
+  width: 2.5em;
+  height: 2.5em;
+  display: block;
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+}
+
+
+@media screen and (max-width:1050px) {
+  .navflex {
+    justify-content: center;
+    background: var(--bgcolor1);
+  }
+
+  header {
+    position: relative;
+  }
+
+  .menu {
+    font-size: 12px;
+    position: fixed;
+    margin: 0;
+    height: 64px;
+    bottom: 0;
+    border-radius: 1em 1em 0 0;
+  }
+
+  .menu__text.active {
+    color: var(--color-3);
+  }
+
+  .menu__icon {
+    font-size: 3.5em;
+  }
+
+  .menu__item.active {
+    flex-grow: 2.8;
+    color: var(--color-3);
+  }
+
+  .width70 {
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  .sec3__subheader {
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+  .sec3-card__inner {
+    height: 500px;
+    width: 80%;
+  }
+}
