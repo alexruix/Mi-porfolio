@@ -664,6 +664,12 @@ label .habilities, label .work{
       }
     }
 }
+.tooltipped{
+  font-family: $sfont;
+  background: $color2;
+  color: $bg1color;
+  border-radius: $border;
+}
 @media screen and (max-width:800px) {
   .text__title{
     font-size: 40px;

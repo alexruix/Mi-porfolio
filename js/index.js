@@ -1,4 +1,7 @@
 
+$(document).ready(function(){
+   $('.tooltipped').tooltip();
+ });
 var app = document.getElementById('type2');
 
 var typewriter = new Typewriter(app, {
