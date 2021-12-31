@@ -13,6 +13,7 @@
   $color2: #d5d5d5;
   $color3: #3C58B7;
   $color4: #0072ff;
+  $color5: rgba(#ffffff, 0.07);
   $hoverbg: #051D6B;
   $bg1color: #090909;
   $bg2color: #191C1C;
@@ -175,6 +176,10 @@ header {
   }
   &--middlewidth{
     width: 50%;
+  }
+  &__fullwidth{
+    width: 100%;
+    position: relative;
   }
   &--img{
     max-width: 430px;
@@ -369,7 +374,7 @@ input {
 .work{
   right: 0;
 }
-.habilities, .work{
+label .habilities, label .work{
   display: block;
   position: absolute;
   width: 50%;
@@ -381,4 +386,37 @@ input {
 }
 .card__black{
   @include buttonblue($bg2color);
+  padding: 3% 0;
+}
+.hab, .show .work {
+  display: none;
+}
+.show .hab {
+  display: flex;
+}
+.work{
+  &__header{
+    position: relative;
+    margin-top: 10%;
+  }
+  &__titlebg{
+    font-size: 110px;
+    left: 0;
+    letter-spacing: 10px;
+    line-height: .7;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    font-weight: 800;
+    transform: translateY(-50%);
+    color: $color5;
+  }
+  &__img{
+    width: 55px;
+    height: 55px;
+    margin-right: 2%;
+  }
+  &__container{
+    width: 85%;
+  }
 }
