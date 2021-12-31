@@ -37,14 +37,8 @@ header {
   top: 0;
   z-index: 999;
 }
-.navflex ul li a {
-  display: inline-flex;
-  font-family: $sfont;
-  font-size: 1.1em;
-  &:hover, &--active{
-    color: $color4;
-    border-radius: 16px;
-  }
+a{
+  color: $bg1color;
 }
 .navflex{
   display: flex;
@@ -221,7 +215,7 @@ header {
 }
 .button {
   transition: text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
-  border-radius: 16px;
+  border-radius: $border;
   font-size: 22px;
   height: 55px;
   letter-spacing: 0.8px;
@@ -229,67 +223,58 @@ header {
   width: 205px;
   position: relative;
 
-&:hover{
-
+  &:hover {
     text-indent: -20%;
     box-shadow: $shadow;
-}
-&__text{
-  font-size: 1.3em;
-  letter-spacing: .3px;
-  font-weight: 500;
-  color: $bg1color;
-  border-radius: 8px;
-  &:hover{
-    box-shadow: none;
   }
-  &:after{
-    
-  }
-}
-&--left, &--right{
-  position: absolute;
-  top: 50%;
-  margin-top: -25px;
-  height: 50px;
-  width: 50px;
-  z-index: 2;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  box-shadow: $shadow2;
-  left: -25px;
-  border: none;
-  transition: all .3s ease-in;
-  background-color: $bg5color;
-  color: $color;
-  font-size: 20px;
-  font-weight: 900;
-  &:focus, &:active, &:hover{
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08);
-    background-color: $bg2color;
-    box-shadow: $shadow3;
-  }
-}
-&--right{
-  right: -25px;
-  left: auto;
-}
 
-&__ppal {
-  background: $hoverbg;
-  margin-right: 2%;
+  &__text {
+    font-size: $border;
+    letter-spacing: .3px;
+    color: $bg1color;
+    width: 100px;
 
-  &:active,
-  &:focus,
-  &:hover {
-    background: $hoverbg;
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+
+      &:before {
+        opacity: 1;
+        text-indent: 0;
+      }
+    }
 
     &:before {
-      opacity: 1;
-      text-indent: 0;
+      position: absolute;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: '\f08e';
+      font-family: "Font Awesome 6 Free";
+      font-size: 14px;
+      font-weight: 900;
+      line-height: inherit;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
     }
   }
+
+  &__ppal {
+    background: $hoverbg;
+    margin-right: 2%;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: $hoverbg;
+
+      &:before {
+        opacity: 1;
+        text-indent: 0;
+      }
+    }
 
     &:before {
       position: absolute;
@@ -309,20 +294,53 @@ header {
       transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
     }
   }
-&__secondary {
-  outline: 2px solid $color4;
-  background: $bg2color;
-  color: $color4;
 
+  &__secondary {
+    outline: 2px solid $color4;
+    background: $bg2color;
+    color: $color4;
 
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $hoverbg;
-    color: $color;
-    outline: 2px solid $hoverbg;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $hoverbg;
+      color: $color;
+      outline: 2px solid $hoverbg;
+    }
   }
-}
+  &--left,
+  &--right {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow2;
+    left: -25px;
+    border: none;
+    transition: all 0.3s ease-in;
+    background-color: $bg5color;
+    color: $color;
+    font-size: 20px;
+    font-weight: 900;
+
+    &:active,
+    &:focus,
+    &:hover {
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: $bg2color;
+      box-shadow: $shadow3;
+    }
+  }
+
+  &--right {
+    right: -25px;
+    left: auto;
+  }
 }
 .marginbottom{
   margin-bottom: 7em;
@@ -530,6 +548,10 @@ label .habilities, label .work{
       transform: translateX(-50%);
       opacity: 0.3;
     }
+    &:hover .card__hide {
+      max-height: 500px;
+      transition: max-height .7s ease-in;
+    }
   }
   &__inner{
     color: $bg2color;
@@ -559,6 +581,14 @@ label .habilities, label .work{
       margin-right: 20px;
     }
   }
+  &__hide{
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: normal;
+    transition: max-height .5s ease-out;
+  }
+
 }
 
 @keyframes scale {
