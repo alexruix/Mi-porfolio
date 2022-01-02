@@ -566,10 +566,11 @@ label .habilities, label .work{
     margin-left: 20px;
     /*Ult mod*/
     width: 400px;
-    height: 400px;
+    height: 470px;
     max-width: 550px;
     background: $bg6color;
     outline: 1px solid rgba(0, 0, 0, .8);
+    //Two News
     box-shadow: $shadow3;
 
     &:hover  {
@@ -702,6 +703,20 @@ label .habilities, label .work{
   height: 15px;
   border-radius: 8px;
 }
+.swiper {
+        width: 85%;
+        height: 100%;
+        max-height: 470px;
+        background: $bg4color;
+      }
+
+      .swiper-slide {
+        width: 300px;
+        height: 100%;
+        max-height: 500px;
+        max-width: 470px;
+        background: $bg4color;
+      }
 @media screen and (max-width:800px) {
 
 .text{
@@ -724,7 +739,6 @@ max-height: 500px;
   }
 }
 
-
   .flex__column-start{
     padding-top: 20%;
   }
@@ -734,6 +748,9 @@ max-height: 500px;
   }
   .flex__column-start .flex__box, .social-icons{
     flex-wrap: nowrap;
+  }
+  .switcher{
+    width: 100%;
   }
   .container{
     width: 100%;

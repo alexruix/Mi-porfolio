@@ -32,20 +32,24 @@ slider.scrollLeft = 10;
 
 slider.onmousedown = function (e) {
     'use strict';
+    e.preventDefault()
     isDown = true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
 };
 
-slider.onmouseup = function () {
+
+slider.onmouseleave = function (e) {
     'use strict';
+    e.preventDefault();
     isDown = false;
     slider.classList.remove('active');
 };
 
-slider.onmouseleave = function () {
+slider.onmouseup = function (e) {
     'use strict';
+    e.preventDefault();
     isDown = false;
     slider.classList.remove('active');
 };
@@ -63,19 +67,19 @@ function controlsSlider(num) {
     'use strict';
     var smooth = setInterval(function () {
         slider.scrollLeft += num;
-    }, 10);
+    }, 12);
     setTimeout(function () {
         clearInterval(smooth);
     }, 210);
 }
 arrows[0].onclick = function () {
     'use strict';
-    controlsSlider(-20);
+    controlsSlider(-16);
 };
 
 arrows[1].onclick = function () {
     'use strict';
-    controlsSlider(20);
+    controlsSlider(16);
 };
 
 window.onkeydown = function (e) {
