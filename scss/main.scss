@@ -15,6 +15,8 @@
   $color4: #0082ff;
   $color5: rgba(#ffffff, 0.07);
   $hoverbg: #051D6B;
+  $pressbtn: #020E46;
+  $hoverbtn: #04185E;
   $bg1color: #090909;
   $bg2color: #191C1C;
   $bg3color: #232323;
@@ -35,10 +37,35 @@ body{
 a{
   color: $bg1color;
 }
+//Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $color5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $hoverbg;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb{
+  &:active, &:focus{
+    background: $pressbtn;
+  }
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $hoverbtn;
+}
 //Backgrounds color
 .bg{
   &--bg1{
-    background-image: url(../img/bannerbg.png);
+    background-image: url(../img/bannerbg.webp);
     background-position: top left;
     background-size: cover;
     margin-top: -64px;
@@ -71,7 +98,7 @@ a{
     padding-bottom: calc(45em/4);
   }
   &--middlewidth{
-    width: 50%;
+    width: 60%;
   }
   &--quarterwidth{
     width: 45%;
@@ -119,6 +146,9 @@ a{
   &__subtitle{
     font-size: 35px;
     line-height: 1.3em;
+    &--small{
+      font-size: 25px;
+    }
   }
   &--font{
     font-family: $sfont;
@@ -157,17 +187,19 @@ svg{
   color: inherit;
   width: 205px;
   position: relative;
-svg{
-  margin-top: -2%;
-  margin-right: 5%;
-  transition: transform .2s ease-in-out 0s;
-}
+  margin-top: 2%;
+
+
+
+    &:active,
+    &:focus,{
+      background: $pressbtn;
+    }
   &:hover {
     text-indent: -20%;
     box-shadow: $shadow;
-    svg{
-        transform: translateX(-20%);
-    }
+    background: $hoverbtn;
+
 
   }
   &__ppal, &__secondary{
@@ -220,6 +252,7 @@ svg{
     &:hover {
       box-shadow: none;
       color: $color4;
+      background: none;
 
 
       &:before {
@@ -247,25 +280,23 @@ svg{
   &__ppal {
     background: $hoverbg;
     margin-right: 2%;
-
-    &:active,
-    &:focus,
-    &:hover {
-      background: $hoverbg;
-    }
   }
 
   &__secondary {
     outline: 2px solid $color4;
     background: $bg2color;
     color: $color4;
-
-    &:active,
-    &:focus,
+    svg{
+      margin-top: -2%;
+      margin-right: 5%;
+      transition: transform .2s ease-in-out 0s;
+    }
     &:hover {
-      background-color: $hoverbg;
       color: $color;
-      outline: 2px solid $hoverbg;
+      outline: 2px solid $hoverbtn;
+      svg{
+          transform: translateX(-20%);
+      }
     }
   }
   &--left,
@@ -664,11 +695,12 @@ label .habilities, label .work{
       }
     }
 }
-.tooltipped{
+.material-tooltip {
   font-family: $sfont;
-  background: $color2;
-  color: $bg1color;
-  border-radius: $border;
+  background: $color;
+  color: $bg3color;
+  height: 15px;
+  border-radius: 8px;
 }
 @media screen and (max-width:800px) {
 
@@ -700,7 +732,7 @@ max-height: 500px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .flex__column-start .flex__box{
+  .flex__column-start .flex__box, .social-icons{
     flex-wrap: nowrap;
   }
   .container{
@@ -710,14 +742,11 @@ max-height: 500px;
       margin-top: 0;
     }
     &__more__padding{
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
   }
 
-  .switcher, .work__container{
-    width: 100%;
-  }
   .button{
     &--left{
       left: 10px;
@@ -743,7 +772,15 @@ max-height: 500px;
     flex-wrap: wrap;
     padding: 2%;
   }
+.work{
+  &__container{
+    width: 100%;
+  }
 
+  &__header{
+    justify-content: flex-start;
+  }
+}
   .card__inner {
     height: 500px;
     width: 80%;
