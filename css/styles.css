@@ -125,7 +125,7 @@ header {
   border-radius: 2em;
   transform-origin: left center;
   background-color: var(--color-4);
-  width: calc(var(--lineWidth) + 5px);
+  width: calc(var(--lineWidth) - 1px);
   transform: translate3d(3em, 0, 0) scaleX(0);
   transition: transform calc(var(--duration) + .2s) var(--cubic);
 }
