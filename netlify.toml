@@ -1,3 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "/links"
+  base = "/"
+
 [[redirects]]
   from = "/links"
   to = "https://zen-galileo-594db2.netlify.app/"
