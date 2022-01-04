@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 
+
   $primary: blue;
   $pfont: 'Bebas Neue', cursive;
   $sfont: 'Didact Gothic', sans-serif;
@@ -17,6 +18,7 @@
   $hoverbg: #051D6B;
   $pressbtn: #020E46;
   $hoverbtn: #04185E;
+
   $bg1color: #090909;
   $bg2color: #191C1C;
   $bg3color: #232323;
@@ -29,11 +31,26 @@
   $shadow2:  0 4px 20px -2px #1c1e22;
   $shadow3: 0 0 10px rgba(#000000, 0.6);
 
+
+
+
 body{
+
   font-family: $pfont;
   color: $color;
   background: $bg1color;
+
+  &.light{
+    $bg1color: #FEFBFF;
+    $bg2color: linear-gradient(0deg, rgba(70, 89, 169, 0.05), rgba(70, 89, 169, 0.05)), #FEFBFF;
+    $bg3color: linear-gradient(0deg, rgba(70, 89, 169, 0.05), rgba(70, 89, 169, 0.05)), #FEFBFF;
+    $bg4color: linear-gradient(0deg, rgba(70, 89, 169, 0.11), rgba(70, 89, 169, 0.11)), #FEFBFF;
+    $bg5color: linear-gradient(0deg, rgba(70, 89, 169, 0.12), rgba(70, 89, 169, 0.12)), #FEFBFF;
+    $bg6color: linear-gradient(0deg, rgba(70, 89, 169, 0.14), rgba(70, 89, 169, 0.14)), #FEFBFF;
+    $color: #1B1B1F;
+  }
 }
+
 a{
   color: $bg1color;
 }
@@ -300,6 +317,17 @@ svg{
       svg{
           transform: translateX(-20%);
       }
+    }
+  }
+  &__gray{
+    background: $color;
+    color: #676767;
+    outline: 2px solid #818181;
+     &:hover, &:focus, &:active{
+      background: $color;
+      color: #676767;
+      outline-color: #676767;
+      text-indent: 0;
     }
   }
   &--left,

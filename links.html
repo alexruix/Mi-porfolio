@@ -31,15 +31,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
 
   <title>Alex Ruiz - Designer & Frontend Dev Profile</title>
 </head>
 
-<body>
+<body class="light">
 
-<div class="bg bg-gradient">
+  <div class="bg bg-gradient">
 
   <div class="container flex__box">
     <div class="content">
@@ -51,71 +51,110 @@
           <img class="imgfit" src="img/profile.png" alt="Alex Ruiz profile card">
         </div>
 
-        <div class="profile-card__cnt js-profile-cnt">
-          <div class="profile-card__nam text text--gradient">
-            <h1 style="font-size:2.5em">Alex Ruiz</h1>
-          </div>
-          <div class="profile-card__txt">
-            <p>UX/UI Designer & Frontend Developer</p>
-            <div class="profile-card-loc">
+      <div class="profile-card__cnt js-profile-cnt">
+        <div class="profile-card__nam text text--gradient">
+          <h3>Alex Ruiz</h3>
+        </div>
+        <div class="profile-card__txt">
+          <p>UX/UI Designer & Frontend Developer</p>
+          <div class="profile-card-loc">
               <i class="icon" data-feather="map-pin"></i>
-              <span>
-                Buenos Aires, <strong>Argentina</strong>
-              </span>
-            </div>
-          </div>
-          <div class="profile-card-social">
-            <a class="profile-card-social__item linkedin" aria-label="Ir al perfl de Linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
-              <span class="icon-font">
-                <i class="fa-brands fa-linkedin"></i>
-              </span>
-            </a>
-
-            <a class="profile-card-social__item github" aria-label="Ir al perfl de Github" target="_blank" rel="noopener" href="https://github.com/alexruix">
-              <span class="icon-font">
-                <i class="fa-brands fa-github"></i>
-              </span>
-            </a>
-
-            <a class="profile-card-social__item twitter" aria-label="Ir al perfl de Twitter" target="_blank" rel="noopener" href="https://twitter.com/uitormenta">
-              <span class="icon-font">
-                <i class="fa-brands fa-twitter"></i>
-              </span>
-            </a>
-
-            <a class="profile-card-social__item instagram" aria-label="Ir al perfl de Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/ui.tormenta/">
-              <span class="icon-font">
-                <i class="fa-brands fa-instagram"></i>
-              </span>
-            </a>
-
-            <a class="profile-card-social__item dribbble" aria-label="Ir al perfl de Dribbble" target="_blank" rel="noopener" href="https://dribbble.com/uitormenta">
-              <span class="icon-font">
-                <i class="fa-brands fa-dribbble"></i>
-              </span>
-            </a>
-          </div>
-
-          <div class="profile-card-ctr">
-            <a href="index.html" class="button button__ppal profile-card__button js-message-btn">Ver mi sitio web</a>
-            <!-- <a href="mailto:alexruiz1666@gmail.com" class="button button__ppal"><i data-feather="link"></i>Ver mis trabajos</a> -->
-            <a href="mailto:alexruiz1666@gmail.com" target="_blank" rel="noopener" class="button button__secondary profile-card__button button--two"><i data-feather="message-square"></i>Escribeme</a>
+            <span>
+              Buenos Aires, <strong>Argentina</strong>
+            </span>
           </div>
         </div>
+        <div class="profile-card-social">
+          <a class="profile-card-social__item linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
+            <span class="icon-font">
+              <i class="fa-brands fa-linkedin"></i>
+            </span>
+          </a>
+
+          <a class="profile-card-social__item github" target="_blank" rel="noopener" href="https://github.com/alexruix">
+            <span class="icon-font">
+              <i class="fa-brands fa-github"></i>
+            </span>
+          </a>
+
+          <a class="profile-card-social__item twitter" target="_blank" rel="noopener" href="https://twitter.com/uitormenta">
+            <span class="icon-font">
+              <i class="fa-brands fa-twitter"></i>
+            </span>
+          </a>
+
+          <a class="profile-card-social__item instagram" target="_blank" rel="noopener" href="https://www.instagram.com/ui.tormenta/">
+            <span class="icon-font">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+          </a>
+
+          <a class="profile-card-social__item dribbble" target="_blank" rel="noopener" href="https://dribbble.com/uitormenta">
+            <span class="icon-font">
+              <i class="fa-brands fa-dribbble"></i>
+            </span>
+          </a>
+        </div>
+
+        <div class="profile-card-ctr">
+          <!-- <button class="profile-card__button button--blue js-message-btn">Message</button> -->
+          <a class="button button__ppal profile-card__button" href="index.html">Ver mi sitio web</a>
+          <!-- <a href="mailto:alexruiz1666@gmail.com" class="button button__ppal"><i data-feather="link"></i>Ver mis trabajos</a> -->
+          <button class="button button__secondary profile-card__button js-message-btn"><i data-feather="message-square"></i>Escribeme</button>
+        </div>
+
+
+
       </div>
+      <div class="profile-card-message js-message">
+        <form class="profile-card-form" action="https://formspree.io/f/mgedvorp" method="POST">
+          <div class="profile-card-form__container">
+              <div class="flex__box form__flex text--font">
+                <div class="form__section">
+                  <input type="text" id="first_name" placeholder="Tu nombre" name="name" minlength="4" maxlength="80" autocomplete="given-name" required="">
+                </div>
+                <div class="form__section">
+                  <input type="email" id="email" name="_replyto" maxlength="80" required="" autocomplete="email" placeholder="Tu email">
+                </div>
+              </div>
+              <div class="flex__box form__flex text--font">
+                <div class="form__section">
+                  <textarea id="message" name="message" rows="8" cols="80" placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+              </div>
+          </div>
+
+          <div class="profile-card-form__bottom">
+            <button class="button button__ppal profile-card__button" type="submit">
+              Enviar
+            </button>
+
+            <button class="button button__gray profile-card__button js-message-close">
+              Cancelar
+            </button>
+          </div>
+        </form>
+
+        <div class="profile-card__overlay js-message-close"></div>
+      </div>
+      </div>
+
     </div>
   </div>
 
-</div>
+  </div>
+
+
+  </div>
 
   <script src="https://kit.fontawesome.com/a6083f8adb.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script> -->
-  <!-- <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> -->
-  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <!-- <script src="js/materialize.min.js"></script> -->
-  <script src="js/index.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/links.js"></script>
 </body>
 
 </html>
