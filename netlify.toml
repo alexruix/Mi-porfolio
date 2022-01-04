@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/links"
+  to = "https://zen-galileo-594db2.netlify.app/"
+  status = 200
+  force = true
+  # headers = {X-From = "Netlify"}
