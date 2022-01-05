@@ -202,7 +202,8 @@ svg{
   height: 55px;
   letter-spacing: 0.8px;
   color: inherit;
-  width: 205px;
+  padding: 0 40px;
+  // width: 205px;
   position: relative;
   margin-top: 2%;
 
@@ -270,8 +271,6 @@ svg{
       box-shadow: none;
       color: $color4;
       background: none;
-
-
       &:before {
         opacity: 1;
         text-indent: 0;
@@ -304,7 +303,7 @@ svg{
 
   &__secondary {
     outline: 2px solid $color4;
-    background: $bg2color;
+    background: none;
     color: $color4;
     svg{
       margin-top: -2%;
@@ -312,8 +311,9 @@ svg{
       transition: transform .2s ease-in-out 0s;
     }
     &:hover {
-      color: $color;
-      outline: 2px solid $hoverbtn;
+      color: $color3;
+      outline: 2px solid $color3;
+      background: none;
       svg{
           transform: translateX(-20%);
       }
@@ -480,6 +480,7 @@ label .habilities, label .work{
 .show .hab {
   display: flex;
 }
+
 .work{
   &__header{
     position: relative;
@@ -508,43 +509,104 @@ label .habilities, label .work{
     margin-left: auto;
   }
 }
+
+
+
+
+
+
 .portfolio{
-  position: relative;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  &:before, &:after{
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    content: "";
-    display: block;
-    width: 20px;
-    height: 100%;
-  }
-  &:before{
-    left: 0;
-    background: linear-gradient(90deg, #222, transparent);
-  }
-  &:after{
-    right: 0;
-    background: linear-gradient(-90deg, #222, transparent);
-  }
-  &__subheader{
-    overflow: hidden;
+  &__container{
+    width: 60%;
+    margin: auto;
     position: relative;
-    width: 100%;
-    white-space: nowrap;
-    padding: 0 2% 5%;
-    cursor: auto;
-    scroll-behavior: auto;
-    &:active{
-      cursor: -webkit-grabbing;
-      cursor: -moz-grabbing;
-      cursor: grabbing;
+  }
+  &__img{
+   width: 300px;
+   position: absolute;
+ 	 flex-shrink: 0;
+ 	 height: 300px;
+   border-radius: $border;
+ 	 transform: translate(-10%, 20%);
+ 	 overflow: hidden;
+   @media screen and (max-width: 768px) {
+     width: 200px;
+     display: flex;
+     margin: auto;
+     position: relative;
+    height: 200px;
+    transform: translateX(0%);
+   }
+   &:after{
+     content: '';
+  	 position: absolute;
+  	 top: 0;
+  	 left: 0;
+  	 width: 100%;
+  	 height: 100%;
+     border-radius: $border;
+  	 background: $color3;
+  	 opacity: 0.2;
+   }
+  }
+
+  &__content{
+    width: 50%;
+    padding-right: 30px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+		 text-align: center;
+		 padding: 0 30px;
     }
   }
+  &__end{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
 }
+
+
+
+
+// .portfolio{
+//   position: relative;
+//   width: 90%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   &:before, &:after{
+//     position: absolute;
+//     top: 0;
+//     z-index: 1;
+//     content: "";
+//     display: block;
+//     width: 20px;
+//     height: 100%;
+//   }
+//   &:before{
+//     left: 0;
+//     background: linear-gradient(90deg, #222, transparent);
+//   }
+//   &:after{
+//     right: 0;
+//     background: linear-gradient(-90deg, #222, transparent);
+//   }
+//   &__subheader{
+//     overflow: hidden;
+//     position: relative;
+//     width: 100%;
+//     white-space: nowrap;
+//     padding: 0 2% 5%;
+//     cursor: auto;
+//     scroll-behavior: auto;
+//     &:active{
+//       cursor: -webkit-grabbing;
+//       cursor: -moz-grabbing;
+//       cursor: grabbing;
+//     }
+//   }
+// }
 .card {
   &__description {
     width: 100%;
@@ -841,5 +903,81 @@ max-height: 500px;
   }
   .flex__column{
     flex-wrap: wrap;
+  }
+}
+
+.profile-card-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &__item {
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #405de6;
+    box-shadow: 0 7px 30px rgba(43,98,169,0.5);
+    position: relative;
+    font-size: 21px;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    @media screen and (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+&.footer{
+  background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: $bg1color;
+  box-shadow: none;
+}
+
+    &.twitter {
+      background: linear-gradient(45deg, #1da1f2,#0e71c8);
+      box-shadow: 0 4px 30px rgba(19, 127, 212, 0.7);
+    }
+
+    &.linkedin{
+      background: linear-gradient(45deg, #3b5998, #0078d7);
+      box-shadow: 0px 4px 30px rgba(43, 98, 169, 0.5);
+    }
+    &.instagram {
+      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+      box-shadow: 0 4px 30px rgba(120, 64, 190, 0.6);
+    }
+
+    &.github {
+      background: linear-gradient(45deg, #333333, #626b73);
+      box-shadow: 0 4px 30px rgba(63, 65, 67, 0.6);
+    }
+
+    &.dribbble {
+      background: #B24592;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(45deg, #da546c, #aa418b);
+      background: -o-linear-gradient(45deg, #da546c, #aa418b);
+      background: linear-gradient(45deg, #da546c, #aa418b);
+      /* Chrome 10-25, Safari 5.1-6 */
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      box-shadow: 0 4px 30px rgba(223, 45, 70, 0.6);
+    }
+  }
+
+  .icon-font {
+    display: inline-flex;
   }
 }
