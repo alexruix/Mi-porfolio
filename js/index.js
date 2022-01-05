@@ -15,7 +15,7 @@ typewriter.typeString('modernas')
     .typeString('simples')
     .pauseFor(8500)
     .deleteAll()
-    .typeString('faciles de usar')
+    .typeString('user friendly')
     .pauseFor(8500)
     .start();
 

@@ -67,12 +67,11 @@ nav ul li a.active, nav ul li a:hover {
 header {
   position: fixed;
   top: 0;
-  right: 0;
   z-index: 999;
 }
 
-.navflex {
-  justify-content: flex-end;
+.navflex{
+  right: 5%;
 }
 
 .menu {
@@ -179,6 +178,7 @@ header {
 @media screen and (max-width:1050px) {
   .navflex {
     justify-content: center;
+    right: 0;
     background: var(--bgcolor1);
   }
 

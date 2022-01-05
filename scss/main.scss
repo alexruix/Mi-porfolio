@@ -155,13 +155,16 @@ a{
     	 transition: 0.3s ease-in-out;
     }
   }
+  &--left{
+    text-align: left;
+  }
   &--gradient{
     background: linear-gradient(to bottom, #00c6ff 30%, #0072ff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   &__subtitle{
-    font-size: 2em;
+    font-size: 2.5rem;
     line-height: 1.3em;
     &--small{
       font-size: 25px;
@@ -517,16 +520,16 @@ label .habilities, label .work{
 
 .portfolio{
   &__container{
-    width: 60%;
+    width: 70%;
     margin: auto;
-    position: relative;
+    display: flex;
     @media screen and (max-width: 768px) {
       width: 100%;
+      flex-direction: column;
     }
   }
   &__img{
    width: 300px;
-   position: absolute;
  	 flex-shrink: 0;
  	 height: 300px;
    border-radius: $border;
@@ -534,6 +537,7 @@ label .habilities, label .work{
  	 overflow: hidden;
    @media screen and (max-width: 768px) {
      width: 80%;
+     max-height: 250px;
      display: flex;
      margin: auto;
      position: relative;
@@ -553,8 +557,7 @@ label .habilities, label .work{
   }
 
   &__content{
-    width: 50%;
-    padding-right: 30px;
+    padding: 0 5%;
     @media screen and (max-width: 768px) {
       width: 100%;
 		 text-align: center;
@@ -562,6 +565,7 @@ label .habilities, label .work{
     }
   }
   &__end{
+    padding: 3% 0;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
