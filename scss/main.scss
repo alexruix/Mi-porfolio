@@ -161,7 +161,7 @@ a{
     -webkit-text-fill-color: transparent;
   }
   &__subtitle{
-    font-size: 35px;
+    font-size: 2em;
     line-height: 1.3em;
     &--small{
       font-size: 25px;
@@ -520,6 +520,9 @@ label .habilities, label .work{
     width: 60%;
     margin: auto;
     position: relative;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   &__img{
    width: 300px;
@@ -530,12 +533,11 @@ label .habilities, label .work{
  	 transform: translate(-10%, 20%);
  	 overflow: hidden;
    @media screen and (max-width: 768px) {
-     width: 200px;
+     width: 80%;
      display: flex;
      margin: auto;
      position: relative;
-    height: 200px;
-    transform: translateX(0%);
+    transform: translate(0%, -20%);
    }
    &:after{
      content: '';
@@ -816,9 +818,6 @@ label .habilities, label .work{
   &__title{
     font-size: 40px;
   }
-  &__subtitle{
-    font-size: 25px;
-  }
 }
 
 .bg{
@@ -873,9 +872,9 @@ max-height: 500px;
       font-size: 30px;
     }
 
-    h4 {
-      font-size: 25px;
-    }
+    // h4 {
+    //   font-size: 25px;
+    // }
 }
 @media screen and (max-width:1050px) {
   .portfolio__subheader {
@@ -884,11 +883,11 @@ max-height: 500px;
   }
 .work{
   &__container{
-    width: 100%;
+    width: 80%;
   }
 
   &__header{
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
   .card__inner {
@@ -911,8 +910,13 @@ max-height: 500px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5%;
 
+  &--hide{
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
   &__item {
     display: inline-flex;
     width: 45px;
@@ -936,6 +940,7 @@ max-height: 500px;
       &:hover {
         transform: scale(1.2);
       }
+
     }
 
 &.footer{
