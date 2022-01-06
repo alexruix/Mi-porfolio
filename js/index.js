@@ -21,79 +21,27 @@ typewriter.typeString('modernas')
 
 feather.replace()
 
-/*global $, console*/
-// var slider = document.querySelector('.portfolio__subheader'),
-//     arrows = document.querySelectorAll('.portfolio .button--left, .portfolio .button--right'),
-//     isDown = false,
-//     startX,
-//     scrollLeft;
+// var messageBox = document.querySelector('.js-message');
+//   var btn = document.querySelector('.js-message-btn');
+//   var card = document.querySelector('.js-profile-card');
+//   var closeBtn = document.querySelectorAll('.js-message-close');
 //
-// slider.scrollLeft = 10;
+//   btn.addEventListener('click',function (e) {
+//       e.preventDefault();
+//       card.classList.add('active');
+//   });
 //
-// slider.onmousedown = function (e) {
-//     'use strict';
-//     e.preventDefault()
-//     isDown = true;
-//     slider.classList.add('active');
-//     startX = e.pageX - slider.offsetLeft;
-//     scrollLeft = slider.scrollLeft;
-// };
-//
-//
-// slider.onmouseleave = function (e) {
-//     'use strict';
-//     e.preventDefault();
-//     isDown = false;
-//     slider.classList.remove('active');
-// };
-//
-// slider.onmouseup = function (e) {
-//     'use strict';
-//     e.preventDefault();
-//     isDown = false;
-//     slider.classList.remove('active');
-// };
-//
-// slider.onmousemove = function (e) {
-//     'use strict';
-//     if (!isDown) { return; }
-//     e.preventDefault();
-//     var x = e.pageX - slider.offsetLeft,
-//         walk = x - startX;
-//     slider.scrollLeft = scrollLeft - walk;
-// };
-//
-// function controlsSlider(num) {
-//     'use strict';
-//     var smooth = setInterval(function () {
-//         slider.scrollLeft += num;
-//     }, 12);
-//     setTimeout(function () {
-//         clearInterval(smooth);
-//     }, 210);
-// }
-// arrows[0].onclick = function () {
-//     'use strict';
-//     controlsSlider(-16);
-// };
-//
-// arrows[1].onclick = function () {
-//     'use strict';
-//     controlsSlider(16);
-// };
-//
-// window.onkeydown = function (e) {
-//     'use strict';
-//     var key = e.keyCode;
-//     if (key === 39) {
-//         controlsSlider(400);
-//     }
-//     if (key === 37) {
-//         controlsSlider(-400);
-//     }
-// };
+//   closeBtn.forEach(function (element, index) {
+//      console.log(element);
+//       element.addEventListener('click',function (e) {
+//           e.preventDefault();
+//           card.classList.remove('active');
+//       });
+//   });
 
-
+  $(document).ready(function(){
+      $('.modal').modal();
+    });
 
 
 

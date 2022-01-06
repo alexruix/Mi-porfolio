@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="scss/universal.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="scss/main.min.css">
+  <link rel="stylesheet" href="scss/profilecard.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -91,8 +92,7 @@
               objetivos comerciales trabajando en estrecha colaboración para comprender cualquier necesidad y resolver problemas</p>
             <p>Si quieres potenciar, actualizar o iniciar un nuevo proyecto web o simplemente tienes una idea que quieres materializar y crees que necesitas mi ayuda, entonces ponte en contacto conmigo 😉</p>
           </div>
-          <!-- <a href="#!" class="btn animated-button btn__btnppal">Mas sobre mi</a> -->
-          <a href="mailto:alexruiz1666@gmail.com" class="button button__secondary marginbottom"><i data-feather="message-square"></i>Escribeme</a>
+          <button class="button button__secondary modal-trigger marginbottom" data-target="modal1"><i data-feather="message-square"></i>Escribeme</button>
         </div>
         <figure class="container--img">
           <img src="img/aboutme.png" class="imgfit" alt="Alex Ruiz frontend developer">
@@ -131,7 +131,7 @@
                   <!-- <h4 class="flex__box-start gap text__spacing"><i data-feather="pen-tool"></i>AHORRAD</h4> -->
                   <!-- <h4 class="flex__box-start text__subtitle gap text__spacing">tecnologías que uso</h4> -->
                   <div class="flex__box-center">
-                      <!-- <img src="img/end.svg" class="work__img" alt="Tecnologias Vector"> -->
+                    <!-- <img src="img/end.svg" class="work__img" alt="Tecnologias Vector"> -->
                     <h4 class="text__subtitle gap text__spacing">tecnologías que uso</h4>
 
                   </div>
@@ -140,8 +140,8 @@
                     <p>Estas son algunas de las tecnologías, entre ellas frameworks y librerías JavaScript y CSS, que utilizo para codificar, diseñar y maquetar sitios web extraordinarios que a la gente le encante usar</p>
                     <p>Para lograrlo, realizo la mejor implementación de diseño Ul posible para crear componentes increíbles e interactivos que están enfocados en el usuario, esto significa llevar su negocio al éxito mientras deja a los usuarios con
                       una gran sonrisa</p>
-                    <p>¿Quieres saber más sobre mi experiencia? Consulte mi <a class="text--blue text--underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">perfil de Linkedin</a> y mi <a class="text--blue text--underline"
-                        target="_blank" rel="noopener" href="https://github.com/alexruix">portfolio de Github</a></p>
+                    <p>¿Quieres saber más sobre mi experiencia? Consulte mi <a class="text--blue text--underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">perfil de Linkedin</a> y mi <a
+                        class="text--blue text--underline" target="_blank" rel="noopener" href="https://github.com/alexruix">portfolio de Github</a></p>
                   </div>
                 </div>
               </div>
@@ -251,140 +251,60 @@
   </section>
 
   <section class="background bg bg--bg3" id="portfolio">
-      <div class="container">
-        <div class="flex__column">
-          <h3>Mi trabajo</h3>
-        </div>
+    <div class="container">
+      <div class="flex__column">
+        <h3>Mi trabajo</h3>
       </div>
-      <!-- <div class="work__container portfolio">
-        <button aria-label="desplazar a la izquierda" class="button button--left" style="">
-          <i data-feather="arrow-left"></i>
-        </button>
-        <button aria-label="desplazar a la derecha" class="button button--right" style="">
-          <i data-feather="arrow-right"></i>
-        </button>
-        <div class="portfolio__subheader">
-          <div class="card__inner flex__column">
-            <div class="item">
-              <img src="img/NatureFood-Thumbnail.png" class="imgfit" alt="Nature Food Website">
-              <div class="card__description">
-                <div class="flex__box-baseline">
-                  <a href="#!">
-                    <h4 class="text text__card--title">Damian Fotografia</h4>
-                  </a>
-                  <div>
-                    <a class="button button__text" target="_blank" href="damianproyecto.html">Ver proyecto</a>
-                  </div>
-                </div>
-                <h5 class="card__text card__text--title">Website Design & Development</h5>
-                <div class="card__hide">
-                  <div class="flex__box card__text">
-                    <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__inner flex__column">
-            <div class="item">
-              <img src="img/NatureFood-Thumbnail.png" class="imgfit" alt="Nature Food Website">
-              <div class="card__description">
-                <div class="flex__box-baseline">
-                  <a href="#!">
-                    <h4 class="text text__card--title">Damian Fotografia</h4>
-                  </a>
-                  <div>
-                    <a class="button button__text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
-                  </div>
-                </div>
-                <h5 class="card__text card__text--title">Website Design & Development</h5>
-                <div class="card__hide">
-                  <div class="flex__box card__text">
-                    <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__inner flex__column">
-            <div class="item">
-              <img src="img/NatureFood-Thumbnail.png" class="imgfit" alt="Nature Food Website">
-              <div class="card__description">
-                <div class="flex__box-baseline">
-                  <a href="#!">
-                    <h4 class="text text__card--title">Damian Fotografia</h4>
-                  </a>
-                  <div>
-                    <a class="button button__text" href="https://alexruix.github.io/NatureFood/">Ver proyecto</a>
-                  </div>
-                </div>
-                <h5 class="card__text card__text--title">Website Design & Development</h5>
-                <div class="card__hide">
-                  <div class="flex__box card__text">
-                    <p>Uno de los objetivos era crear un sitio web que no necesitara ser rediseñado durante mucho tiempo, pudiera actualizarse fácilmente y ofrecer a los clientes una primera impresión acogedora y una experiencia agradable</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="container flex__box">
+      <div class="portfolio__container card__black">
+        <div class="portfolio__item">
+          <figure class="portfolio__img">
+            <img class="imgfit" alt="Imagen de prueba" src="https://images.pexels.com/photos/6541817/pexels-photo-6541817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+          </figure>
         </div>
-      </div> -->
-      <!-- <div class="container" style="padding-top:0;" >
-      <nav class="center">
-        <ul>
-          <li><a class="active" href="#!">Recientes</a></li>
-          <li><a href="#!">Web</a></li>
-          <li><a href="#!">Design Concept</a></li>
-        </ul>
-      </nav>
-    </div> -->
-      <div class="container flex__box">
-        <div class="portfolio__container card__black">
-          <div class="portfolio__list">
-            <div class="portfolio__item">
-              <div class="portfolio__img">
-                  <img class="imgfit" src="https://images.pexels.com/photos/6541817/pexels-photo-6541817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__end">
-            <div class="portfolio__content">
+        <div class="portfolio__end">
+          <div class="portfolio__content">
             <h4 class="text__subtitle text__spacing margin0">Damián Fotografía</h4>
             <p class="text--font">Sitio web portafolio para un fotógrafo</p>
             <div class="text text__description text--font text--left">
-              <p >Damian quería tener presencia fuera de las redes sociales para brindar sus servicios de fotografia y para eso necesitaba tener un sitio web que transmita su personalidad</p>
+              <p>Damian quería tener presencia fuera de las redes sociales para brindar sus servicios de fotografia y para eso necesitaba tener un sitio web que transmita su personalidad</p>
               <p>El sitio web que diseñé cumplió con el objetivo. Además le permitió llegar a nuevos clientes y tener siempre visible su trabajo sin las limitaciones de las redes sociales</p>
             </div>
             <a href="damianproyecto.html" class="button button__secondary">Ver proyecto</a>
-              </div>
           </div>
         </div>
-    </div>
-
-
-
-
-      <div class="wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
-          <path class="path--two" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
       </div>
+    </div>
+    <div class="wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
+        <path class="path--two" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+      </svg>
     </div>
   </section>
 
-  <section class="background bg bg--bg4">
-    <div>
-      <div class="container container--middlewidth" id="contact">
-        <div class="flex__column gap center">
-          <h3 class="text__spacing margin0">Contactame</h3>
-          <p class="text text__subtitle--small text__spacing margin0">¡NO SEAS TÍMIDO!</p>
-
-          <p class="text text__description text--font">No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones</p>
-          <button class="button button__secondary profile-card__button js-message-btn"><i data-feather="message-square"></i>Escribeme</button>
-
-          <p class="text text__description text--font">¡Espero tu mensaje!</p>
-
-          <div class="container--middlewidth">
+  <section class="background bg bg--bg4" id="contact">
+    <div class="container">
+      <div class="flex__column">
+        <h3>Contactame</h3>
+      </div>
+    </div>
+    <div class="container flex__box">
+      <div class="portfolio portfolio__container flex__column card__black">
+        <div class="">
+          <div class="portfolio__end ">
+            <div class="portfolio__content">
+              <h4 class="text__subtitle text__spacing margin0 center">¡No seas tímido!</h4>
+              <div class="text text__description text--font text--left">
+                <p>No dudes en ponerte en contacto conmigo, siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones ¡Espero tu mensaje!</p>
+                <!-- <p>¡Espero tu mensaje!</p> -->
+              </div>
+              <div class="center">
+                <button class="button button__secondary modal-trigger" data-target="modal1"><i data-feather="message-square"></i>Escribeme</button>
+              </div>
+            </div>
+          </div>
+          <div class="center">
             <p class="text text__description text--font">También puedes encontrarme en:</p>
             <div class="profile-card-social">
               <a class="profile-card-social__item linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
@@ -417,6 +337,44 @@
         </div>
       </div>
     </div>
+
+  </section>
+
+
+  <section>
+    <div class="js-message" id="modal">
+      <div id="modal1" class="modal modal__card card__black">
+        <div class="center  text text__description text__spacing modal__black">
+          <h3>Contacto</h3>
+        </div>
+        <form class="work__container profile-card-form" action="https://formspree.io/f/mgedvorp" method="POST">
+          <div class="profile-card-form__container">
+            <div class="flex__box form__flex text--font">
+              <div class="form__section">
+                <input type="text" placeholder="Tu nombre" name="name" minlength="4" maxlength="80" autocomplete="given-name" required />
+              </div>
+              <div class="form__section">
+                <input type="email" name="_replyto" maxlength="80" required autocomplete="email" placeholder="Tu email" />
+              </div>
+            </div>
+            <div class="flex__box form__flex text--font">
+              <div class="form__section">
+                <textarea name="message" rows="8" cols="80" placeholder="Escribe tu mensaje..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card-form__bottom">
+            <input class="button button__ppal button--form form__section" type="submit"/>
+
+            <button class="button button__gray button--form form__section modal-close">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="profile-card__overlay js-message-close"></div>
+    </div>
   </section>
 
 
@@ -429,7 +387,9 @@
       <div class="container" style="padding-top:0; padding-bottom:0;">
         <div class="flex__box text--font">
           <div>
-            <p>Copyright © <script> document.write(new Date().getFullYear())</script> All Rights Reserved by <b>Alex Ruiz</b></p>
+            <p>Copyright © <script>
+                document.write(new Date().getFullYear())
+              </script> All Rights Reserved by <b>Alex Ruiz</b></p>
           </div>
 
           <div class="container--middlewidth">

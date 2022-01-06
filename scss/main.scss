@@ -1,46 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+$primary: blue;
+$pfont: 'Bebas Neue', cursive;
+$sfont: 'Didact Gothic', sans-serif;
+$border: 16px;
+$duration: 0.45s;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$d: 700ms;
+$e: cubic-bezier(0.19, 1, 0.22, 1);
+//Colores
+$color: #fafafa;
+$color2: #d5d5d5;
+$color3: #3C58B7;
+$color4: #0082ff;
+$color5: rgba(#ffffff, 0.07);
+$hoverbg: #051D6B;
+$pressbtn: #020E46;
+$hoverbtn: #04185E;
+$bg1color: #090909;
+$bg2color: #191C1C;
+$bg3color: #232323;
+$bg4color: #1B2223;
+$bg5color: #24292E;
+$bg6color: #322E3A;
+//Sombras
+$shadow: 0 4px 20px -2px rgba(#2d4fdf, 0.5);
+$shadow2: 0 4px 20px -2px #1c1e22;
+$shadow3: 0 0 10px rgba(#000000, 0.6);
 
-
-  $primary: blue;
-  $pfont: 'Bebas Neue', cursive;
-  $sfont: 'Didact Gothic', sans-serif;
-  $border: 16px;
-  $duration: .45s;
-  $cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  $d: 700ms;
-  $e: cubic-bezier(0.19, 1, 0.22, 1);
-  //Colores
-  $color: #fafafa;
-  $color2: #d5d5d5;
-  $color3: #3C58B7;
-  $color4: #0082ff;
-  $color5: rgba(#ffffff, 0.07);
-  $hoverbg: #051D6B;
-  $pressbtn: #020E46;
-  $hoverbtn: #04185E;
-
-  $bg1color: #090909;
-  $bg2color: #191C1C;
-  $bg3color: #232323;
-  $bg4color: #1B2223;
-  $bg5color: #24292E;
-  $bg6color: #322E3A;
-
-  //Sombras
-  $shadow: 0 4px 20px -2px rgba(#2d4fdf, 0.5);
-  $shadow2:  0 4px 20px -2px #1c1e22;
-  $shadow3: 0 0 10px rgba(#000000, 0.6);
-
-
-
-
-body{
-
+body {
   font-family: $pfont;
   color: $color;
   background: $bg1color;
 
-  &.light{
+  &.light {
     $bg1color: #FEFBFF;
     $bg2color: linear-gradient(0deg, rgba(70, 89, 169, 0.05), rgba(70, 89, 169, 0.05)), #FEFBFF;
     $bg3color: linear-gradient(0deg, rgba(70, 89, 169, 0.05), rgba(70, 89, 169, 0.05)), #FEFBFF;
@@ -51,7 +43,7 @@ body{
   }
 }
 
-a{
+a {
   color: $bg1color;
 }
 //Scrollbar
@@ -59,19 +51,19 @@ a{
 ::-webkit-scrollbar {
   width: 20px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px $color5;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $hoverbg;
   border-radius: 8px;
 }
-::-webkit-scrollbar-thumb{
-  &:active, &:focus{
+
+::-webkit-scrollbar-thumb {
+  &:active,
+  &:focus {
     background: $pressbtn;
   }
 }
@@ -80,9 +72,11 @@ a{
   background: $hoverbtn;
 }
 //Backgrounds color
-.bg{
-  &--bg1{
-    background-image: url(../img/bannerbg.webp);
+
+.bg {
+  // margin-top: -2%;
+  &--bg1 {
+    background-image: url("../img/bannerbg.webp");
     background-position: top left;
     background-size: cover;
     margin-top: -64px;
@@ -90,37 +84,45 @@ a{
     margin-left: auto;
     margin-right: auto;
   }
-  &--bg2{
+
+  &--bg2 {
     background: $bg2color;
     margin-bottom: -160px;
   }
-  &--bg3{
+
+  &--bg3 {
     background: $bg3color;
-    padding-top: 3em;
+    // padding-top: -2%;
   }
-  &--bg4{
+
+  &--bg4 {
     background: $bg4color;
   }
-  &--bg5{
+
+  &--bg5 {
     background: $bg5color;
   }
 }
 
-.container{
+.container {
   width: 100%;
   max-width: 1200px;
   padding: 2em;
-  &--padding{
+
+  &--padding {
     padding-top: calc(45em/5);
     padding-bottom: calc(45em/4);
   }
-  &--middlewidth{
+
+  &--middlewidth {
     width: 60%;
   }
-  &--quarterwidth{
+
+  &--quarterwidth {
     width: 45%;
   }
-  &--img{
+
+  &--img {
     max-width: 450px;
     height: 100%;
     max-height: 580px;
@@ -129,20 +131,25 @@ a{
     margin-top: 10%;
   }
 }
-.text{
-  &--blue{
+
+.text {
+  &--blue {
     color: $color4;
   }
-  &--underline{
+
+  &--underline {
     position: relative;
-    &:hover{
+
+    &:hover {
       color: $color3;
-      &::after{
+
+      &::after {
         width: 100%;
         left: 0;
       }
     }
-    &::after{
+
+    &::after {
       content: ' ';
       width: 100%;
       height: 1px;
@@ -152,54 +159,69 @@ a{
       background: $color3;
       position: absolute;
       bottom: -5px;
-    	 transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
   }
-  &--left{
+
+  &--left {
     text-align: left;
   }
-  &--gradient{
+
+  &--gradient {
     background: linear-gradient(to bottom, #00c6ff 30%, #0072ff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  &__subtitle{
+
+  &__subtitle {
     font-size: 2.5rem;
     line-height: 1.3em;
-    &--small{
+    @media screen and (max-width: 1000px) {
+      font-size: 2rem;
+    }
+
+    &--small {
       font-size: 25px;
     }
   }
-  &--font{
+
+  &--font {
     font-family: $sfont;
     color: $color2;
   }
-  &__title{
+
+  &__title {
     font-size: 63px;
     letter-spacing: 0.05em;
   }
-  &__spacing{
+
+  &__spacing {
     letter-spacing: 3px;
   }
-  &__description{
+
+  &__description {
     font-size: 20px;
     line-height: 1.6em;
   }
-  &__card--title{
+
+  &__card--title {
     margin: 0;
     font-size: 32px;
     margin-top: 10%;
-    transition: color .3s ease-in-out;
-    &:hover{
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
       color: $color4;
     }
   }
 }
-svg{
+
+svg {
   display: inline-flex;
 }
+
 .button {
-  transition: color .3s ease-in-out, text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
+  transition: color 0.3s ease-in-out, text-indent 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, transform 1s ease-in-out;
   border-radius: $border;
   font-size: 22px;
   height: 55px;
@@ -211,20 +233,20 @@ svg{
   margin-top: 2%;
 
 
+  &:active,
+  &:focus {
+    background: $pressbtn;
+  }
 
-    &:active,
-    &:focus,{
-      background: $pressbtn;
-    }
   &:hover {
     text-indent: -20%;
     box-shadow: $shadow;
     background: $hoverbtn;
-
-
   }
-  &__ppal, &__secondary{
-    &:before{
+
+  &__ppal,
+  &__secondary {
+    &:before {
       position: absolute;
       top: 0;
       right: 0;
@@ -239,23 +261,28 @@ svg{
       font-weight: 900;
       line-height: inherit;
       opacity: 0;
-      transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
+      transition: all .3s ease-in-out;
     }
-    &:hover{
-      &:before{
-          opacity: 1;
-          text-indent: 0;
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        text-indent: 0;
       }
     }
   }
+  &--form{
+    width: 100%;
+  }
 
-  &__mail{
+  &__mail {
     width: 100%;
     background: $hoverbg;
     color: $color;
     height: 110px;
     padding: 1em 0;
-    &:hover{
+
+    &:hover {
       text-indent: 0;
       color: $color2;
     }
@@ -263,7 +290,7 @@ svg{
 
   &__text {
     font-size: $border;
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     color: $bg1color;
     width: 100px;
     height: 0;
@@ -274,6 +301,7 @@ svg{
       box-shadow: none;
       color: $color4;
       background: none;
+
       &:before {
         opacity: 1;
         text-indent: 0;
@@ -292,15 +320,16 @@ svg{
       font-weight: 900;
       line-height: inherit;
       opacity: 0;
-      transition: opacity 0.2s ease-in-out 0s, text-indent 0.2 ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 
   &__ppal {
     background: $hoverbg;
-    outline: 2px solid rgba($color4, .3);
-    &:hover{
-      outline: 2px solid rgba($color4, .3);
+    outline: 2px solid rgba($pressbtn, .3);
+
+    &:hover {
+      outline: 2px solid rgba($pressbtn, .3);
     }
   }
 
@@ -308,31 +337,41 @@ svg{
     outline: 2px solid $color4;
     background: none;
     color: $color4;
-    svg{
+
+    svg {
       margin-top: -2%;
       margin-right: 5%;
-      transition: transform .2s ease-in-out 0s;
+      transition: transform 0.2s ease-in-out 0s;
     }
+
+    &:active,
+    &:focus,
     &:hover {
-      color: $color3;
-      outline: 2px solid $color3;
+      color: $color4;
+      outline: 2px solid $color4;
       background: none;
-      svg{
-          transform: translateX(-20%);
+
+      svg {
+        transform: translateX(-20%);
       }
     }
   }
-  &__gray{
-    background: $color;
+
+  &__gray {
+    background: none;
     color: #676767;
     outline: 2px solid #818181;
-     &:hover, &:focus, &:active{
-      background: $color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: none;
       color: #676767;
-      outline-color: #676767;
+      outline: 2px solid #818181;
       text-indent: 0;
     }
   }
+
   &--left,
   &--right {
     position: absolute;
@@ -367,7 +406,8 @@ svg{
     left: auto;
   }
 }
-.marginbottom{
+
+.marginbottom {
   margin-bottom: 7em;
 }
 
@@ -402,12 +442,12 @@ svg{
   text-transform: uppercase;
   transition: all 200ms linear;
 }
-
-@mixin buttonblue($background: $color3){
+@mixin buttonblue($background: $color3) {
   background: $background;
   box-shadow: $shadow2;
   border-radius: $border;
 }
+
 input {
   &[type="checkbox"] {
     opacity: 0;
@@ -436,6 +476,7 @@ input {
   &[type="checkbox"]:checked+.base-color .habilities {
     color: $bg2color;
   }
+
   &[type="checkbox"]:checked+.base-color .work {
     color: $color;
   }
@@ -453,17 +494,21 @@ input {
     box-shadow: $shadow2;
   }
 
-  &[type="checkbox"]+.base-color .habilities{
+  &[type="checkbox"]+.base-color .habilities {
     color: $color2;
   }
 }
-.habilities{
+
+.habilities {
   left: 0;
 }
-.work{
+
+.work {
   right: 0;
 }
-label .habilities, label .work{
+
+label .habilities,
+label .work {
   display: block;
   position: absolute;
   width: 50%;
@@ -473,27 +518,32 @@ label .habilities, label .work{
   line-height: 60px;
   text-align: center;
 }
-.card__black{
+
+.card__black {
   @include buttonblue($bg2color);
   padding: 3% 0;
 }
-.hab, .show .work {
+
+.hab,
+.show .work {
   display: none;
 }
+
 .show .hab {
   display: flex;
 }
 
-.work{
-  &__header{
+.work {
+  &__header {
     position: relative;
     margin-top: 10%;
   }
-  &__titlebg{
+
+  &__titlebg {
     font-size: 110px;
     left: 0;
     letter-spacing: 10px;
-    line-height: .7;
+    line-height: 0.7;
     position: absolute;
     right: 0;
     top: 25%;
@@ -501,25 +551,22 @@ label .habilities, label .work{
     transform: translateY(-50%);
     color: $color5;
   }
-  &__img{
+
+  &__img {
     width: 55px;
     height: 55px;
     margin-right: 2%;
   }
-  &__container{
+
+  &__container {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
   }
 }
 
-
-
-
-
-
-.portfolio{
-  &__container{
+.portfolio {
+  &__container {
     width: 70%;
     margin: auto;
     display: flex;
@@ -528,43 +575,46 @@ label .habilities, label .work{
       flex-direction: column;
     }
   }
-  &__img{
-   width: 300px;
- 	 flex-shrink: 0;
- 	 height: 300px;
-   border-radius: $border;
- 	 transform: translate(-10%, 20%);
- 	 overflow: hidden;
-   @media screen and (max-width: 768px) {
-     width: 80%;
-     max-height: 250px;
-     display: flex;
-     margin: auto;
-     position: relative;
-    transform: translate(0%, -20%);
-   }
-   &:after{
-     content: '';
-  	 position: absolute;
-  	 top: 0;
-  	 left: 0;
-  	 width: 100%;
-  	 height: 100%;
-     border-radius: $border;
-  	 background: $color3;
-  	 opacity: 0.2;
-   }
+
+  &__img {
+    width: 300px;
+    flex-shrink: 0;
+    height: 300px;
+    border-radius: $border;
+    transform: translate(-10%, 20%);
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      max-height: 250px;
+      display: flex;
+      margin: auto;
+      position: relative;
+      transform: translate(0%, -20%);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: $border;
+      background: $color3;
+      opacity: 0.2;
+    }
   }
 
-  &__content{
+  &__content {
     padding: 0 5%;
     @media screen and (max-width: 768px) {
       width: 100%;
-		 text-align: center;
-		 padding: 0 30px;
+      text-align: center;
+      padding: 0 30px;
     }
   }
-  &__end{
+
+  &__end {
     padding: 3% 0;
     display: flex;
     align-items: flex-end;
@@ -572,10 +622,6 @@ label .habilities, label .work{
     flex-direction: column;
   }
 }
-
-
-
-
 // .portfolio{
 //   position: relative;
 //   width: 90%;
@@ -613,6 +659,7 @@ label .habilities, label .work{
 //     }
 //   }
 // }
+
 .card {
   &__description {
     width: 100%;
@@ -648,9 +695,10 @@ label .habilities, label .work{
     &:hover {
       max-height: 500px;
       transition: max-height 0.7s ease-in;
+
       .card__hide {
         max-height: 500px;
-        transition: max-height .7s ease-in;
+        transition: max-height 0.7s ease-in;
       }
     }
   }
@@ -672,11 +720,12 @@ label .habilities, label .work{
     //Two News
     box-shadow: $shadow3;
 
-    &:hover  {
-      & img{
+    &:hover {
+      & img {
         animation: scale 0.5s ease-in-out;
         animation-fill-mode: forwards;
       }
+
       &.card__description::after {
         animation: updown 0.5s ease-in-out;
         animation-iteration-count: 6;
@@ -704,11 +753,9 @@ label .habilities, label .work{
       font-size: 1.2em;
     }
   }
-  &__mail{
 
-  }
+  &__mail {}
 }
-
 @keyframes scale {
   0% {
     transform: scale(1);
@@ -718,7 +765,6 @@ label .habilities, label .work{
     transform: scale(1.05);
   }
 }
-
 @keyframes updown {
   0% {
     transform: translateY(0);
@@ -732,6 +778,7 @@ label .habilities, label .work{
     top: 7px;
   }
 }
+
 .item {
   overflow: hidden;
   margin-left: auto;
@@ -742,59 +789,73 @@ label .habilities, label .work{
   position: relative;
   border-radius: $border;
 }
-.gap{
+
+.gap {
   gap: 10px;
 }
-.social-icons{
- a{
-   background-color: $color;
-   color: $bg2color;
-   font-size: 16px;
-   display: inline-block;
-   line-height: 44px;
-   width: 44px;
-   height: 44px;
-   text-align: center;
-   margin-right: 8px;
-   border-radius: 100%;
-   -webkit-transition: all .2s linear;
-   -o-transition: all .2s linear;
-   transition: all .2s linear;
-   &:active, &:hover, &:focus{
-     color: $color;
-     background-color: #E34133;
-   }
-   &.github:hover{
-     background-color: $bg1color;
-   }
-   &.linkedin:hover{
-     background-color: #0A63BC;
-   }
-   &.instagram:hover{
-     background-color: #ea4c89;
-   }
- }
+
+.social-icons {
+  a {
+    background-color: $color;
+    color: $bg2color;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color;
+      background-color: #E34133;
+    }
+
+    &.github:hover {
+      background-color: $bg1color;
+    }
+
+    &.linkedin:hover {
+      background-color: #0A63BC;
+    }
+
+    &.instagram:hover {
+      background-color: #ea4c89;
+    }
+  }
 }
-.site-footer{
+
+.site-footer {
   background-color: $bg4color;
   padding: 45px 0 20px;
   line-height: 24px;
 }
-.links{
-  li{
+
+.links {
+  li {
     margin-bottom: 2%;
   }
-  li i{
+
+  li i {
     margin-right: 5%;
   }
-    a{
-      color: $color;
-      transition: color .3s ease-in-out;
-      &:hover{
-        color: $color4;
-      }
+
+  a {
+    color: $color;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color4;
     }
+  }
 }
+
 .material-tooltip {
   font-family: $sfont;
   background: $color;
@@ -802,109 +863,124 @@ label .habilities, label .work{
   height: 15px;
   border-radius: 8px;
 }
+
 .swiper {
-        width: 85%;
-        height: 100%;
-        max-height: 470px;
-        background: $bg4color;
-      }
+  width: 85%;
+  height: 100%;
+  max-height: 470px;
+  background: $bg4color;
+}
 
-      .swiper-slide {
-        width: 300px;
-        height: 100%;
-        max-height: 500px;
-        max-width: 470px;
-        background: $bg4color;
-      }
+.swiper-slide {
+  width: 300px;
+  height: 100%;
+  max-height: 500px;
+  max-width: 470px;
+  background: $bg4color;
+}
 @media screen and (max-width:800px) {
-
-.text{
-  &__title{
-    font-size: 40px;
+  .text {
+    &__title {
+      font-size: 40px;
+    }
   }
-}
 
-.bg{
-  &--bg2{
+  .bg {
+    &--bg2 {
       height: 80%;
+    }
   }
-}
-.card{
-  &__hide{
-max-height: 500px;
-  }
-}
 
-  .flex__column-start{
+  .card {
+    &__hide {
+      max-height: 500px;
+    }
+  }
+
+  .flex__column-start {
     padding-top: 20%;
   }
-  .flex__box, .flex__box-baseline{
+
+  .flex__box,
+  .flex__box-baseline {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .flex__column-start .flex__box, .social-icons{
+
+  .flex__column-start .flex__box,
+  .social-icons {
     flex-wrap: nowrap;
   }
-  .switcher{
+
+  .switcher {
     width: 100%;
   }
-  .container{
+
+  .container {
     width: 100%;
-    &--img{
+
+    &--img {
       height: 500px;
       margin-top: 0;
     }
-    &__more__padding{
+
+    &__more__padding {
       padding-left: 1em;
       padding-right: 1em;
     }
   }
 
-  .button{
-    &--left{
+  .button {
+    &--left {
       left: 10px;
     }
-    &--right{
+
+    &--right {
       right: 10px;
     }
-    &__mail{
+
+    &__mail {
       height: 85px;
     }
   }
 
-    h3 {
-      font-size: 30px;
-    }
-
-    // h4 {
-    //   font-size: 25px;
-    // }
+  h3 {
+    font-size: 30px;
+  }
+  // h4 {
+  //   font-size: 25px;
+  // }
 }
 @media screen and (max-width:1050px) {
   .portfolio__subheader {
     flex-wrap: wrap;
     padding: 2%;
   }
-.work{
-  &__container{
-    width: 80%;
+
+  .work {
+    &__container {
+      width: 80%;
+    }
+
+    &__header {
+      justify-content: space-between;
+    }
   }
 
-  &__header{
-    justify-content: space-between;
-  }
-}
   .card__inner {
     height: 500px;
     width: 80%;
   }
-  .container--middlewidth{
+
+  .container--middlewidth {
     width: 100%;
   }
-  .container--quarterwidth{
+
+  .container--quarterwidth {
     width: 100%;
   }
-  .flex__column{
+
+  .flex__column {
     flex-wrap: wrap;
   }
 }
@@ -916,11 +992,12 @@ max-height: 500px;
   flex-wrap: wrap;
   gap: 5%;
 
-  &--hide{
-  @media screen and (max-width: 768px) {
-    display: none;
+  &--hide {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
-}
+
   &__item {
     display: inline-flex;
     width: 45px;
@@ -944,26 +1021,26 @@ max-height: 500px;
       &:hover {
         transform: scale(1.2);
       }
-
     }
 
-&.footer{
-  background: #ECE9E6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-color: $bg1color;
-  box-shadow: none;
-}
+    &.footer {
+      background: #ECE9E6; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: $bg1color;
+      box-shadow: none;
+    }
 
     &.twitter {
       background: linear-gradient(45deg, #1da1f2,#0e71c8);
       box-shadow: 0 4px 30px rgba(19, 127, 212, 0.7);
     }
 
-    &.linkedin{
+    &.linkedin {
       background: linear-gradient(45deg, #3b5998, #0078d7);
-      box-shadow: 0px 4px 30px rgba(43, 98, 169, 0.5);
+      box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
     }
+
     &.instagram {
       background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
       box-shadow: 0 4px 30px rgba(120, 64, 190, 0.6);
@@ -988,5 +1065,80 @@ color: $bg1color;
 
   .icon-font {
     display: inline-flex;
+  }
+}
+/*Modal*/
+
+.modal {
+  max-height: 100%;
+  &__card {
+    width: 40%;
+    overflow: hidden;
+    background: $color;
+    transition: 0.3s ease-in-out;
+    @media screen and (max-width: 800px){
+      width: 90%;
+    }
+  }
+
+  &__black {
+    color: $bg1color;
+  }
+}
+
+.form__section{
+  @media screen and (max-width: 800px){
+    margin-bottom: 5%;
+    width: 100%;
+  }
+}
+
+.form__flex {
+  gap: 5%;
+  margin-bottom: 5%;
+  @media screen and (max-width: 1050px){
+    margin: 0;
+  }
+}
+
+::placeholder {
+  color: $bg2color;
+}
+
+input[type=email]:not(.browser-default),
+input[type=text]:not(.browser-default),
+nput:not([type]),
+textarea {
+  outline: 2px solid $color3;
+  border: none;
+  width: 90%;
+  border-radius: 10px;
+  height: 2rem;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0;
+  color: $bg1color;
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+textarea:focus {
+  outline: 2px solid $color4;
+  color: $bg1color;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  height: 100px;
+  border: 2px solid $color3;
+  padding: 15px 20px;
+  color: $bg1color;
+  outline: none;
+  transition: all 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: $color4;
   }
 }
