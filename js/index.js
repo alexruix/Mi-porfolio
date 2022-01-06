@@ -43,6 +43,12 @@ feather.replace()
       $('.modal').modal();
     });
 
+    $('modal-close').submit(function(e) {
+        e.preventDefault();
+        // Coding
+        $('modal').modal(); //or  $('#IDModal').modal('hide');
+        return false;
+    });
 
 
 let mainNavLinks = document.querySelectorAll(".menu__item");

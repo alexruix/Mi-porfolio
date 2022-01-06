@@ -103,3 +103,26 @@
     transition: all 0.3s;
   }
 }
+.profile-card__button {
+  border: none;
+  margin: 15px 35px;
+  min-width: 201px;
+  min-height: 55px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transition: all 0.3s;
+  @media screen and (max-width: 768px) {
+    min-width: 170px;
+    margin: 15px 25px;
+  }
+  @media screen and (max-width: 576px) {
+    min-width: inherit;
+    margin: 0 0 16px;
+    width: 100%;
+    max-width: 300px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
