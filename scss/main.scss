@@ -528,12 +528,12 @@ label .work {
   padding: 3% 0;
 }
 
-.hab,
-.show .work {
+.work,
+.show .hab {
   display: none;
 }
 
-.show .hab {
+.show .work {
   display: flex;
 }
 
@@ -571,7 +571,7 @@ label .work {
 
 .portfolio {
   &__container {
-    width: 70%;
+    width: 80%;
     margin: auto;
     display: flex;
     @media screen and (max-width: 768px) {
@@ -947,6 +947,7 @@ label .work {
       height: 85px;
     }
   }
+
 
   h3 {
     font-size: 30px;
