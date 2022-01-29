@@ -6,8 +6,7 @@ $border: 16px;
 $duration: 0.45s;
 $cubic: cubic-bezier(0.4, 0, 0.2, 1);
 $d: 700ms;
-$e: cubic-bezier(0.19, 1, 0.22, 1);
-//Colores
+$e: cubic-bezier(0.19, 1, 0.22, 1); //Colores
 $color: #fafafa;
 $color2: #d5d5d5;
 $color3: #3C58B7;
@@ -21,8 +20,7 @@ $bg2color: #191C1C;
 $bg3color: #232323;
 $bg4color: #1B2223;
 $bg5color: #24292E;
-$bg6color: #322E3A;
-//Sombras
+$bg6color: #322E3A; //Sombras
 $shadow: 0 4px 20px -2px rgba(#2d4fdf, 0.5);
 $shadow2: 0 4px 20px -2px #1c1e22;
 $shadow3: 0 0 10px rgba(#000000, 0.6);
@@ -123,12 +121,12 @@ a {
   }
 
   &--img {
-    max-width: 450px;
+    max-width: 550px;
     height: 100%;
     max-height: 580px;
     position: relative;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
 
@@ -202,7 +200,7 @@ a {
   &__description {
     font-size: 20px;
     line-height: 1.6em;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       font-size: 16px;
       line-height: 1.5em;
     }
@@ -236,7 +234,6 @@ svg {
   position: relative;
   margin-top: 2%;
 
-
   &:active,
   &:focus {
     background: $pressbtn;
@@ -265,7 +262,7 @@ svg {
       font-weight: 900;
       line-height: inherit;
       opacity: 0;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -275,7 +272,8 @@ svg {
       }
     }
   }
-  &--form{
+
+  &--form {
     width: 100%;
   }
 
@@ -528,8 +526,8 @@ label .work {
   padding: 3% 0;
 }
 
-.work,
-.show .hab {
+.show .hab,
+.work {
   display: none;
 }
 
@@ -798,39 +796,53 @@ label .work {
   gap: 10px;
 }
 
-.social-icons {
-  a {
-    background-color: $color;
-    color: $bg2color;
-    font-size: 16px;
-    display: inline-block;
-    line-height: 44px;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    margin-right: 8px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+.social {
+    position: fixed;
+    gap: 10px;
+    bottom: 1rem;
+    z-index: 4;
+    padding: 2%;
+    animation: entrada 300ms 1 ease-in-out;
 
-    &:active,
-    &:focus,
-    &:hover {
-      color: $color;
-      background-color: #E34133;
+    @keyframes entrada{
+      0%{
+        transform: scale(0);
+      }
     }
+  &-icons {
+    a {
+      background-color: $color;
+      color: $bg2color;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
 
-    &.github:hover {
-      background-color: $bg1color;
-    }
+      &:active,
+      &:focus,
+      &:hover {
+        color: $color;
+        background-color: #E34133;
+      }
 
-    &.linkedin:hover {
-      background-color: #0A63BC;
-    }
+      &.github:hover {
+        background-color: $bg1color;
+      }
 
-    &.instagram:hover {
-      background-color: #ea4c89;
+      &.linkedin:hover {
+        background-color: #0A63BC;
+      }
+
+      &.instagram:hover {
+        background-color: #ea4c89;
+      }
     }
   }
 }
@@ -948,7 +960,6 @@ label .work {
     }
   }
 
-
   h3 {
     font-size: 30px;
   }
@@ -1029,9 +1040,12 @@ label .work {
     }
 
     &.footer {
-      background: #ECE9E6; /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #ECE9E6;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color: $bg1color;
       box-shadow: none;
     }
@@ -1073,20 +1087,20 @@ label .work {
   }
 }
 /*Modal*/
-
 .modal {
   max-height: 100%;
+
   &__card {
     width: 40%;
     overflow: hidden;
     background: $color;
     transition: 0.3s ease-in-out;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       width: 90%;
     }
   }
 
-  &-closeBtn{
+  &-closeBtn {
     margin-top: 2%;
   }
 
@@ -1095,8 +1109,8 @@ label .work {
   }
 }
 
-.form__section{
-  @media screen and (max-width: 800px){
+.form__section {
+  @media screen and (max-width: 800px) {
     margin-bottom: 5%;
     width: 100%;
   }
@@ -1105,7 +1119,7 @@ label .work {
 .form__flex {
   gap: 5%;
   margin-bottom: 5%;
-  @media screen and (max-width: 1050px){
+  @media screen and (max-width: 1050px) {
     margin: 0;
   }
 }
@@ -1114,9 +1128,9 @@ label .work {
   color: $bg2color;
 }
 
+input:not([type]),
 input[type=email]:not(.browser-default),
 input[type=text]:not(.browser-default),
-input:not([type]),
 textarea {
   outline: 2px solid $color3;
   border: none;
