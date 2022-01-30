@@ -27,14 +27,38 @@ $(function() {
   // if(document.body.classList.contains("dark")){
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
+if (matchMedia('only screen and (min-width: 900px)').matches) {
+  if (scroll <= 2750) {
+    social.css("display", "flex");
+  } else {
+    social.hide();
+  }
+}
 
-    if (scroll <= 2750) {
-      social.show();
-    } else {
-      social.hide();
-    }
+else{
+  social.hide();
+}
+
   });
 });
+
+const clip  = document.querySelectorAll('.video');
+
+clip.forEach(clips =>{
+  clip.addEventListener('mouseover', function(){
+    clip.play();
+  });
+  clip.addEventListener('mouseout', function(){
+    clip.pause();
+  });
+
+});
+
+// for (var i = 0; i < clip.length; i++) {
+//   clip[i].addEventListener('mouseenter', function(e){
+//     clip[i].play();
+//   });
+// }
 
 
   $(document).ready(function(){

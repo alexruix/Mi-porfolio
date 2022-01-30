@@ -114,6 +114,9 @@ a {
 
   &--middlewidth {
     width: 60%;
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
   }
 
   &--quarterwidth {
@@ -797,13 +800,13 @@ label .work {
 }
 
 .social {
+  display: none;
     position: fixed;
     gap: 10px;
     bottom: 1rem;
     z-index: 4;
     padding: 2%;
     animation: entrada 300ms 1 ease-in-out;
-
     @keyframes entrada{
       0%{
         transform: scale(0);
@@ -986,10 +989,6 @@ label .work {
   .card__inner {
     height: 500px;
     width: 80%;
-  }
-
-  .container--middlewidth {
-    width: 100%;
   }
 
   .container--quarterwidth {
