@@ -155,7 +155,9 @@ function handleTransition(item, text) {
 
 }
 
+var date = new Date().getFullYear();
 
+$('#copyright').html(date)
 
 
 document.addEventListener("DOMContentLoaded", function () {

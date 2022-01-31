@@ -446,6 +446,10 @@ svg {
   white-space: nowrap;
   text-transform: uppercase;
   transition: all 200ms linear;
+
+  @media screen and (max-width: 768px){
+      width: 80%;
+  }
 }
 @mixin buttonblue($background: $color3) {
   background: $background;
@@ -471,7 +475,9 @@ input {
     width: 100%;
     height: 100%;
     transition: all 150ms linear;
-    @include buttonblue;
+    background: $color4;
+    box-shadow: $shadow2;
+    border-radius: $border;
   }
 
   &[type="checkbox"]:checked+.base-color .toggle-slider {
@@ -947,9 +953,6 @@ label .work {
     flex-wrap: nowrap;
   }
 
-  .switcher {
-    width: 100%;
-  }
 
   .container {
     width: 100%;
