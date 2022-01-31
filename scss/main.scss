@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 $primary: blue;
-$pfont: 'Bebas Neue', cursive;
+$pfont: 'Bebas Neue', "Roboto", sans-serif;
 $sfont: 'Didact Gothic', sans-serif;
 $border: 16px;
 $duration: 0.45s;
@@ -114,7 +114,7 @@ a {
 
   &--middlewidth {
     width: 60%;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
   }
@@ -545,7 +545,7 @@ label .work {
   }
 
   &__titlebg {
-    font-size: 110px;
+    font-size: 80px;
     left: 0;
     letter-spacing: 10px;
     line-height: 0.7;
@@ -558,8 +558,8 @@ label .work {
   }
 
   &__img {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     margin-right: 2%;
   }
 
@@ -581,10 +581,21 @@ label .work {
     }
   }
 
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    // width: 100%;
+    @media screen and (max-width: 425px) {
+      flex-direction: column;
+    }
+  }
+
   &__img {
     width: 300px;
-    flex-shrink: 0;
+    // flex-shrink: 0;
     height: 300px;
+    cursor: pointer;
     border-radius: $border;
     transform: translate(-10%, 20%);
     overflow: hidden;
@@ -597,17 +608,19 @@ label .work {
       transform: translate(0%, -20%);
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: $border;
-      background: $color3;
-      opacity: 0.2;
-    }
+    // &:after {
+    //   content: "\f04b";
+    //   font-family: "Font Awesome 6 Free";
+    //   font-weight: 900;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   width: 20px;
+      // height: 100%;
+      // border-radius: $border;
+      // background: $color3;
+      // opacity: 0.2;
+    // }
   }
 
   &__content {
@@ -664,6 +677,8 @@ label .work {
 //     }
 //   }
 // }
+
+
 
 .card {
   &__description {
@@ -801,17 +816,18 @@ label .work {
 
 .social {
   display: none;
-    position: fixed;
-    gap: 10px;
-    bottom: 1rem;
-    z-index: 4;
-    padding: 2%;
-    animation: entrada 300ms 1 ease-in-out;
-    @keyframes entrada{
-      0%{
-        transform: scale(0);
-      }
+  position: fixed;
+  gap: 10px;
+  bottom: 1rem;
+  z-index: 4;
+  padding: 2%;
+  animation: entrada 300ms 1 ease-in-out;
+  @keyframes entrada {
+    0% {
+      transform: scale(0);
     }
+  }
+
   &-icons {
     a {
       background-color: $color;

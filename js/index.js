@@ -42,17 +42,27 @@ else{
   });
 });
 
-const clip  = document.querySelectorAll('.video');
+const videodad = document.querySelectorAll(".portfolio__img")
+const videos = document.querySelectorAll("video")
 
-clip.forEach(clips =>{
-  clip.addEventListener('mouseover', function(){
-    clip.play();
-  });
-  clip.addEventListener('mouseout', function(){
-    clip.pause();
-  });
+videos.forEach(video => {
+  video.addEventListener("mouseover", function () {
+    this.play()
+  })
 
-});
+  video.addEventListener("mouseout", function () {
+    this.pause()
+  })
+
+  video.addEventListener("touchstart", function () {
+    this.play()
+  })
+
+  video.addEventListener("touchend", function () {
+    this.pause()
+  })
+})
+
 
 // for (var i = 0; i < clip.length; i++) {
 //   clip[i].addEventListener('mouseenter', function(e){
