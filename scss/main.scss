@@ -72,7 +72,6 @@ a {
 //Backgrounds color
 
 .bg {
-padding-top: 50px;
   &--bg1 {
     background-image: url("../img/bannerbg.webp");
     background-position: top left;
@@ -95,6 +94,7 @@ padding-top: 50px;
 
   &--bg4 {
     background: $bg4color;
+    padding-top: 50px;
 
   }
 
@@ -604,7 +604,7 @@ label .work {
     height: 300px;
     cursor: pointer;
     border-radius: $border;
-    transform: translate(-10%, 20%);
+    transform: translate(-10%, 25%);
     overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 80%;
