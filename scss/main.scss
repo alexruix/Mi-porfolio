@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 $primary: blue;
-$pfont: 'Bebas Neue', cursive;
+$pfont: 'Bebas Neue', "Roboto", sans-serif;
 $sfont: 'Didact Gothic', sans-serif;
 $border: 16px;
 $duration: 0.45s;
 $cubic: cubic-bezier(0.4, 0, 0.2, 1);
 $d: 700ms;
-$e: cubic-bezier(0.19, 1, 0.22, 1);
-//Colores
+$e: cubic-bezier(0.19, 1, 0.22, 1); //Colores
 $color: #fafafa;
 $color2: #d5d5d5;
 $color3: #3C58B7;
@@ -21,8 +20,7 @@ $bg2color: #191C1C;
 $bg3color: #232323;
 $bg4color: #1B2223;
 $bg5color: #24292E;
-$bg6color: #322E3A;
-//Sombras
+$bg6color: #322E3A; //Sombras
 $shadow: 0 4px 20px -2px rgba(#2d4fdf, 0.5);
 $shadow2: 0 4px 20px -2px #1c1e22;
 $shadow3: 0 0 10px rgba(#000000, 0.6);
@@ -74,7 +72,6 @@ a {
 //Backgrounds color
 
 .bg {
-  // margin-top: -2%;
   &--bg1 {
     background-image: url("../img/bannerbg.webp");
     background-position: top left;
@@ -97,6 +94,8 @@ a {
 
   &--bg4 {
     background: $bg4color;
+    padding-top: 50px;
+
   }
 
   &--bg5 {
@@ -105,7 +104,7 @@ a {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   padding: 2em;
 
@@ -116,6 +115,9 @@ a {
 
   &--middlewidth {
     width: 60%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &--quarterwidth {
@@ -123,12 +125,12 @@ a {
   }
 
   &--img {
-    max-width: 450px;
+    max-width: 550px;
     height: 100%;
     max-height: 580px;
     position: relative;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
 
@@ -202,7 +204,7 @@ a {
   &__description {
     font-size: 20px;
     line-height: 1.6em;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       font-size: 16px;
       line-height: 1.5em;
     }
@@ -236,7 +238,6 @@ svg {
   position: relative;
   margin-top: 2%;
 
-
   &:active,
   &:focus {
     background: $pressbtn;
@@ -265,7 +266,7 @@ svg {
       font-weight: 900;
       line-height: inherit;
       opacity: 0;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -275,7 +276,8 @@ svg {
       }
     }
   }
-  &--form{
+
+  &--form {
     width: 100%;
   }
 
@@ -412,15 +414,18 @@ svg {
 }
 
 .marginbottom {
-  margin-bottom: 7em;
+  margin-bottom: 5.5em;
 }
 
 .path {
   fill-opacity: 1;
-  margin-top: -2.5rem;
+  // margin-top: -2.5rem;
   width: 100%;
-  height: 12rem;
+  height: 13rem;
   display: block;
+  @media screen and (max-width: 768px){
+    height: 9rem;
+  }
 
   &--two {
     fill: $bg4color;
@@ -445,6 +450,10 @@ svg {
   white-space: nowrap;
   text-transform: uppercase;
   transition: all 200ms linear;
+
+  @media screen and (max-width: 768px){
+      width: 80%;
+  }
 }
 @mixin buttonblue($background: $color3) {
   background: $background;
@@ -470,7 +479,9 @@ input {
     width: 100%;
     height: 100%;
     transition: all 150ms linear;
-    @include buttonblue;
+    background: $color4;
+    box-shadow: $shadow2;
+    border-radius: $border;
   }
 
   &[type="checkbox"]:checked+.base-color .toggle-slider {
@@ -528,8 +539,8 @@ label .work {
   padding: 3% 0;
 }
 
-.work,
-.show .hab {
+.show .hab,
+.work {
   display: none;
 }
 
@@ -544,7 +555,7 @@ label .work {
   }
 
   &__titlebg {
-    font-size: 110px;
+    font-size: 80px;
     left: 0;
     letter-spacing: 10px;
     line-height: 0.7;
@@ -557,8 +568,8 @@ label .work {
   }
 
   &__img {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     margin-right: 2%;
   }
 
@@ -580,12 +591,23 @@ label .work {
     }
   }
 
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    // width: 100%;
+    @media screen and (max-width: 425px) {
+      justify-content: center;
+    }
+  }
+
   &__img {
     width: 300px;
-    flex-shrink: 0;
+    // flex-shrink: 0;
     height: 300px;
+    cursor: pointer;
     border-radius: $border;
-    transform: translate(-10%, 20%);
+    transform: translate(-10%, 25%);
     overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 80%;
@@ -596,17 +618,18 @@ label .work {
       transform: translate(0%, -20%);
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: $border;
-      background: $color3;
-      opacity: 0.2;
-    }
+    // &:after {
+    //   content: "Play Video";
+    //   position: absolute;
+    //   font-family: $sfont;
+    //   text-align: center;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   border-radius: 0, 0, $border, $border;
+    //   background: rgba($bg2color, 0.6);
+    //   // opacity: 0.2;
+    // }
   }
 
   &__content {
@@ -663,6 +686,8 @@ label .work {
 //     }
 //   }
 // }
+
+
 
 .card {
   &__description {
@@ -798,39 +823,54 @@ label .work {
   gap: 10px;
 }
 
-.social-icons {
-  a {
-    background-color: $color;
-    color: $bg2color;
-    font-size: 16px;
-    display: inline-block;
-    line-height: 44px;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    margin-right: 8px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $color;
-      background-color: #E34133;
+.social {
+  display: none;
+  position: fixed;
+  gap: 10px;
+  bottom: 1rem;
+  z-index: 4;
+  padding: 2%;
+  animation: entrada 300ms 1 ease-in-out;
+  @keyframes entrada {
+    0% {
+      transform: scale(0);
     }
+  }
 
-    &.github:hover {
-      background-color: $bg1color;
-    }
+  &-icons {
+    a {
+      background-color: $color;
+      color: $bg2color;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
 
-    &.linkedin:hover {
-      background-color: #0A63BC;
-    }
+      &:active,
+      &:focus,
+      &:hover {
+        color: $color;
+        background-color: #E34133;
+      }
 
-    &.instagram:hover {
-      background-color: #ea4c89;
+      &.github:hover {
+        background-color: $bg1color;
+      }
+
+      &.linkedin:hover {
+        background-color: #0A63BC;
+      }
+
+      &.instagram:hover {
+        background-color: #ea4c89;
+      }
     }
   }
 }
@@ -916,9 +956,6 @@ label .work {
     flex-wrap: nowrap;
   }
 
-  .switcher {
-    width: 100%;
-  }
 
   .container {
     width: 100%;
@@ -948,7 +985,6 @@ label .work {
     }
   }
 
-
   h3 {
     font-size: 30px;
   }
@@ -975,10 +1011,6 @@ label .work {
   .card__inner {
     height: 500px;
     width: 80%;
-  }
-
-  .container--middlewidth {
-    width: 100%;
   }
 
   .container--quarterwidth {
@@ -1029,9 +1061,12 @@ label .work {
     }
 
     &.footer {
-      background: #ECE9E6; /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #ECE9E6;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color: $bg1color;
       box-shadow: none;
     }
@@ -1073,20 +1108,20 @@ label .work {
   }
 }
 /*Modal*/
-
 .modal {
   max-height: 100%;
+
   &__card {
     width: 40%;
     overflow: hidden;
     background: $color;
     transition: 0.3s ease-in-out;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       width: 90%;
     }
   }
 
-  &-closeBtn{
+  &-closeBtn {
     margin-top: 2%;
   }
 
@@ -1095,8 +1130,8 @@ label .work {
   }
 }
 
-.form__section{
-  @media screen and (max-width: 800px){
+.form__section {
+  @media screen and (max-width: 800px) {
     margin-bottom: 5%;
     width: 100%;
   }
@@ -1105,7 +1140,7 @@ label .work {
 .form__flex {
   gap: 5%;
   margin-bottom: 5%;
-  @media screen and (max-width: 1050px){
+  @media screen and (max-width: 1050px) {
     margin: 0;
   }
 }
@@ -1114,9 +1149,9 @@ label .work {
   color: $bg2color;
 }
 
+input:not([type]),
 input[type=email]:not(.browser-default),
 input[type=text]:not(.browser-default),
-input:not([type]),
 textarea {
   outline: 2px solid $color3;
   border: none;

@@ -21,23 +21,55 @@ typewriter.typeString('modernas')
 
 feather.replace()
 
-// var messageBox = document.querySelector('.js-message');
-//   var btn = document.querySelector('.js-message-btn');
-//   var card = document.querySelector('.js-profile-card');
-//   var closeBtn = document.querySelectorAll('.js-message-close');
-//
-//   btn.addEventListener('click',function (e) {
-//       e.preventDefault();
-//       card.classList.add('active');
+$(function() {
+  let social = $(".social");
+
+  // if(document.body.classList.contains("dark")){
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+if (matchMedia('only screen and (min-width: 900px)').matches) {
+  if (scroll <= 2750) {
+    social.css("display", "flex");
+  } else {
+    social.hide();
+  }
+}
+
+else{
+  social.hide();
+}
+
+  });
+});
+
+const videodad = document.querySelectorAll(".portfolio__img")
+const videos = document.querySelectorAll("video")
+
+videos.forEach(video => {
+  video.addEventListener("mouseover", function () {
+    this.play()
+  })
+
+  video.addEventListener("mouseout", function () {
+    this.pause()
+  })
+
+  video.addEventListener("touchstart", function () {
+    this.play()
+  })
+
+  video.addEventListener("touchend", function () {
+    this.pause()
+  })
+})
+
+
+// for (var i = 0; i < clip.length; i++) {
+//   clip[i].addEventListener('mouseenter', function(e){
+//     clip[i].play();
 //   });
-//
-//   closeBtn.forEach(function (element, index) {
-//      console.log(element);
-//       element.addEventListener('click',function (e) {
-//           e.preventDefault();
-//           card.classList.remove('active');
-//       });
-//   });
+// }
+
 
   $(document).ready(function(){
       $('.modal').modal();
@@ -123,7 +155,9 @@ function handleTransition(item, text) {
 
 }
 
+var date = new Date().getFullYear();
 
+$('#copyright').html(date)
 
 
 document.addEventListener("DOMContentLoaded", function () {
