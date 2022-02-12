@@ -23,11 +23,14 @@
   <link rel="stylesheet" href="scss/universal.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="scss/main.min.css">
+  <link rel="stylesheet" href="scss/profilecard.min.css">
+  <link rel="stylesheet" href="scss/proyecto.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,110 +38,279 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
   <title>Alex Ruiz - Damian Fotografo Proyecto</title>
 </head>
-<body class="bg bg--bg3">
-<div class="container flex__box">
-    <div class="container--middlewidth flex__column-start">
-      <h1 class="text text__title">Damian fotógrafo</h1>
-      <h2 class="text text__description text--font">Sitio web portafolio para un fotógrafo</h2>
 
-      <div class="flex__box-baseline">
-        <div class="flex__column container--middlewidth">
-          <p class="text text__spacing text__subtitle">Trabajo</p>
-          <p class="text text--font text__description">Diseño de identidad, logotipo y sitio web completo</p>
+<body >
+
+  <header class="navflex background">
+    <nav class="navflex">
+      <div class="menu">
+        <a href="index.html" class="menu__item">
+          <div class="menu__icon">
+            <i data-feather="home"></i>
+          </div>
+          <span class="menu__text active">inicio</span>
+        </a>
+        <a href="index.html#perfil" class="menu__item">
+          <div class="menu__icon">
+            <i data-feather="user"></i>
+          </div>
+          <span class="menu__text active">perfil</span>
+        </a>
+        <a href="#" class="menu__item active">
+          <div class="menu__icon">
+            <i data-feather="briefcase"></i>
+          </div>
+          <span class="menu__text active">
+            Portfolio</span>
+        </a>
+        <a href="index.html#contact" class="menu__item">
+          <div class="menu__icon">
+            <i data-feather="message-square"></i>
+          </div>
+          <span class="menu__text active">Contacto</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section >
+    <img src="img/headerdamian.png" alt="" class="proyecto__header imgfit">
+    <div class="wave" style="margin-top: -150px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
+        <path class="path--three" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="bg bg--bg2">
+    <div class="container proyecto__container">
+      <div class="flex__column">
+        <h3 class="text text__spacing center">Damián Fotografía</h3>
+        <p class="text--font">Sitio web portfolio para un fotógrafo</p>
+        <div class="text text__description text--font text--left">
+          <p>
+            Damian es un joven fotógrafo profesional que encontró en la cámara su manera de expresarse. Su trabajo es capturar aquello que es invisible para los demás y que sus fotografías sorprendan a los clientes haciendo que cada momento capturado
+            sea memorable.
+          </p>
         </div>
-        <div class="flex__column container--middlewidth">
-          <p class="text text__spacing text__subtitle">Duración</p>
-          <p class="text text--font text__description">5 semanas</p>
-        </div>
-        <div class="flex__column container--middlewidth">
-          <p class="text text__spacing text__subtitle">Año</p>
-          <p class="text text--font text__description">2022</p>
+        <div class="portfolio__buttons">
+          <a href="https://damianruiz.netlify.app/" class="button button__ppal">Ver sitio web</a>
         </div>
       </div>
-      <a target="_blank" href="mailto:alexruiz1666@gmail.com" class="button button__ppal marginbottom">Ver sitio web</a>
     </div>
-    <div class="container--middlewidth">
-      <figure class="container--img">
-        <img src="img/aboutme.png" class="imgfit" alt="Mockup del proyecto">
-      </figure>
+  </section>
+
+  <section class="bg bg--bg3">
+    <div class="proyecto__padding">
+      <div class="container ">
+        <div class="container card__black">
+          <ul class="tabs flex__box-center">
+            <li class="tab ">
+              <a class="active" href="#tab1">Tarea</a>
+            </li>
+            <li class="tab"><a href="#tab2">Desafío</a></li>
+            <li class="tab"><a href="#tab3">Solución</a></li>
+          </ul>
+
+          <div id="tab2" class="container">
+            <div class="text text__description text--font text--left">
+              <!-- <p>No dudes en ponerte en contacto conmigo, siempre estoy abierto a nuevos proyectos, ideas creativas u oportunidades laborales para hacer realidad los objetivos comerciales ¡Espero tu mensaje!</p> -->
+              <p>El <b>mayor desafío</b> que tuve fue el comienzo del proyecto porque para crear su marca personal necesite <b>conocer su personalidad</b>, tuve que descubrir cuales son sus objetivos, sus fortalezas y debilidades.
+
+              </p>
+              <p>
+                Luego de un arduo trabajo con el cliente obtuve todo la información para realizar el proyecto y que Damián este orgulloso del resultado
+              </p>
+            </div>
+          </div>
+          <div id="tab1" class="container">
+            <div class="text text__description text--font">
+              <p>Damián <b>quería tener presencia en internet</b> para brindar sus servicios de fotografía
+                <br>Para esto necesitaba tener una identidad de marca y un sitio web donde alojar sus trabajos para que estén siempre disponibles
+                <br>En definitiva <b>llevar su trabajo al siguiente nivel 🚀</b>
+              </p>
+              <p>El objetivo fue crear su marca personal y construir un sitio web que refleje su personalidad y profesionalismo para dar a conocer sus fotografías y servicios</p>
+              <p>Estos fueron los <b>puntos claves</b> que tuve en cuenta para realizar este proyecto:
+              <ul>
+                <li>Conocer a la persona</li>
+                <li>Reflejar su personalidad y profesionalismo en la marca y en el sitio web</li>
+                <li>Ofrecer una buena experiencia de usuario</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+          <div id="tab3" class="container">
+            <div class="text text__description text--font">
+              <p>
+                Para resolver el proyecto decidí que el sitio web y la marca personal estuvieran <b>enfocadas en su trabajo</b>, por eso cada página tiene un estilo <b>elegante, premium y armonioso</b> acorde al trabajo del fotógrafo combinado con una <b>interfaz
+                clásica y llamativa</b> para ofrecer una buena experiencia a los visitantes. De esta manera, atraer a la mayor cantidad de clientes posible y que su trabajo adquiera visibilidad
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<div class="container flex__column">
-  <label class="switcher flex__box-center">
-    <input type='checkbox' />
-    <span class='base-color'>
-      <span class='toggle-slider flex__box'></span>
-      <span class='work' id="work">Investigacion</span>
-      <span class='habilities' id="hab">Diseño</span>
-    </span>
-  </label>
-</div>
-<div class="container flex__box">
-    <h3 class="text text__spacing">Intro</h3>
-
-    <p class="text text--font text__description">Damian es un joven fotógrafo profesional que encontró en la cámara su manera de expresarse. Su trabajo es capturar aquello que es invisible para los demás y que sus fotografías sorprendan a los clientes haciendo que cada momento capturado sea memorable</p>
-</div>
-<div class="container flex__box">
-  <figure class="container--img">
-    <img src="img/aboutme.png" class="imgfit" alt="Mockup del proyecto">
-  </figure>
-</div>
-<div class="container flex__box">
-    <h3 class="text text__spacing">Tarea</h3>
-
-    <div class="text text--font text__description">
-      <p>Damian necesitaba tener una identidad digital y un sitio web para alojar sus trabajos, desarrollar estrategias para aumentar las visitas y llevar su trabajo al siguiente nivel</p>
-      <p>El objetivo era crear una marca y un sitio web que represente a el mismo, su personalidad y su profesionalismo</p>
-      <p>Estas fueron los puntos claves para realizar este proyecto:
-        <ul>
-          <li>Conocer a la persona y su personalidad</li>
-          <li>Atraer clientes proporcionando una experiencia premium y elegante en la web</li>
-        </ul>
-      </p>
+  <section class="bg bg--bg3 bg--bg2-margin">
+    <div class="container ">
+      <div class="flex__column container">
+        <h3 class="text text__spacing center">Conclusión</h3>
+        <div class="text text__description text--font">
+          <p>Tener una identidad de marca y un sitio web le permitió a Damián tener el <b>control total de cómo representarse a sí mismo</b> y destacar por sobre la competencia
+          </p>
+          <p>
+            Además, la página cumplió su objetivo y <b>él tiene siempre disponible sus obras</b> y puede complementarlo con las redes sociales
+          </p>
+        </div>
+      </div>
     </div>
-</div>
+    <div class="wave" style="top:-140px;">
+      <svg class="path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path class="path--two" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+      </svg>
+    </div>
+  </section>
 
-<div class="container flex__box">
-<div class="container--middlewidth">
-  <figure class="container--img">
-    <img src="img/aboutme.png" class="imgfit" alt="Alex Ruiz frontend developer">
-  </figure>
-</div>
-<div class="container--middlewidth container__more__padding">
+  <section class="bg bg--bg4">
+    <div class="container flex__box">
+      <div class="portfolio portfolio__container flex__column card__black">
+        <div class="">
+          <div class="portfolio__end ">
+            <div class="portfolio__content">
+              <h3 class="text__subtitle text__spacing margin0 center">Contactame</h3>
+              <div class="text text__description text--font text--left">
+                <!-- <p>No dudes en ponerte en contacto conmigo, siempre estoy abierto a nuevos proyectos, ideas creativas u oportunidades laborales para hacer realidad los objetivos comerciales ¡Espero tu mensaje!</p> -->
+                <p>No dudes en ponerte en contacto conmigo si tienes una oferta de trabajo, una propuesta de proyecto, estás interesado en que trabajemos juntos o simplemente quieres saludarme, siempre tengo el 'inbox' abierto. ¡Espero tu mensaje!
+                </p>
+              </div>
+              <div class="center">
+                <button class="button button__secondary modal-trigger" data-target="modal1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Escribeme</button>
+              </div>
+            </div>
+          </div>
+          <div class="center">
+            <p class="text text__description text--font">También puedes encontrarme en:</p>
+            <div class="profile-card-social">
+              <a class="profile-card-social__item linkedin" aria-label="Enlace a linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
+                <span class="icon-font">
+                  <i class="fa-brands fa-linkedin"></i>
+                </span>
+              </a>
+              <a class="profile-card-social__item github" aria-label="Enlace a github" target="_blank" rel="noopener" href="https://github.com/alexruix">
+                <span class="icon-font">
+                  <i class="fa-brands fa-github"></i>
+                </span>
+              </a>
+              <a class="profile-card-social__item twitter" aria-label="Enlace a twitter" target="_blank" rel="noopener" href="https://twitter.com/uitormenta">
+                <span class="icon-font">
+                  <i class="fa-brands fa-twitter"></i>
+                </span>
+              </a>
+              <a class="profile-card-social__item instagram" aria-label="Enlace a instagram" target="_blank" rel="noopener" href="https://www.instagram.com/alexr.dev/">
+                <span class="icon-font">
+                  <i class="fa-brands fa-instagram"></i>
+                </span>
+              </a>
+              <a class="profile-card-social__item dribbble" aria-label="Enlace a dribbble" target="_blank" rel="noopener" href="https://dribbble.com/uitormenta">
+                <span class="icon-font">
+                  <i class="fa-brands fa-dribbble"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3 class="text text__spacing center">Desafío</h3>
-  <div class="text text__description text--font">
-    <p>Para crear su marca personal fue esencial conocer a la persona y su personalidad, tuve que descubrir cuales son sus objetivos, sus fortalezas, debilidades. Luego de un arduo trabajo y varias tazas de café obtuve todo la información para realizar el proyecto</p>
+
+  <section>
+    <div class="js-message" id="modal">
+      <div id="modal1" class="modal modal__card card__black">
+        <div class="center  text text__description text__spacing modal__black">
+          <h3>Contacto</h3>
+        </div>
+        <form class="work__container profile-card-form" action="https://formspree.io/f/mgedvorp" method="POST">
+          <div class="profile-card-form__container">
+            <div class="flex__box form__flex text--font">
+              <div class="form__section">
+                <input type="text" placeholder="Tu nombre" name="name" minlength="4" maxlength="80" autocomplete="given-name" required />
+              </div>
+              <div class="form__section">
+                <input type="email" name="_replyto" maxlength="80" required autocomplete="email" placeholder="Tu email" />
+              </div>
+            </div>
+            <div class="flex__box form__flex text--font">
+              <div class="form__section">
+                <textarea name="message" rows="8" cols="80" placeholder="Escribe tu mensaje..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card-form__bottom ">
+            <button class="button button__send button--form form__section" type="submit">
+              Enviar
+            </button>
+
+          </div>
+
+        </form>
+        <div class="profile-card-form__bottom profile-card-form modal-closeBtn">
+          <button class="button button__gray button--form form__section modal-close">
+            Cancelar
+          </button>
+        </div>
+
+      </div>
+      <div class="profile-card__overlay js-message-close"></div>
+    </div>
+  </section>
+
+  <div class="social flex__column" style="display: flex;">
+    <a class="profile-card-social__item footer" aria-label="Enlace a linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
+      <span class="icon-font">
+        <i class="fa-brands fa-linkedin"></i>
+      </span>
+    </a>
+    <a class="profile-card-social__item footer" aria-label="Enlace a github" target="_blank" rel="noopener" href="https://www.github.com/alexruix/">
+      <span class="icon-font">
+        <i class="fa-brands fa-github"></i>
+      </span>
+    </a>
+    <a class="profile-card-social__item footer" aria-label="Enlace a twitter" target="_blank" rel="noopener" href="https://twitter.com/uitormenta">
+      <span class="icon-font">
+        <i class="fa-brands fa-twitter"></i>
+      </span>
+    </a>
   </div>
-</div>
-</div>
+  <footer class="site-footer">
+    <div class="container work__container">
+      <hr>
+    </div>
+    <div class="work__container">
+      <div class="container" style="padding-top:0; padding-bottom:0;">
+        <div class="flex__box text--font">
+          <div>
+            <p>Copyright © <span id="copyright"></span> All Rights Reserved by <a style="color: white;" href="https://www.linkedin.com/in/alexruix/"><b>Alex Ruiz</b></a></p>
+          </div>
 
-<div class="container flex__box">
+          <div class="container--middlewidth">
 
-<div class="container--middlewidth container__more__padding">
+          </div>
+        </div>
+      </div>
 
-  <h3 class="text text__spacing center">Solución</h3>
-  <div class="text text__description text--font">
-    <p>El sitio web y la marca personal estuvieron enfocadas en el trabajo de Damian, por eso decidí que cada página tenga un estilo elegante y armonioso acorde al trabajo del fotógrafo combinado con una interfaz moderna y llamativa para que haga feliz a los visitantes y atraiga a la mayor cantidad de clientes posible</p>
-  </div>
-</div>
-<div class="container--middlewidth">
-  <figure class="container--img">
-    <img src="img/aboutme.png" class="imgfit" alt="Alex Ruiz frontend developer">
-  </figure>
-</div>
-</div>
+    </div>
+  </footer>
 
-
-<script src="https://kit.fontawesome.com/a6083f8adb.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="js/materialize.min.js"></script>
-<script src="js/index.js"></script>
+  <script src="https://kit.fontawesome.com/a6083f8adb.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/proyecto.js"></script>
 </body>
 
 </html>
