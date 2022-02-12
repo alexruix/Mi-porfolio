@@ -4,7 +4,7 @@ $(function() {
   // if(document.body.classList.contains("dark")){
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-if (matchMedia('only screen and (min-width: 900px)').matches) {
+if (matchMedia('only screen and (min-width: 1050px)').matches) {
   if (scroll <= 1500) {
     social.css("display", "flex");
   } else {
