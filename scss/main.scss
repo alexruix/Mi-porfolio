@@ -84,7 +84,9 @@ a {
 
   &--bg2 {
     background: $bg2color;
-    margin-bottom: -160px;
+    &-margin{
+      margin-bottom: -160px;
+    }
   }
 
   &--bg3 {
@@ -95,7 +97,6 @@ a {
   &--bg4 {
     background: $bg4color;
     padding-top: 50px;
-
   }
 
   &--bg5 {
@@ -363,6 +364,18 @@ svg {
     }
   }
 
+  &__send{
+    background: $hoverbg;
+    outline: 2px solid rgba($pressbtn, .3);
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-indent: 0;
+      color: $color2;
+    }
+  }
+
   &__gray {
     background: none;
     color: #676767;
@@ -433,6 +446,9 @@ svg {
 
   &--one {
     fill: $bg3color;
+  }
+  &--three{
+    fill: $bg2color;
   }
 }
 
@@ -570,7 +586,7 @@ label .work {
   &__img {
     width: 48px;
     height: 48px;
-    margin-right: 2%; 
+    margin-right: 2%;
     fill: white;
   }
 

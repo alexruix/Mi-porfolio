@@ -107,6 +107,7 @@
   cursor: pointer;
   backface-visibility: hidden;
   transition: all 0.3s;
+  text-indent: 0;
   @media screen and (max-width: 768px) {
     min-width: 170px;
     margin: 15px 25px;
