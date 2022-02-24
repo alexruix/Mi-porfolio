@@ -29,16 +29,6 @@ body {
   font-family: $pfont;
   color: $color;
   background: $bg1color;
-
-  &.light {
-    $bg1color: #FEFBFF;
-    $bg2color: linear-gradient(0deg, rgba(70, 89, 169, 0.05), rgba(70, 89, 169, 0.05)), #FEFBFF;
-    $bg3color: linear-gradient(0deg, rgba(70, 89, 169, 0.05), rgba(70, 89, 169, 0.05)), #FEFBFF;
-    $bg4color: linear-gradient(0deg, rgba(70, 89, 169, 0.11), rgba(70, 89, 169, 0.11)), #FEFBFF;
-    $bg5color: linear-gradient(0deg, rgba(70, 89, 169, 0.12), rgba(70, 89, 169, 0.12)), #FEFBFF;
-    $bg6color: linear-gradient(0deg, rgba(70, 89, 169, 0.14), rgba(70, 89, 169, 0.14)), #FEFBFF;
-    $color: #1B1B1F;
-  }
 }
 
 a {
@@ -47,11 +37,17 @@ a {
 //Scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  // width: 20px;
+  height: 4px;
+  background: $bg3color;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px $color5;
+  // box-shadow: inset 0 0 5px $color5;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 8px;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -84,7 +80,8 @@ a {
 
   &--bg2 {
     background: $bg2color;
-    &-margin{
+
+    &-margin {
       margin-bottom: -160px;
     }
   }
@@ -364,7 +361,7 @@ svg {
     }
   }
 
-  &__send{
+  &__send {
     background: $hoverbg;
     outline: 2px solid rgba($pressbtn, .3);
 
@@ -436,7 +433,7 @@ svg {
   width: 100%;
   height: 13rem;
   display: block;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     height: 9rem;
   }
 
@@ -447,7 +444,8 @@ svg {
   &--one {
     fill: $bg3color;
   }
-  &--three{
+
+  &--three {
     fill: $bg2color;
   }
 }
@@ -466,9 +464,8 @@ svg {
   white-space: nowrap;
   text-transform: uppercase;
   transition: all 200ms linear;
-
-  @media screen and (max-width: 768px){
-      width: 80%;
+  @media screen and (max-width: 768px) {
+    width: 80%;
   }
 }
 @mixin buttonblue($background: $color3) {
@@ -561,7 +558,7 @@ label .work {
 }
 
 .show .work {
-  display: flex;
+  display: block;
 }
 
 .work {
@@ -587,7 +584,11 @@ label .work {
     width: 48px;
     height: 48px;
     margin-right: 2%;
-    fill: white;
+
+    &-skills {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__container {
@@ -597,24 +598,35 @@ label .work {
   }
 }
 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
 .portfolio {
   &__container {
-    width: 80%;
-    margin: auto;
+    // width: 85%;
+    // margin: auto;
     display: flex;
+    margin-bottom: 32px;
     @media screen and (max-width: 768px) {
       width: 100%;
       flex-direction: column;
+      margin-bottom: 72px;
     }
   }
 
   &__buttons {
     display: flex;
-    gap: 20px;
+    gap: 32px;
     flex-wrap: wrap;
     // width: 100%;
-    @media screen and (max-width: 425px) {
-      justify-content: center;
+    a {
+      @media screen and (max-width: 425px) {
+        justify-content: center;
+        width: 100%;
+      }
     }
   }
 
@@ -634,7 +646,6 @@ label .work {
       position: relative;
       transform: translate(0%, -20%);
     }
-
     // &:after {
     //   content: "Play Video";
     //   position: absolute;
@@ -703,8 +714,6 @@ label .work {
 //     }
 //   }
 // }
-
-
 
 .card {
   &__description {
@@ -924,21 +933,20 @@ label .work {
   height: 15px;
   border-radius: 8px;
 }
-
-.swiper {
-  width: 85%;
-  height: 100%;
-  max-height: 470px;
-  background: $bg4color;
-}
-
-.swiper-slide {
-  width: 300px;
-  height: 100%;
-  max-height: 500px;
-  max-width: 470px;
-  background: $bg4color;
-}
+// .swiper {
+//   width: 85%;
+//   height: 100%;
+//   max-height: 470px;
+//   background: $bg4color;
+// }
+//
+// .swiper-slide {
+//   width: 300px;
+//   height: 100%;
+//   max-height: 500px;
+//   max-width: 470px;
+//   background: $bg4color;
+// }
 @media screen and (max-width:800px) {
   .text {
     &__title {
@@ -972,7 +980,6 @@ label .work {
   .social-icons {
     flex-wrap: nowrap;
   }
-
 
   .container {
     width: 100%;
@@ -1201,5 +1208,46 @@ textarea {
   &:focus {
     outline: none;
     border-color: $color4;
+  }
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  // overflow-y: hidden;
+  gap: 16px;
+  height: 100%;
+  // min-height: 450px;
+  overscroll-behavior: contain;
+  scroll-snap-type: x proximity;
+  // padding: 8px;
+  position: relative;
+
+
+  &::-webkit-scrollbar {
+    // background: green;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $bg3color;
+    border-radius: 16px;
+  }
+  &__image{
+    max-height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &__item {
+    scroll-snap-align: center;
+    @include buttonblue($bg2color);
+    min-width: 90%;
+    min-height: 325px;
+    height: 100%;
+    &-title{
+      padding: 1.5em;
+      padding-top: 0;
+    }
   }
 }
