@@ -32,13 +32,13 @@ body {
 }
 
 a {
-  color: $bg1color;
+  color: inherit;
 }
 //Scrollbar
 /* width */
 ::-webkit-scrollbar {
   // width: 20px;
-  height: 4px;
+  // height: 4px;
   background: $bg3color;
 }
 /* Track */
@@ -51,22 +51,9 @@ a {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $hoverbg;
+  background: $hoverbtn;
   border-radius: 8px;
 }
-
-::-webkit-scrollbar-thumb {
-  &:active,
-  &:focus {
-    background: $pressbtn;
-  }
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $hoverbtn;
-}
-//Backgrounds color
-
 .bg {
   &--bg1 {
     background-image: url("../img/bannerbg.webp");
@@ -1225,11 +1212,12 @@ textarea {
 
 
   &::-webkit-scrollbar {
-    // background: green;
+    background: $color3;
+    height: 8px;
+    border-radius: 16px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $bg3color;
     border-radius: 16px;
   }
   &__image{
@@ -1245,9 +1233,11 @@ textarea {
     min-width: 90%;
     min-height: 325px;
     height: 100%;
+    color: $color;
     &-title{
       padding: 1.5em;
-      padding-top: 0;
+      // padding-top: 0;
+
     }
   }
 }
