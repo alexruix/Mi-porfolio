@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="scss/main.min.css">
   <link rel="stylesheet" href="scss/profilecard.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -74,7 +74,7 @@
     <div class="container flex__box container--padding">
       <div class="container--middlewidth">
         <h1 class="text text__title">Hola, soy <span class="text text--gradient">Alex Ruiz</span></h1>
-        <h2 class="text text__subtitle text--font">Soy diseñador y desarrollador frontend enfocado en crear experiencias <span class="text text--blue" id="type2"></span> que mejoren la vida de los usuarios</h2>
+        <h2 class="text text__subtitle text--font">Soy diseñador UI y desarrollador frontend enfocado en crear experiencias <span class="text text--blue" id="type2"></span> que mejoren la vida de los usuarios</h2>
         <a href="#portfolio" class="button button__ppal">Ver mi trabajo
         </a>
       </div>
@@ -85,7 +85,7 @@
     <div class="bg bg--bg2 bg--bg2-margin">
       <div class="container flex__box ">
         <div class="container--quarterwidth container__more__padding">
-          <h3 class="text text__spacing center">Diseñador web creativo</h3>
+          <h3 class="text text__spacing center">UI Developer creativo</h3>
           <div class="text text__description text--font">
             <p>Me especializo en el diseño y desarrollo de interfaces de usuario, considero fundamental crear una experiencia integral que además de ser estetica esté enfocada en las personas</p>
             <p>Siempre pondré todo de mí para que los clientes puedan alcanzar sus
@@ -108,58 +108,48 @@
 
     <div class="bg bg--bg3 ">
       <div class="container">
-        <div class="flex__column">
-          <h3 class="text text__spacing center">Lo que hago</h3>
-        </div>
+        <!-- <h3 class="text text__spacing center">Lo que hago</h3> -->
       </div>
       <div class="container flex__column">
+
         <label class="switcher flex__box-center">
-          <input type='checkbox' />
+          <input class="profilecheckbox" type='checkbox' />
           <span class='base-color'>
             <span class='toggle-slider flex__box'></span>
-            <span class='habilities' id="hab">Herramientas</span>
+            <span class='habilities' id="hab">Lo que hago</span>
             <span class='work' id="work">Plan de trabajo</span>
           </span>
         </label>
       </div>
-      <div class="container flex__box switch">
-        <div class="flex__box-around container card__black hab" id="habilities">
-          <div class="flex__column">
-            <div class="flex__box ">
-              <div class="flex__column">
-                <div>
-                  <!-- <h4 class="flex__box-start gap text__spacing"><i data-feather="pen-tool"></i>AHORRAD</h4> -->
-                  <!-- <h4 class="flex__box-start text__subtitle gap text__spacing">tecnologías que uso</h4> -->
-                  <div class="flex__box-center">
-                    <!-- <img src="img/end.svg" class="work__img" alt="Tecnologias Vector"> -->
-                    <h4 class="text__subtitle gap text__spacing">tecnologías que uso</h4>
+      <div class="container switch">
+        <div class="container card__black hab" id="habilities">
+          <div class="container">
+            <div class="flex__box-center">
+              <!-- <h4 class="text__subtitle gap text__spacing">tecnologías que uso</h4> -->
 
-                  </div>
+            </div>
 
+            <div class="text__description text--font">
+              <p>Como UI developer siempre aplico lo mejor del diseño en cada proyecto, adaptandolo a las necesidades del cliente para crear sitios web increibles que estén enfocados en las personas, esto significa ayudar a las empresas y
+                emprendedores en crecimiento a lograr su objetivo mientras deja a los usuarios con una gran sonrisa</p>
 
+              <!-- <p>Para diseñar, maquetar y codificar sitios web utilizo algunas de las siguientes tecnologías</p> -->
+              <p>Mis skills:</p>
+              <figure class="skills gap">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/feather/figma.svg?size=99&color=f5f5f5" alt="Figma icon">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/adobeillustrator.svg?size=99&color=f5f5f5&colored=false" alt="Illustrator icon">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/html5.svg?size=99&color=f5f5f5" alt="HTML5 icon">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/css3.svg?size=20&color=f5f5f5" alt="CSS3 icon">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/javascript.svg?size=99&color=f5f5f5" alt="JavaScript icon">
+                <!-- <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/react.svg?size=99&color=f5f5f5" alt="React icon"> -->
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/git.svg?size=99&color=f5f5f5" alt="Git icon">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/github.svg?size=99&color=f5f5f5" alt="Github icon">
+                <img class="work__img work__img-skills" onerror="this.remove()" src="https://icongr.am/simple/firebase.svg?size=99&color=f5f5f5" alt="Firebase icon">
+              </figure>
+              <!-- <p>En cada proyecto aplico lo mejor del diseño UI posible y adaptado a las necesidades del cliente para crear componentes increíbles e interactivos que están enfocados en las personas</p> -->
+              <p>¿Quieres saber más sobre mi experiencia?<br> Consulta mi <a class="text--blue text--underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">perfil de Linkedin</a> y mi <a
+                  class="text--blue text--underline" target="_blank" rel="noopener" href="https://github.com/alexruix">portfolio de Github</a></p>
 
-                  <div class="container text__description text--font">
-                    <figure class="flex__box-center gap">
-                      <img class="work__img" src="img/html.svg" alt="HTML5 icon">
-                      <img class="work__img" src="img/css.svg" alt="CSS3 icon">
-                      <img class="work__img" src="img/logo-javascript.svg" alt="JavaScript icon">
-                      <img class="work__img" src="img/react.svg" alt="React icon">
-                      <!-- <img class="work__img" src="img/angular.svg" alt="Angular icon"> -->
-                      <img class="work__img" src="img/sass-1.svg" alt="Sass icon">
-                      <img class="work__img" src="img/bootstrap-5-1.svg" alt="Bootstrap icon">
-                      <img class="work__img" src="img/tailwind.svg" alt="Tailwind icon">
-                      <img class="work__img" src="img/git.svg" alt="Git icon">
-                      <img class="work__img" src="img/figma-1.svg" alt="Figma icon">
-                    </figure>
-                    <p>Esas son algunas de las tecnologías, que utilizo para diseñar, maquetar y codificar sitios web; y transformar los problemas en proyectos extraordinarios y exitosos</p>
-                    <p>Para conseguirlo, aplico lo mejor del diseño UI posible y adaptado a las necesidades del cliente para crear componentes increíbles e interactivos que están enfocados en las personas, esto significa llevar su negocio al éxito
-                      mientras deja a los usuarios con
-                      una gran sonrisa</p>
-                    <p>¿Quieres saber más sobre mi experiencia? Consulta mi <a class="text--blue text--underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">perfil de Linkedin</a> y mi <a
-                        class="text--blue text--underline" target="_blank" rel="noopener" href="https://github.com/alexruix">portfolio de Github</a></p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -271,8 +261,10 @@
         <h3>Mi trabajo</h3>
       </div>
     </div>
-    <div class="container flex__box">
-      <div class="portfolio__container card__black">
+
+
+    <div class="container">
+      <div class="portfolio__container container card__black">
         <div class="portfolio__item">
           <figure class="portfolio__img">
             <video width="300" height="300" class="video imgfit" alt="Damian portfolio" src="img/damian.mp4" loop muted preload="">
@@ -294,20 +286,72 @@
           </div>
         </div>
       </div>
+      <!-- <div class="portfolio__container card__black">
+        <div class="portfolio__item">
+          <figure class="portfolio__img">
+            <video width="300" height="300" class="video imgfit" alt="Damian portfolio" src="img/damian.mp4" loop muted preload="">
+            </video>
+          </figure>
+        </div>
+        <div class="portfolio__end">
+          <div class="portfolio__content">
+            <h4 class="text__subtitle text__spacing margin0">Damián Fotografía</h4>
+            <p class="text--font">Sitio web portfolio para un fotógrafo</p>
+            <div class="text text__description text--font text--left">
+              <p>Damián quería tener presencia en internet para brindar sus servicios de fotografía, para esto necesitaba tener un sitio web que transmita su personalidad</p>
+              <p>El sitio web que diseñé le permitió llegar a nuevos clientes, tener siempre visible su trabajo y complementarlo con las redes sociales</p>
+            </div>
+            <div class="portfolio__buttons">
+              <a href="https://damianruiz.netlify.app/" class="button button__ppal">Ver sitio web</a>
+              <a href="damianproyecto.html" class="button button__secondary">Case study</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
 
+    <div class="container">
+      <h3 class="center">Mi blog</h3>
+      <div class="slider container">
+        <div class="slider__item ">
+          <img class="imgfit slider__image"
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--jWKZaQyW--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t00q2s0t4afv8bx0x5we.png" alt="Javascript code">
+          <div class="slider__item-title">
+            <a class="text text__subtitle text--underline" href="https://dev.to/alexruix/10-awesome-and-useful-javascript-tricks-and-tips-part-1-1d0g"> 10 awesome and useful JAVASCRIPT TRICKS and TIPS. Part 1</a>
+            <p class="text--font">#JavaScript, #beginners, #webdev, #tutorial</p>
+            <a href="https://dev.to/alexruix/10-awesome-and-useful-javascript-tricks-and-tips-part-1-1d0g" class="button button__ppal">Ver post</a>
+          </div>
+        </div>
+        <div class="slider__item ">
+          <img class="imgfit slider__image"
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--M5ZxmpwC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/608rlaxfi7uhgok59e50.jpg" alt="Javascript code">
+          <div class="slider__item-title">
+            <a class="text text__subtitle text--underline" href="https://dev.to/alexruix/10-best-plugins-to-create-websites-in-atom-2lfk"> 10 best plugins to create websites in ATOM</a>
+            <p class="text--font">#productivity, #plugins, #webdev, #ninja</p>
+            <a href="https://dev.to/alexruix/10-best-plugins-to-create-websites-in-atom-2lfk" class="button button__ppal">Ver post</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
     <div class="wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2.5rem;width:100%;height:12rem;display:block;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="margin-top:-2rem;width:100%;height:12rem;display:block;">
         <path class="path--two" d="M0,192L120,213.3C240,235,480,277,720,266.7C960,256,1200,192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
       </svg>
     </div>
   </section>
 
-<section class="bg bg--bg4" id="contact">
+  <section class="bg bg--bg4" id="contact">
 
     <div class="container flex__box">
-      <div class="portfolio portfolio__container flex__column card__black">
-        <div class="">
+      <div class="container">
+        <div class="portfolio container portfolio__container flex__column card__black">
           <div class="portfolio__end ">
             <div class="portfolio__content">
               <h3 class="text__subtitle text__spacing margin0 center">Contactame</h3>
@@ -319,38 +363,42 @@
               <div class="center">
                 <button class="button button__secondary modal-trigger" data-target="modal1"><i data-feather="message-square"></i>Escribeme</button>
               </div>
+
+              <div class="center">
+                <p class="text text__description text--font">También puedes encontrarme en:</p>
+                <div class="profile-card-social">
+                  <a class="profile-card-social__item linkedin" aria-label="Enlace a linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
+                    <span class="icon-font">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </span>
+                  </a>
+                  <a class="profile-card-social__item github" aria-label="Enlace a github" target="_blank" rel="noopener" href="https://github.com/alexruix">
+                    <span class="icon-font">
+                      <i class="fa-brands fa-github"></i>
+                    </span>
+                  </a>
+                  <a class="profile-card-social__item facebook" aria-label="Enlace a Behance" target="_blank" rel="noopener" href="https://behance.net/alexruix">
+                    <span class="icon-font">
+                      <i class="fa-brands fa-behance"></i>
+                    </span>
+                  </a>
+                  <a class="profile-card-social__item twitter" aria-label="Enlace a twitter" target="_blank" rel="noopener" href="https://twitter.com/alexruixdev">
+                    <span class="icon-font">
+                      <i class="fa-brands fa-twitter"></i>
+                    </span>
+                  </a>
+                  <!-- <a class="profile-card-social__item instagram" aria-label="Enlace a instagram" target="_blank" rel="noopener" href="https://www.instagram.com/alexr.dev/">
+                    <span class="icon-font">
+                      <i class="fa-brands fa-instagram"></i> -->
+                  </span>
+                  </a>
+                </div>
+              </div>
             </div>
+
+
           </div>
-          <div class="center">
-            <p class="text text__description text--font">También puedes encontrarme en:</p>
-            <div class="profile-card-social">
-              <a class="profile-card-social__item linkedin" aria-label="Enlace a linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
-                <span class="icon-font">
-                  <i class="fa-brands fa-linkedin"></i>
-                </span>
-              </a>
-              <a class="profile-card-social__item github" aria-label="Enlace a github" target="_blank" rel="noopener" href="https://github.com/alexruix">
-                <span class="icon-font">
-                  <i class="fa-brands fa-github"></i>
-                </span>
-              </a>
-              <a class="profile-card-social__item facebook" aria-label="Enlace a Behance" target="_blank" rel="noopener" href="https://behance.net/alexruix">
-                <span class="icon-font">
-                  <i class="fa-brands fa-behance"></i>
-                </span>
-              </a>
-              <a class="profile-card-social__item twitter" aria-label="Enlace a twitter" target="_blank" rel="noopener" href="https://twitter.com/alexruixdev">
-                <span class="icon-font">
-                  <i class="fa-brands fa-twitter"></i>
-                </span>
-              </a>
-              <a class="profile-card-social__item instagram" aria-label="Enlace a instagram" target="_blank" rel="noopener" href="https://www.instagram.com/alexr.dev/">
-                <span class="icon-font">
-                  <i class="fa-brands fa-instagram"></i>
-                </span>
-              </a>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -358,7 +406,7 @@
   </section>
 
   <div class="social flex__column">
-    <a class="profile-card-social__item footer" aria-label="Enlace a linkedin"target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
+    <a class="profile-card-social__item footer" aria-label="Enlace a linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexruix/">
       <span class="icon-font">
         <i class="fa-brands fa-linkedin"></i>
       </span>
@@ -428,10 +476,6 @@
           <div>
             <p>Copyright © <span id="copyright"></span> All Rights Reserved by <a style="color: white;" href="https://www.linkedin.com/in/alexruix/"><b>Alex Ruiz</b></a></p>
           </div>
-
-          <div class="container--middlewidth">
-
-          </div>
         </div>
       </div>
 
@@ -442,6 +486,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/index.js"></script>

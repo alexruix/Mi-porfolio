@@ -161,7 +161,7 @@ $('#copyright').html(date)
 
 
 document.addEventListener("DOMContentLoaded", function () {
-      const checkboxSwitcher = document.querySelector("input[type=checkbox]");
+      const checkboxSwitcher = document.querySelector(".profilecheckbox");
       const details = document.querySelector(".switch");
       checkboxSwitcher.addEventListener("change", function (event) {
         if (event.target.checked) {
@@ -173,3 +173,19 @@ document.addEventListener("DOMContentLoaded", function () {
   },
   false
 );
+var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
