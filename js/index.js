@@ -162,7 +162,7 @@ $('#copyright').html(date)
 
 document.addEventListener("DOMContentLoaded", function () {
       const checkboxSwitcher = document.querySelector(".profilecheckbox");
-      const details = document.querySelector(".switch");
+      const details = document.querySelector(".switches");
       checkboxSwitcher.addEventListener("change", function (event) {
         if (event.target.checked) {
           details.classList.add('show');
