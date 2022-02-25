@@ -84,7 +84,7 @@ videos.forEach(video => {
 
 
 let mainNavLinks = document.querySelectorAll(".menu__item");
-let mainSections = document.querySelectorAll(".background");
+let mainSections = document.querySelectorAll(".navflex");
 
 let lastId;
 let cur = [];
@@ -96,7 +96,7 @@ window.addEventListener("scroll", event => {
     let section = document.querySelector(link.hash);
 
     if (
-      section.offsetTop <= fromTop &&
+      section.offsetTop <= fromTop +50 &&
       section.offsetTop + section.offsetHeight > fromTop
     ) {
       link.classList.add("active");
