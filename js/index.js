@@ -96,8 +96,8 @@ window.addEventListener("scroll", event => {
     let section = document.querySelector(link.hash);
 
     if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
+      section.offsetTop <= fromTop +50 &&
+      section.offsetTop + section.offsetHeight > fromTop +25
     ) {
       link.classList.add("active");
     } else {
