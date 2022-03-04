@@ -492,11 +492,11 @@ input {
     margin-left: 50%;
   }
 
-  &[type="checkbox"]:checked+.base-color .habilities {
+  &[type="checkbox"]:checked+.base-color .work {
     color: $bg2color;
   }
 
-  &[type="checkbox"]:checked+.base-color .work {
+  &[type="checkbox"]:checked+.base-color .habilities {
     color: $color;
   }
 
@@ -513,17 +513,17 @@ input {
     box-shadow: $shadow2;
   }
 
-  &[type="checkbox"]+.base-color .habilities {
+  &[type="checkbox"]+.base-color .work {
     color: $color2;
   }
 }
 
 .habilities {
-  left: 0;
+  right: 0;
 }
 
 .work {
-  right: 0;
+  left: 0;
 }
 
 label .habilities,
@@ -543,16 +543,24 @@ label .work {
   padding: 3% 0;
 }
 
-.show .hab,
-.work {
+.show .work,
+.hab {
   display: none;
 }
 
-.show .work {
+.show .hab {
   display: block;
 }
 
 .work {
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    gap: 32px;
+  }
+  &__item{
+    // width: 30%;
+  }
   &__header {
     position: relative;
     margin-top: 10%;

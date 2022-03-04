@@ -42,8 +42,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
-
 nav {
   background-color: rgba(0, 0, 0, 0);
   font-family: var(--pfont);
@@ -70,7 +68,7 @@ header {
   z-index: 999;
 }
 
-.navflex{
+.navflex {
   margin-right: 5%;
   justify-content: flex-end;
 }
@@ -175,14 +173,12 @@ header {
   stroke-miterlimit: 10;
 }
 
-
 @media screen and (max-width:1050px) {
   .navflex {
     justify-content: center;
     right: 0;
     background: var(--bgcolor1);
   }
-
 
   .menu {
     font-size: 12px;
@@ -192,8 +188,6 @@ header {
     bottom: 0;
     border-radius: 1em 1em 0 0;
   }
-
-
 
   .menu__icon {
     font-size: 3.5em;
