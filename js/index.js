@@ -84,7 +84,7 @@ videos.forEach(video => {
 
 
 let mainNavLinks = document.querySelectorAll(".menu__item");
-let mainSections = document.querySelectorAll(".background");
+let mainSections = document.querySelectorAll(".navflex");
 
 let lastId;
 let cur = [];
@@ -161,8 +161,8 @@ $('#copyright').html(date)
 
 
 document.addEventListener("DOMContentLoaded", function () {
-      const checkboxSwitcher = document.querySelector("input[type=checkbox]");
-      const details = document.querySelector(".switch");
+      const checkboxSwitcher = document.querySelector(".profilecheckbox");
+      const details = document.querySelector(".switches");
       checkboxSwitcher.addEventListener("change", function (event) {
         if (event.target.checked) {
           details.classList.add('show');
@@ -173,3 +173,19 @@ document.addEventListener("DOMContentLoaded", function () {
   },
   false
 );
+var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
