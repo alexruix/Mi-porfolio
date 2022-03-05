@@ -555,11 +555,19 @@ label .work {
 .work {
   &__grid{
     display: grid;
-    grid-template-columns: repeat(3,300px);
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
     gap: 32px;
+    @media screen and (max-width: 768px){
+      grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width: 625px){
+      grid-template-columns: repeat(1,1fr);
+      // gap: 15%;
+    }
   }
   &__item{
-    // width: 30%;
+
   }
   &__header {
     position: relative;
@@ -1130,6 +1138,8 @@ label .work {
     display: inline-flex;
   }
 }
+
+
 /*Modal*/
 .modal {
   max-height: 100%;
