@@ -126,6 +126,12 @@ a {
   &--blue {
     color: $color4;
   }
+  &--white{
+    color: $color;
+    font-weight: bold;
+    font-family: 'Nunito';
+    // font-style: italic;
+  }
 
   &--underline {
     position: relative;
@@ -567,7 +573,15 @@ label .work {
     }
   }
   &__item{
-
+    & p span{
+      // display: inline-flex;
+      // background: $color2;
+      // padding-left: .5%;
+      // padding-right: .5%;
+      color: $color;
+      // font-style: oblique;
+      // font-size: 1.2rem;
+    }
   }
   &__header {
     position: relative;
