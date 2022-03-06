@@ -516,8 +516,8 @@ input {
     border-radius: $border;
     top: 0;
     left: 0;
-    background: $card;
-    // box-shadow: $shadow2;
+    background: $bg3color;
+    box-shadow: $shadow2;
   }
 
   &[type="checkbox"]+.base-color .work {
