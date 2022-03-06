@@ -21,6 +21,7 @@ $bg3color: #232323;
 $bg4color: #1B2223;
 $bg5color: #24292E;
 $bg6color: #322E3A; //Sombras
+$card: #1e1e1e;
 $shadow: 0 4px 20px -2px rgba(#2d4fdf, 0.5);
 $shadow2: 0 4px 20px -2px #1c1e22;
 $shadow3: 0 0 10px rgba(#000000, 0.6);
@@ -128,7 +129,7 @@ a {
   }
   &--white{
     color: $color;
-    font-weight: bold;
+    // font-weight: bold;
     font-family: 'Nunito';
     // font-style: italic;
   }
@@ -434,15 +435,15 @@ svg {
   }
 
   &--two {
-    fill: $bg4color;
-  }
-
-  &--one {
     fill: $bg3color;
   }
 
-  &--three {
+  &--one {
     fill: $bg2color;
+  }
+
+  &--three {
+    fill: $bg4color;
   }
 }
 
@@ -491,7 +492,7 @@ input {
     transition: all 150ms linear;
     background: $color4;
     box-shadow: $shadow2;
-    border-radius: $border;
+    border-radius: 18px;
   }
 
   &[type="checkbox"]:checked+.base-color .toggle-slider {
@@ -512,11 +513,11 @@ input {
     width: 50%;
     height: 100%;
     transition: margin 300ms linear;
-    border-radius: 16px;
+    border-radius: $border;
     top: 0;
     left: 0;
-    background: $bg2color;
-    box-shadow: $shadow2;
+    background: $card;
+    // box-shadow: $shadow2;
   }
 
   &[type="checkbox"]+.base-color .work {
@@ -545,8 +546,11 @@ label .work {
 }
 
 .card__black {
-  @include buttonblue($bg2color);
+  @include buttonblue($card);
   padding: 3% 0;
+  &-one{
+    @include buttonblue($bg3color);
+  }
 }
 
 .show .work,
@@ -573,15 +577,7 @@ label .work {
     }
   }
   &__item{
-    & p span{
-      // display: inline-flex;
-      // background: $color2;
-      // padding-left: .5%;
-      // padding-right: .5%;
-      color: $color;
-      // font-style: oblique;
-      // font-size: 1.2rem;
-    }
+
   }
   &__header {
     position: relative;
